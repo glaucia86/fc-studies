@@ -12,7 +12,10 @@ Repository responsible for studies related to the Full Cycle course.
 
 ## ✏️ Studies 
 
-<details><summary><b>[Módulo 2: Docker](./02-module/README.md)</b></summary>
+<details><summary><b>Módulo 2: Docker</b></summary>
+
+**[Module 02 - Docker](./02-module/README.md)**
+
   - Começando do Zero
   - Código fonte
   - Iniciando com Docker
