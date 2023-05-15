@@ -3,6 +3,7 @@
 ## What I learned?
 
 - [ ] Começando do Zero
+  - [x] Introdução
   - [ ] Instalando Docker
   - [ ] Conhecendo o WSL 2
   - [ ] Instalando o WSL 2 do zero
