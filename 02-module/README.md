@@ -2,17 +2,24 @@
 
 ## What I learned?
 
-- [ ] Começando do Zero
+- [x] Começando do Zero
   - [x] Introdução
-  - [ ] Instalando Docker
-  - [ ] Conhecendo o WSL 2
-  - [ ] Instalando o WSL 2 do zero
-  - [ ] Dicas truques com WSL 2 e Windows Terminal
-  - [ ] Backup com WSL 2
-  - [ ] Integrando Docker com WSL 2
-  - [ ] Errata: Instalação do Docker no WSL/Windows
-- [ ] Código fonte
-- [ ] Iniciando com Docker
+  - [x] Instalando Docker
+  - [x] Conhecendo o WSL 2
+  - [x] Instalando o WSL 2 do zero
+  - [x] Dicas truques com WSL 2 e Windows Terminal
+  - [x] Backup com WSL 2
+  - [x] Integrando Docker com WSL 2
+  - [x] Errata: Instalação do Docker no WSL/Windows
+- [x] Código fonte
+- [x] Iniciando com Docker
+  - [x] Hello World
+  - [x] Executando Ubuntu
+  - [x] Publicando portas com nginx
+  - [x] Removendo containers
+  - [x] Acessando e alterando arquivos de um container
+  - [x] Iniciando com bind mounts
+  - [x] Trabalhando com volumes
 - [ ] Trabalhando com Imagens
 - [ ] Networks
 - [ ] Colocando em prática
