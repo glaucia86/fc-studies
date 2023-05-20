@@ -109,6 +109,24 @@ docker rm <nome do container>
 docker run --name <nome do container> <nome da imagem>
 ```
 
+Para parar um determinado container, basta executar o comando abaixo:
+  
+  ```bash
+  docker stop <container name>
+  ```
+
+Se você deseja remover todos os containers, basta executar o comando abaixo:
+
+```bash	
+docker rm $(docker ps -aq)
+```
+
+E, para forçar a remoção de um container, basta executar o comando abaixo:
+
+```bash
+docker rm -f <container name>
+```
+
 Exemplo com nginx
 
 ```bash
@@ -216,6 +234,43 @@ docker volume prune
 ```
 
 ## Trabalhando com Imagens
+
+Para listar as imagens, basta executar o comando abaixo:
+
+```bash
+docker images
+```
+
+E para remover uma imagem, basta executar o comando abaixo:
+
+```bash
+docker rmi <nome da imagem>
+```
+
+## Trabalhando com Dockerfile
+
+O que é um Dockerfile? É um arquivo que contém instruções para criar uma imagem. Para criar um Dockerfile, basta executar o comando abaixo:
+
+```bash
+touch Dockerfile
+```
+
+Agora, vamos criar um Dockerfile com o seguinte conteúdo:
+
+```dockerfile
+FROM nginx:latest
+
+RUN apt-get update 
+RUN apt-get install -y vim
+```
+
+Agora, vamos criar uma imagem a partir do Dockerfile. Para isso, basta executar o comando abaixo:
+
+```bash
+docker build -t glaucia86/nginx-com-vim:latest .
+```
+
+
 
 
 

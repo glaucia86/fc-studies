@@ -21,6 +21,11 @@
   - [x] Iniciando com bind mounts
   - [x] Trabalhando com volumes
 - [ ] Trabalhando com Imagens
+  - [x] Criando primeira imagem com Dockerfile
+  - [x] Avançando com Dockerfile
+  - [ ] ENTRYPOINT vs CMD
+  - [ ] Docker entrypoint exec
+  - [ ] Publicando imagem no Docker Hub
 - [ ] Networks
 - [ ] Colocando em prática
 - [ ] Otimizando imagens
