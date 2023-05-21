@@ -23,7 +23,7 @@
 - [ ] Trabalhando com Imagens
   - [x] Criando primeira imagem com Dockerfile
   - [x] Avançando com Dockerfile
-  - [ ] ENTRYPOINT vs CMD
+  - [x] ENTRYPOINT vs CMD
   - [ ] Docker entrypoint exec
   - [ ] Publicando imagem no Docker Hub
 - [ ] Networks

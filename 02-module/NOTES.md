@@ -270,6 +270,60 @@ Agora, vamos criar uma imagem a partir do Dockerfile. Para isso, basta executar 
 docker build -t glaucia86/nginx-com-vim:latest .
 ```
 
+**WORKDIR**: é uma forma de definir o diretório de trabalho.
+**COPY**: é uma forma de copiar arquivos do host para o container.
+
+```dockerfile
+FROM nginx:latest
+
+WORKDIR /app
+
+RUN apt-get update && \  
+    apt-get install vim -y
+
+COPY html /usr/share/nginx
+```
+
+> observação: o comando `docker rm $(docker ps -a -q) -f` remove todos os containers que estão parados.
+
+Se você desejar usar o CMD para executar um 'Hello World', basta executar o comando abaixo:
+
+```dockerfile
+FROM ubuntu:latest
+
+CMD ["echo", "Hello World!"]
+```
+
+Executando o comando `docker build`:
+
+```bash
+docker build -t glaucia86/hello:latest .
+```
+
+Executando o comando `docker run`:
+
+```bash
+docker run --rm glaucia86/hello:latest
+```
+
+Agora como teste de que podemos alterar o 'echo' do CMD, basta executar o comando abaixo:
+
+```bash
+docker run --rm glaucia86/hello:latest echo "Hello World! - Glaucia Lemos"
+```
+
+O que é o **ENTRYPOINT**? É uma forma de executar um comando quando o container é iniciado.
+
+Vamos entender agora como funciona o **ENTRYPOINT**. Para isso, vamos criar um Dockerfile com o seguinte conteúdo:
+
+```dockerfile
+FROM ubuntu:latest
+
+ENTRYPOINT ["echo", "Hello"]
+
+CMD ["echo", "World!"]
+```
+
 
 
 
