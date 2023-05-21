@@ -20,13 +20,17 @@
   - [x] Acessando e alterando arquivos de um container
   - [x] Iniciando com bind mounts
   - [x] Trabalhando com volumes
-- [ ] Trabalhando com Imagens
+- [x] Trabalhando com Imagens
   - [x] Criando primeira imagem com Dockerfile
   - [x] Avançando com Dockerfile
   - [x] ENTRYPOINT vs CMD
-  - [ ] Docker entrypoint exec
-  - [ ] Publicando imagem no Docker Hub
+  - [x] Docker entrypoint exec
+  - [x] Publicando imagem no Docker Hub
 - [ ] Networks
+  - [ ] Entendendo tipos de Network
+  - [ ] Trabalhando com bridge
+  - [ ] Trabalhando com host
+  - [ ] Container acessando nossa maquina
 - [ ] Colocando em prática
 - [ ] Otimizando imagens
 - [ ] Docker-compose
