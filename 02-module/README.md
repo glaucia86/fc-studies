@@ -26,12 +26,16 @@
   - [x] ENTRYPOINT vs CMD
   - [x] Docker entrypoint exec
   - [x] Publicando imagem no Docker Hub
-- [ ] Networks
-  - [ ] Entendendo tipos de Network
-  - [ ] Trabalhando com bridge
-  - [ ] Trabalhando com host
-  - [ ] Container acessando nossa maquina
+- [x] Networks
+  - [x] Entendendo tipos de Network
+  - [x] Trabalhando com bridge
+  - [x] Trabalhando com host
+  - [x] Container acessando nossa maquina
 - [ ] Colocando em prática
+  - [ ] Instalando framework em um container
+  - [ ] Ativando entrypoint e command
+  - [ ] Criando aplicação Node.js sem o Node
+  - [ ] Gerando imagem com aplicação Node.js
 - [ ] Otimizando imagens
 - [ ] Docker-compose
 - [ ] Desafio

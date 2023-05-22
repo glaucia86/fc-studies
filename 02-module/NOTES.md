@@ -324,6 +324,239 @@ ENTRYPOINT ["echo", "Hello"]
 CMD ["echo", "World!"]
 ```
 
+## Network
+
+O que é o **Network**? É uma forma de conectar os containers entre si. 
+
+Existem tipos de network: **brigde**, **host** e **none**.
+
+* **brigde**: é uma forma de conectar os containers entre si, porém, não é possível conectar com o host.
+
+* **host**: é uma forma de conectar os containers com o host.
+
+* **overlay**: é uma forma de conectar os containers entre si, porém, é necessário ter um cluster de Docker Swarm.
+
+* **maclan**: 
+
+* **none**: é uma forma de não conectar os containers com o host.
+
+### Trabalhando com Bridge
+
+Vamos primeiramente criar um container:
+
+```bash
+docker run -d -it --name ubuntu1 bash
+```
+
+E outro container
+
+```bash
+docker run -d -it --name ubuntu2 bash
+```
+
+Para inspecionar o container, basta executar o comando abaixo:
+
+```bash
+docker network inspect bridge
+```
+
+O resultado do comando acima:
+
+<details><summary><b>Inspect Network</b></summary>
+
+```bash
+[
+    {
+        "Name": "bridge",
+        "Id": "88710ce52b1f05a1f1a4bad41e2e2613acfe61de98113d31e9cc365cc658e84b",
+        "Created": "2023-05-22T20:01:59.027658328Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "72c31c2b7a235fc56f7237b573f78b987a9802623f1057bdb4f380774772d132": {
+                "Name": "ubuntu2",
+                "EndpointID": "106a09f3419f0ff62e407ffc2227defd33183ebff2c2441a1955f980b1dd91da",
+                "MacAddress": "02:42:ac:11:00:03",
+                "IPv4Address": "172.17.0.3/16",
+                "IPv6Address": ""
+            },
+            "7ff2fec002415f8bb29fa78405f9004a67e94a5544d0d3d724644a2f71ad03b4": {
+                "Name": "ubuntu1",
+                "EndpointID": "f4ac4ac5715f23ef1b3906617a0d7d2ed74f75a1eb695e55c648ead0366458ab",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+```
+
+</details>
+<br />
+
+Para entrar no modo `attach` de um container, basta executar o comando abaixo:
+
+```bash
+docker attach ubuntu1
+```
+
+Vamos agora criar uma network do tipo **brigde**. Para isso, basta executar o comando abaixo:
+
+```bash
+docker network create --driver bridge minharede
+```
+
+Agora que criamos a network, vamos executar o comando abaixo para conectar os containers na network:
+
+```bash
+docker run -dit --name ubuntu1 --network minharede bash
+```
+
+```bash
+docker run -dit --name ubuntu2 --network minharede bash
+```
+
+Vamos entrar em um desses networks:
+
+```bash
+docker exec -it ubuntu1 bash
+```
+
+```
+ping ubuntu2
+```
+
+Crie agora uma network fora da bridge:
+
+```bash
+docker run -dit --name ubuntu3 bash
+```
+
+Ao tentar executar o comando `ping ubuntu3` não irá funcionar. Pois, o container ubuntu3 não está na mesma network que os outros containers. 
+
+Porém, se você executar o comando abaixo:
+
+```bash
+docker network connect minharede ubuntu3
+```
+
+Agora sim, você conseguirá executar o comando `ping ubuntu3`.
+
+E, por fim se desejar inspecionar a network, basta executar o comando abaixo:
+
+```bash
+docker network inspect minharede
+```
+
+E, veja o resultado. Você encontrará os containers: ubuntu1, ubuntu2 e ubuntu3 conectados na mesma network.
+
+<details><summary><b>Inspect Network</b></summary>
+
+```bash
+[
+    {
+        "Name": "minharede",
+        "Id": "77a4fd67d51c0b07f9f2116de1e626dab75cf148fc6ce3f0fd2760dcc8f959d6",
+        "Created": "2023-05-22T22:41:41.520043482Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "0e97c6f21b3269cec7af400bf6a1e64ccc1668b9b8932c28049c552e74f2dfdc": {
+                "Name": "ubuntu1",
+                "EndpointID": "1bc6dba3ddbaae7cc8007e7e6c520e60d85cee8ae643cfdcee07bf77ebcb91b8",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "68c31c456152dfed13a984d3cc599f8e0dc13a592821ffae137b086b6bd457db": {
+                "Name": "ubuntu2",
+                "EndpointID": "bbbe6363e681a00ea3d5b5f9df8e5fc08f2b20e653a0ffe83dd53cadbcf1f087",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "85ec3ca86298e6ed7c5a327017dbdaec7dc18c2da26dbe8a7283bcd20d65a010": {
+                "Name": "ubuntu3",
+                "EndpointID": "a37e75490ee7ef3fa6f9a4621f71fcf172aa6f185da330239a0dbbacde0f067c",
+                "MacAddress": "02:42:ac:12:00:04",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+```
+
+</details>
+<br />
+
+
+### Container acessando nossa maquina
+
+Para um container acessar nossa maquina, basta executar o comando abaixo:
+
+```bash
+docker run --rm -it --name ubuntu ubuntu bash
+```
+
+Agora execute alguma aplicação localmente na sua máquina. Seja uma aplicação node ou o que for.
+Dentro do container para acessar a aplicação local, basta executar o comando abaixo:
+
+```bash
+curl host.docker.internal:3000
+```
+
+
+
+
 
 
 
