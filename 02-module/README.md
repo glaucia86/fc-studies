@@ -31,11 +31,23 @@
   - [x] Trabalhando com bridge
   - [x] Trabalhando com host
   - [x] Container acessando nossa maquina
-- [ ] Colocando em prática
-  - [ ] Instalando framework em um container
-  - [ ] Ativando entrypoint e command
-  - [ ] Criando aplicação Node.js sem o Node
-  - [ ] Gerando imagem com aplicação Node.js
+- [x] Colocando em prática
+  - [x] Instalando framework em um container
+  - [x] Ativando entrypoint e command
+  - [x] Criando aplicação Node.js sem o Node
+  - [x] Gerando imagem com aplicação Node.js
 - [ ] Otimizando imagens
+  - [ ] Otimização utilizando Multistage Building
+  - [ ] Nginx como proxy reverso
 - [ ] Docker-compose
+  - [ ] Iniciando com Docker-compose
+  - [ ] Build de imagens com Docker-compose
+  - [ ] Criando banco de dados MySQL
+  - [ ] Configurando app node com docker-compose
+  - [ ] Errata - Criando Banco de dados MySQL
+  - [ ] Node vs MySQL
+  - [ ] Dependências entre containers
+  - [ ] Errata - Dependências entre containers (wait-for-it)
 - [ ] Desafio
+  - [ ] Desafio Go
+  - [ ] Nginx com Node.Js

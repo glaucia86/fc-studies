@@ -554,8 +554,25 @@ Dentro do container para acessar a aplicação local, basta executar o comando a
 curl host.docker.internal:3000
 ```
 
+## Entrando no modo interavito do container sem ter o Node instalado na máquina
 
+Para entrar no modo interativo do container, basta executar o comando abaixo:
 
+```bash
+docker run --rm -it -v "%cd":/usr/src/app -p 3000:3000 node:18 bash
+```
+
+```bash
+docker run --rm -it -v "C:\Users\user\Documents\GitHub\docker\02-module\sample-03":/usr/src/app -p 3000:3000 node:18 bash
+```
+
+Se você desejar fazer o build de um outro arquivo Dockerfile, por exemplo: `Dockerfile.prod`, basta executar o comando abaixo:
+
+```bash
+docker build -t glaucia86/hello-world-express node/ -f node/Dockerfile.prod
+```
+
+> p.s.: no local de `node/` você pode colocar o caminho do seu Dockerfile.
 
 
 
