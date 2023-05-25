@@ -574,6 +574,80 @@ docker build -t glaucia86/hello-world-express node/ -f node/Dockerfile.prod
 
 > p.s.: no local de `node/` você pode colocar o caminho do seu Dockerfile.
 
+## Otimizando imagens com Multi-Stage Builds
+
+Para otimizar as imagens com o Multi-Stage Builds, deem uma olhada no exemplo criado em `sample-02 -> laravel -> Dockerfile.prod`
+
+```dockerfile
+FROM php:7.4-cli AS builder
+
+WORKDIR /var/www
+
+RUN apt-get update && \
+    apt-get install libzip-dev -y && \
+    docker-php-ext-install zip
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+    php composer-setup.php && \
+    php -r "unlink('composer-setup.php');"
+
+RUN php composer.phar create-project --prefer-dist laravel/laravel laravel
+
+FROM php:7.4-fpm-alpine
+WORKDIR /var/www
+RUN rm -rf /var/www/html
+COPY --from=builder /var/www/laravel .
+RUN ln -s public html
+RUN chown -R www-data:www-data /var/www
+EXPOSE 9000
+CMD [ "php-fpm" ]
+
+```
+
+Depois de criado o Dockerfile, basta executar o comando abaixo:
+
+```bash
+docker build -t glaucia86/laravel:latest laravel/ -f laravel/Dockerfile.prod
+```
+
+## Nginx como Proxy Reverso
+
+Basta seguir o exemplo contigo em `sample-01 -> nginx.conf`. Coloque as informações de configuração do nginx.conf seguindo conforme a documentação do Laravel.
+
+Depois de criado o arquivo `nginx.conf`, crie um arquivo chamado `Dockerfile.prod` e coloque as seguintes informações:
+
+```dockerfile
+FROM nginx:1.15.0-alpine
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
+
+RUN mkdir /var/www/html -p && touch /var/www/html/index.php
+```
+
+Agora crie a imagem do nginx com o comando abaixo:
+
+```bash
+docker build -t glaucia86/nginx:prod . -f Dockerfile.prod
+``` 
+
+Vamos criar uma network para que o nginx possa se comunicar com o container do laravel:
+
+```bash
+docker network create laranet
+```
+
+Agora vamos rodar esse network criado:
+
+```bash
+docker run --rm -d --name laravel --network laranet glaucia86/laravel:prod
+```
+
+Agora vamos fazer o nginx trabalhar, para isso execute o comando abaixo:
+
+```bash
+docker run -d --network laranet --name nginx -p 8080:80 glaucia86/nginx:prod
+```
 
 
 
