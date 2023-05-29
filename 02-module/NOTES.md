@@ -885,6 +885,107 @@ Se aparecer a informação conforme abaixo com os seus dados, então, deu tudo c
 1 row in set (0.00 sec)
 ```
 
+### Dependências entre containers
+
+Para que o container do `app` node dependa do container do `db`, precisamos adicionar o step: `depends_on`. Vejamos um exemplo na configuração no `docker-compose.yml`:
+
+```yaml
+(...)
+
+    app:
+        build:
+        context: node
+        container_name: app
+        networks:
+        - node-network
+        volumes:
+        - ./node:/usr/src/app
+        tty: true
+        ports:
+        - '3000:3000'
+        depends_on:
+        - db
+    
+(...)
+```
+
+Porém, se faz bem usar o dockerize para que o container do `app` node espere o container do `db` estar pronto. Há um repositório a qual podemos usar para o nosso projeto **[dockerize](https://github.com/jwilder/dockerize)**. Vamos usar a imagem do Ubuntu. Para isso, vamos alterar o `Dockerfile` do `app` node:
+
+```dockerfile
+FROM node:18
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && apt-get install -y wget
+
+ENV DOCKERIZE_VERSION v0.7.0
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+EXPOSE 3000
+
+# CMD [ "node", "index.js" ]
+```
+
+Depois, execute o comando abaixo:
+
+```bash
+docker-compose up -d --build
+```
+
+E, vamos voltar ao modo interativo do container do `app` node:
+
+```bash
+docker exec -it app bash
+```
+
+Logo após, digitem o comando:
+
+```bash
+dockerize -wait tcp://db:3306 -timeout 20s
+```
+
+O que esse comando faz? Ele faz com que o container do `app` node espere o container do `db` estar pronto. 
+
+Agora, vamoas mudar o `entrypoint` do `app` node. Para isso, vamos alterar o `Dockerfile` do `app` node:
+
+```dockerfile
+(...)
+app:
+    build:
+      context: node
+    container_name: app
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
+    networks:
+      - node-network
+    volumes:
+      - ./node:/usr/src/app
+    tty: true
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+(...)
+```
+
+Vamos atualizar a nossa imagem, fazendo o build novamente:
+
+```bash
+docker-compose up -d --build
+```
+
+E, finalmente digite o comando abaixo:
+
+```bash
+docker logs app
+```
+
+## Desafios
+
+
+
+
 
 
 
