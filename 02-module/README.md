@@ -36,11 +36,11 @@
   - [x] Ativando entrypoint e command
   - [x] Criando aplicação Node.js sem o Node
   - [x] Gerando imagem com aplicação Node.js
-- [ ] Otimizando imagens
-  - [ ] Otimização utilizando Multistage Building
-  - [ ] Nginx como proxy reverso
+- [x] Otimizando imagens
+  - [x] Otimização utilizando Multistage Building
+  - [x] Nginx como proxy reverso
 - [ ] Docker-compose
-  - [ ] Iniciando com Docker-compose
+  - [x] Iniciando com Docker-compose
   - [ ] Build de imagens com Docker-compose
   - [ ] Criando banco de dados MySQL
   - [ ] Configurando app node com docker-compose

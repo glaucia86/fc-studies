@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  laravel:
+    build:
+      context: ./laravel
+      dockerfile: Dockerfile.prod
+    image: glaucia86/laravel:prod
+    container_name: laravel
+    networks:
+      - laranet
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.prod
+    image: glaucia86/nginx:prod
+    container_name: nginx
+    networks:
+      - laranet
+    ports:
+      - '8080:80'
+
+networks:
+  laranet:
+    driver: bridge

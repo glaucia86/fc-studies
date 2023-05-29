@@ -607,12 +607,12 @@ CMD [ "php-fpm" ]
 Depois de criado o Dockerfile, basta executar o comando abaixo:
 
 ```bash
-docker build -t glaucia86/laravel:latest laravel/ -f laravel/Dockerfile.prod
+docker build -t glaucia86/laravel:prod laravel/ -f laravel/Dockerfile.prod
 ```
 
 ## Nginx como Proxy Reverso
 
-Basta seguir o exemplo contigo em `sample-01 -> nginx.conf`. Coloque as informações de configuração do nginx.conf seguindo conforme a documentação do Laravel.
+Basta seguir o exemplo contigo em `nginx -> nginx.conf`. Coloque as informações de configuração do nginx.conf seguindo conforme a documentação do Laravel.
 
 Depois de criado o arquivo `nginx.conf`, crie um arquivo chamado `Dockerfile.prod` e coloque as seguintes informações:
 
@@ -651,17 +651,239 @@ docker run -d --network laranet --name nginx -p 8080:80 glaucia86/nginx:prod
 
 ## Começando com Docker Compose
 
+Para executar o docker-compose, basta executar o comando abaixo:
+
+```bash
+docker-compose up -d
+```
+
+Mas, lembrando que antes de executar o comando acima, é necessário criar o arquivo `docker-compose.yml` com as informações necessárias.
+
+Exemplo
+
+```yaml
+version: '3'
+
+services:
+  laravel:
+    image: glaucia86/laravel:prod
+    container_name: laravel
+    networks:
+      - laranet
+
+  nginx:
+    image: glaucia86/nginx:prod
+    container_name: nginx
+    networks:
+      - laranet
+    ports:
+      - '8080:80'
+
+networks:
+  laranet:
+    driver: bridge
+```
+
+> Não se esqueça de remover os containers que foram criados anteriormente. Para isso, basta executar o comando abaixo:
+
+```bash
+docker rm $(docker ps -a -q) -f
+```
+
+Para parar o docker-compose, basta executar o comando abaixo:
+
+```bash
+docker-compose down
+```
+
+Outro detalhe importante é que, se você precisar o usar o docker-compose para fazer o build de uma imagem, basta executar o comando abaixo:
+
+```bash
+docker-compose up -d --build
+```
+
+## Trabalhando com Banco de Dados com Docker Compose
+
+Para trabalhar com banco de dados com o docker-compose, basta seguir o exemplo contido em  { `docker-compose.yml`
+
+```yaml
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    command: --innodb-use-native-aio=0
+    container_name: db
+    restart: always
+    tty: true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=nodedb
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - node-network
+
+networks:
+  node-network:
+    driver: bridge
+```
+
+Agora vamos executar o docker-compose:
+
+```bash
+docker-compose up -d
+```
+
+Perceba uma coisa bastante interessante, dentro da pasta `mysql`, que antes estava vazia, agora temos os arquivos do banco de dados. Ou seja, o docker-compose criou um volume para o banco de dados. Por mais que você dê um `docker-compose down` e depois um `docker-compose up -d`, os dados do banco de dados não serão perdidos.
 
 
+### Configurando app node com docker-compose
 
+Para configurar o app node com o docker-compose, basta seguir o exemplo contido em `docker-compose.yml`
 
+```yaml
+version: '3'
 
+services:
+  app:
+    build:
+      context: node
+    container_name: app
+    networks:
+      - node-network
+    volumes:
+      - ./node:/usr/src/app
+    tty: true
+    ports:
+      - '3000:3000'
 
+  db:
+    image: mysql:5.7
+    command: --innodb-use-native-aio=0
+    container_name: db
+    restart: always
+    tty: true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=nodedb
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - node-network
 
+networks:
+  node-network:
+    driver: bridge
+```
 
+Agora, vamos executar o docker-compose:
 
+```bash
+docker-compose up -d --build
+```
 
+Vamos entrar no container do app node:
 
+```bash
+docker exec -it app bash
+```
+
+Vamos agora entrar de modo interativo no container do mysql:
+
+```bash
+docker exec -it db bash
+```
+
+Precisaremos inserir as credenciais do mysql (dentro do modo interativo):
+
+```bash
+mysql -u root -p
+```
+
+Coloque a senha que é: `root` e digite o comando abaixo:
+
+```bash
+show databases;
+```
+
+Ao executar o comando acima, você verá que o banco de dados `nodedb` foi criado. Agora vamos criar uma tabela dentro do banco de dados `nodedb`:
+
+```bash
+use nodedb;
+```
+
+Agora vamos criar uma tabela chamada `people`:
+
+```bash
+create table people(id int not null auto_increment, name varchar(255), primary key(id));
+```
+
+Digite o comando abaixo para ver se a tabela foi criada:
+
+```bash
+desc people;
+```
+
+Perfeito! Agora, vamos retornar ao container do `app` node. Porém, vamos instalar o pacote `mysql` para que possamos fazer a conexão com o banco de dados (dentro do modo interativo):
+
+```bash
+npm install mysql --save
+```
+
+Agora, vá até o arquivo `index.js` e coloque as seguintes informações:
+
+```javascript
+const express = require('express');
+const mysql = require('mysql');
+
+const app = express();
+
+const port = 3000;
+
+const config = {
+  host: 'db',
+  user: 'root',
+  password: 'root',
+  database: 'nodedb',
+};
+
+const connection = mysql.createConnection(config);
+const sql = `INSERT INTO people(name) values('Glaucia Lemos')`;
+connection.query(sql);
+connection.end();
+
+app.get('/', (_req, res) => {
+  res.send('<h1>Olá, Developers!</h1>');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
+```
+
+Execute o comando abaixo (dentro do modo interativo):
+
+```bash
+node index.js
+```
+
+Abra o outro terminal onde está executando no modo interativo o `db` e digite o comando abaixo:
+
+```bash
+select * from people;
+```
+
+Se aparecer a informação conforme abaixo com os seus dados, então, deu tudo certo:
+
+```bash
++----+---------------+
+| id | name          |
++----+---------------+
+|  1 | Glaucia Lemos |
++----+---------------+
+1 row in set (0.00 sec)
+```
 
 
 
