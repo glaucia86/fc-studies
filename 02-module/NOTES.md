@@ -111,9 +111,9 @@ docker run --name <nome do container> <nome da imagem>
 
 Para parar um determinado container, basta executar o comando abaixo:
   
-  ```bash
-  docker stop <container name>
-  ```
+```bash
+docker stop <container name>
+```
 
 Se você deseja remover todos os containers, basta executar o comando abaixo:
 
@@ -648,6 +648,12 @@ Agora vamos fazer o nginx trabalhar, para isso execute o comando abaixo:
 ```bash
 docker run -d --network laranet --name nginx -p 8080:80 glaucia86/nginx:prod
 ```
+
+## Começando com Docker Compose
+
+
+
+
 
 
 
