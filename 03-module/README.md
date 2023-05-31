@@ -1,0 +1,44 @@
+# Module 03 - Fundamentals of software architecture
+
+## What I learned
+
+- [x] Fundamentos
+  - [x] Introdução
+  - [x] Arquitetura Tecnológica e Corporativa
+  - [x] Arquitetura de Solução
+  - [x] O que é arquitetura de software
+  - [x] O papel do arquiteto de software
+  - [x] Vantagens de aprender arquitetura de software
+  - [x] Arquitetura vs Design de Software
+  - [x] Sustentabilidade no dia zero
+  - [x] Pilares da arquitetura de software
+  - [x] Requisitos arquiteturais
+- [x] Características Arquiteturais
+  - [ ] Características Arquiteturais
+  - [ ] Características Operacionais
+  - [ ] Características Estruturais
+  - [ ] Características Cross Cutting
+- [ ] Performance
+  - [ ] Perspectivas para arquitetar um software
+  - [ ] Métricas para medir a performance
+  - [ ] Checklist para aumento de performance
+  - [ ] Escala concorrência e paralelismo
+  - [ ] Caching
+  - [ ] Caching vs Edge Computing
+- [ ] Escabilidade
+  - [ ] Escalabilidade
+  - [ ] Escalando Aplicações
+  - [ ] Escalando Banco de Dados
+  - [ ] Proxy Reverso
+- [ ] Resiliência
+  - [ ] Introdução a resiliência
+  - [ ] Proteger e ser protegido
+  - [ ] Health Check
+  - [ ] Rate Limit
+  - [ ] Circuit Breaker
+  - [ ] API Gateway
+  - [ ] Service Mesh
+  - [ ] Comunicação assíncrona
+  - [ ] Garantias de entrega com Retry
+  - [ ] Garantias de entrega com Kafka
+  - [ ] Situações complexas e decisões de alto nível
