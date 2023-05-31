@@ -704,7 +704,7 @@ docker-compose up -d --build
 
 ## Trabalhando com Banco de Dados com Docker Compose
 
-Para trabalhar com banco de dados com o docker-compose, basta seguir o exemplo contido em  { `docker-compose.yml`
+Para trabalhar com banco de dados com o docker-compose, basta seguir o exemplo contido em   `docker-compose.yml`
 
 ```yaml
 version: '3'

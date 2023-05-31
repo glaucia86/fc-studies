@@ -1,6 +1,6 @@
 # Module 02 - Docker
 
-## What I learned?
+## What I learned
 
 - [x] Começando do Zero
   - [x] Introdução
@@ -39,15 +39,15 @@
 - [x] Otimizando imagens
   - [x] Otimização utilizando Multistage Building
   - [x] Nginx como proxy reverso
-- [ ] Docker-compose
+- [x] Docker-compose
   - [x] Iniciando com Docker-compose
-  - [ ] Build de imagens com Docker-compose
-  - [ ] Criando banco de dados MySQL
-  - [ ] Configurando app node com docker-compose
-  - [ ] Errata - Criando Banco de dados MySQL
-  - [ ] Node vs MySQL
-  - [ ] Dependências entre containers
-  - [ ] Errata - Dependências entre containers (wait-for-it)
-- [ ] Desafio
-  - [ ] Desafio Go
-  - [ ] Nginx com Node.Js
+  - [x] Build de imagens com Docker-compose
+  - [x] Criando banco de dados MySQL
+  - [x] Configurando app node com docker-compose
+  - [x] Errata - Criando Banco de dados MySQL
+  - [x] Node vs MySQL
+  - [x] Dependências entre containers
+  - [x] Errata - Dependências entre containers (wait-for-it)
+- [x] Desafio
+  - [x] Desafio Go
+  - [x] Nginx com Node.Js
