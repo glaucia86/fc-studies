@@ -14,10 +14,10 @@
   - [x] Pilares da arquitetura de software
   - [x] Requisitos arquiteturais
 - [x] Características Arquiteturais
-  - [ ] Características Arquiteturais
-  - [ ] Características Operacionais
-  - [ ] Características Estruturais
-  - [ ] Características Cross Cutting
+  - [x] Características Arquiteturais
+  - [x] Características Operacionais
+  - [x] Características Estruturais
+  - [x] Características Cross Cutting
 - [ ] Performance
   - [ ] Perspectivas para arquitetar um software
   - [ ] Métricas para medir a performance

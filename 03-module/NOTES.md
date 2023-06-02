@@ -93,6 +93,44 @@ Assim sendo, qunato mais tempo o software fica no ar, mais retorno gera. Ou seja
 * **Audit**: logs, auditoria, etc.
 * **Marketing**: SEO, campanhas, tracking, etc.
 
+## Características Arquiteturais
+
+As características Arquiteturais são divididas em 3 grupos:
+
+* **Operacionais**
+* **Estruturais**
+* **Cross-Cutting**
+
+### Características Operacionais
+
+* **Disponibilidade**: tempo que o sistema está disponível para uso. Garantir o SLA dessa aplicação.
+* **Recuperação de Desastres:** como o sistema se recupera de um desastre. Ex.: backup, replicação, etc.
+* **Performance**: tempo de resposta, throughput, latência, etc.
+* **Recuperação (backup):** crie regras de backup para o seu sistema.
+* **Confiabilidade e Segurança:** como o sistema se comporta em relação a segurança. Ex.: autenticação, autorização, criptografia, etc.
+* **Robustes**: verificar e ver se o sistema que você está criando ele é robusto o suficiente para atender a demanda. Ou se é escalável.
+* **Escabilidade**: Como você pode verificar que o seu sistema ficará disponível para atender a demanda. Ex.: horizontal, vertical, load balance, etc.
+  
+### Características Estruturais
+
+* **Configurável**: o sistema precisa ser configurável para atender a demanda. A melhor forma de saber se a sua aplicação é configurável é colocando a sua aplicação em stage.
+* **Extensibilidade**: o sistema precisa ser extensível para atender a demanda. Ex.: plugins, etc.
+* **Fácil Instalação**: o sistema precisa ser fácil de instalar para atender a demanda. Ex.: docker, etc.
+* **Reuso de Componentes**: o sistema precisa ser reutilizável para atender a demanda. Ex.: componentização, etc.
+* **Internacionalização**: o sistema precisa ser internacionalizável para atender a demanda. Ex.: i18n, etc.
+* **Fácil manuntenção**: o sistema precisa ser fácil para que outras pessoas possam dar manutenção. Quanto mais simples for o seu software mais fácil será para dar manutenção. Pense bastante com relação a isso. Evitando assim o que chamamos de "over engineering" e "over architecting". Ex.: documentação, testes etc.
+* **Portabilidade (diversos banco de dados)**: o sistema deve ser fácil para adoção de outros bancos de dados. Ex.: ORM, etc.
+* Fácil suporte (logs, debugging): o sistema deve ser fácil para dar suporte. Foque muito em observabilidade. Ex.: logs, etc.
+
+### Características Cross-Cutting
+
+* **Acessibilidade**: o sistema deve seguir padrões e seguir as regras de acessibilidade. Ex.: WCAG, etc.
+* **Processo de retenção e recuperação de dados (quanto tempo os dados serão mantidos)**: o sistema deve seguir as regras de retenção e recuperação de dados. Até porque isso envolve custos. Analisar o tipo de Storage que será utilizado. Ex. hot, cold, etc.
+* **Autenticação e Autorização**: o sistema deve seguir as regras de autenticação e autorização. Analisar e ver como os outros serviços comunicará com um sistema distribuído nesse aspecto. Ex.: OAuth, etc.
+* **Legal**: o sistema deve seguir as regras legais e conformidades do país. Ex.: LGPD, GDPR, etc.
+* **Privacidade**: o sistema deve seguir as regras de privacidade. Ex.: LGPD, GDPR, etc.
+* **Segurança**: o sistema deve seguir as regras de segurança e deve estar integrada de ponta a ponta. Ex.: LGPD, GDPR, etc.
+* **Usabilidade**: o sistema deve seguir as regras de usabilidade. Ex.: UX, etc.
 
 
 
