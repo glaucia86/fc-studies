@@ -132,6 +132,122 @@ As características Arquiteturais são divididas em 3 grupos:
 * **Segurança**: o sistema deve seguir as regras de segurança e deve estar integrada de ponta a ponta. Ex.: LGPD, GDPR, etc.
 * **Usabilidade**: o sistema deve seguir as regras de usabilidade. Ex.: UX, etc.
 
+## Performance
+
+### Perspectivas para arquitetar um software
+
+* **Performance**: tempo de resposta, throughput, latência, etc.
+* **Escabilidade**: horizontal, vertical, load balance, etc.
+* **Resiliência**: tolerância a falhas, recuperação de desastres, etc.
+
+### Métricas para medir a performance
+
+
+O que é performance? É o desempenho que um software possui para completar um determinado workload.
+
+Vejamos alguns pontos importantes:
+
+1. As unidades de medida para avaliarmos a performance de um software são:
+  * latência ou tempo de resposta
+  * Throughput
+
+2. Ter um software perfomático é diferente de ter um software escalável.
+
+3. A primeira coisa para melhorar a performance do meu software é:
+
+3.1 Diminuindo a latência. Mas, como?
+  * Normalmente medida por milisegundos.
+  * A latência é afetada pelo tempo de processamento, tempo de rede, e chamadas externas.
+
+3.2 Aumentar throughput. Mas, como?
+  * Quantidade de requisições simultaneas.
+  * Diretamente ligado a latência.
+
+### Checklist para aumento de performance
+
+* Processamento ineficiente
+* Recursos computacionais limitados
+* Trabalhar de forma bloqueante
+* Acesso serial a recursos
+
+Principais formas para aumentar eficiência são:
+
+* Escala de capacidade computacional (CPU, memória, etc)
+* Lógica por trás do software (algoritmos, queries, overhead de frameworks)
+* Concorrência e paralelismo (threads, processos, etc)
+* Banco de dados (índices, queries, tipos de dados, schema, etc)
+* Caching
+  
+### Escala Computacional: Escala Vertical vs Escala Horizontal
+
+* **Escala Vertical**: aumentar a capacidade de processamento de um único servidor. Ex.: aumentar a memória RAM, aumentar o número de CPUs, etc.
+
+* **Escala Horizontal**: aumentar a capacidade de processamento de vários servidores. Ex.: aumentar o número de servidores, etc.
+
+### Diferença entre Concorrência e Paralelismo
+
+> "Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é sobre fazer muitas coisas ao mesmo tempo." - Rob Pike
+
+```mermaid
+
+sequenceDiagram
+    participant A as Thread 1
+    participant B as Thread 2
+    participant C as Thread 3
+    participant D as Thread 4
+    participant E as Thread 5
+    A->>A: 10ms
+    B->>B: 10ms
+    C->>C: 10ms
+    D->>D: 10ms
+    E->>E: 10ms
+```
+
+### Caching
+
+Tipos de Caching:
+
+* Cache na borda/ Edge Computing
+* Dados estáticos
+* Páginas Web
+* Funções internas
+  * Evita reprocessamento de algoritmos pesados
+* Objetos
+
+#### Caching Exclusivo vs Compartilhado
+
+* **Exclusivo**: cada servidor possui o seu próprio cache.
+  * Baixa latência
+  * Duplicado entre os nós
+  * Problemas relacionados a sessões
+
+
+* **Compartilhado**: todos os servidores compartilham o mesmo cache.
+  * Maior latência
+  * Não há duplicação
+  * Sessões compartilhadas
+  * Banco de dados externo
+    * MySQL
+    * Redis
+    * Memcached
+
+### Caching vs Edge Computing
+
+O que é Edge Computing? É um modelo de computação distribuída que traz a computação e o armazenamento de dados mais próximo do local onde é necessário para melhorar a latência e a eficiência do tráfego de dados.
+
+Quando falamos de Edge Computing, estamos em:
+
+* Cache realizado mais próximo ao usuário
+* Evita a requisição chegar até o Cloud Provider/Infra
+* Normalmente arquivos estáticos
+* CDN (Content Delivery Network)
+* Cloudflare workers
+* Vercel 
+
+
+
+
+
 
 
 
