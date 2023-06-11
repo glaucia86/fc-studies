@@ -244,6 +244,57 @@ Quando falamos de Edge Computing, estamos em:
 * Cloudflare workers
 * Vercel 
 
+## Escabilidade
+
+> "Escabilidade é a capacidade de sistemas suportarem o aumento (ou a redução) dos workloads incrementando (ou reduzindo) o custo em menor ou igual proporção." - Elemar Jr.
+
+### Escabilidade vs Performance
+
+Enquanto performance tem o foco em reduzir a latência e aumentar o throughput, a escabilidade visa termos a possibilidade de aumentar ou diminuir o throughput adicionando ou removendo a capacidade computacional.
+
+### Escalando aplicações
+
+* **Disco efêmero**: disco que não é persistido. Ex.: disco de máquina virtual, etc.
+* **Servidor de aplicação vs Servidor de assets**: separar os servidores de aplicação dos servidores de assets. Ex.: imagens, vídeos, etc.
+* **Cache centralizado**: o cache não ficará na sua máquina. Nesse caso ele será compartilhado. 
+* **Sessões centralizadas**: toda aplicação deve ser stateless. E, nesse caso as sessões precisam ser compartilhadas também.
+* **Upload/Gravação de Arquivos**: o upload e a gravação de arquivos devem ser feitos em um storage externo. Ex.: S3, etc.
+  
+Resumindo, escalar aplicações significa descentralizar os recursos. Tudo pode ser criado e destruído a qualquer momento.
+
+### Escalando banco de dados
+
+* **Aumentar recursos computacionais**: aumentar a capacidade computacional do banco de dados. Ex.: aumentar a memória RAM, aumentar o número de CPUs, etc.
+* **Distribuindo responsabilidades (escrita vs leitura)**: separar os bancos de dados de leitura dos bancos de dados de escrita.
+* **Shards de forma horizontal**: adicionar várias máquinas de leitura ou dividir partições de dados em várias máquinas. 
+
+> O que é Sharding? Sharding é uma técnica de escalabilidade horizontal usada em bancos de dados distribuídos. Ele envolve a divisão de um banco de dados em várias partições menores, chamadas shards, que são distribuídas em várias máquinas. Cada shard contém um subconjunto dos dados do banco de dados completo.
+> Ao dividir o banco de dados em shards, é possível distribuir a carga de leitura e gravação em várias máquinas, permitindo que o banco de dados suporte um grande número de usuários e transações. Além disso, o sharding pode melhorar a disponibilidade do banco de dados, já que a falha de uma máquina não afetará todo o banco de dados. 
+
+* **Serverless**: utilizar um banco de dados serverless. Ex.: DynamoDB, etc.
+
+### Otimização de queries e índices: 
+
+* Trabalhe com índices de forma consciente
+* APM (Application Performance monitoring) nas queries
+* Explain nas queries
+* CQRS (Command Query Responsibility Segregation)
+
+### Proxy Reverso
+
+> O que é Proxy Reverso? Um proxy reverso é um servidor que atua como intermediário entre os clientes e os servidores de destino. Ele recebe solicitações dos clientes e as encaminha para os servidores de destino, ocultando a identidade dos servidores de destino dos clientes. O proxy reverso também pode ser usado para balanceamento de carga, cache de conteúdo e segurança de rede.
+
+![Proxy reverso](image.png)
+
+#### Soluções populares de Proxy Reverso
+
+* Nginx
+* HAProxy (HA = High Availability)
+* Traefik
+
+
+
+
 
 
 
