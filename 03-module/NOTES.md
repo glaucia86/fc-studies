@@ -292,6 +292,87 @@ Resumindo, escalar aplicações significa descentralizar os recursos. Tudo pode 
 * HAProxy (HA = High Availability)
 * Traefik
 
+## Resiliência
+
+Resiliência é um conjunto de estratégias adotadas intencionalmente para a *adaptação* de um sistema quando uma falha ocorre.
+
+Ter estratégias de resiliência nos possibilita minimizar os riscos de perda de dados e transações importantes para o negócio.
+
+### Proteger e ser protegido
+
+* Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com *qualidade*.
+
+* Um sistema precisa não pode ser 'egoísta' ao ponto de realizar mais requisições em um sistema que está falhando.
+
+* Um sistema lento no ar muitas vezes é pior do que um sistema dora do ar (Efeito dominó).
+
+### Health check
+
+* Sem sinais vitais, não é possível saber a "saúde" de um sistema. 
+
+* Um sistema que não está saudável possui uma chance de se recuperar caso o tráfego pare de ser direcionado a ele temporariamente.
+
+* Health check de qualidade
+
+### Rate Limit
+
+* Protege o sistema baseado no que ele foi projetado para suportar.
+
+* Preferência programada por tipo de client
+
+### Circuit Breaker
+
+Protege o sistema fazendo com que as requisições feitas para ele sejam negadas. Ex: erro 500.
+
+Agora vejamos os tipos de circuit breaker:
+
+* **Circuito aberto**: requisições não chegam ao sistema. Erro instantâneo ao client.
+* **Circuito fechado**: requisições chegam normalmente
+* **Meio aberto**: permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente.
+
+### API Gateway
+
+* Garante que requisições "inapropriadas" chegeuem até o sistema. Ex.: usuário não autenticado.
+
+* Implementa políticas de Rate Limiting, Health Check.
+
+### Service Mesh
+
+> Service Mesh é uma camada de infraestrutura de rede que gerencia o tráfego entre microservices em um ambiente de nuvem. Ele fornece recursos como descoberta de serviço, balanceamento de carga, segurança, monitoramento e resiliência. O Service Mesh é implementado como um conjunto de proxies de rede que são injetados em cada instância de microservice e que se comunicam uns com os outros para fornecer esses recursos.
+
+* Controla o tráfego de rede.
+* Evita implementações de proteção pelo próprio sistema.
+* mTLS (Mutual TLS) - Autenticação mútua entre os serviços.
+* Com Service Mesh a gente consegue trabalhar de forma automatizada com: Circuit Breaker, retry, timeout, fault inmjection, etc.
+
+### Comunicação assíncrona
+
+* Evita perda de dados.
+* Não há perda de dados no envio de uma transação de o server estiver fora.
+* Servidor pode processar a transação em seu tempo quando estiver disponível/online
+* Entender com profundidade o message broker/sistema de stream
+
+### Garantias de entrega com Retry
+
+> Exponential backoff é uma técnica usada para lidar com falhas temporárias em sistemas distribuídos. Quando uma solicitação falha, em vez de tentar novamente imediatamente, a técnica de exponential backoff espera um período de tempo crescente antes de tentar novamente. O tempo de espera aumenta exponencialmente a cada tentativa subsequente, o que ajuda a evitar sobrecarregar o sistema com solicitações repetidas. Isso pode ajudar a melhorar a resiliência do sistema e garantir que as solicitações sejam processadas com sucesso em momentos de alta carga ou instabilidade.
+
+> Exponential backoff com Jitter é uma variação da técnica de exponential backoff que adiciona um elemento aleatório ao tempo de espera antes de cada nova tentativa. Isso ajuda a evitar que várias solicitações falhadas sejam reenviadas simultaneamente, o que pode sobrecarregar o sistema. O Jitter é adicionado ao tempo de espera multiplicando-o por um valor aleatório entre 0 e 1. Por exemplo, se o tempo de espera for de 10 segundos e o Jitter for de 0,5, o tempo de espera real antes da próxima tentativa será entre 5 e 15 segundos. Essa técnica pode ajudar a melhorar a resiliência do sistema e garantir que as solicitações sejam processadas com sucesso em momentos de alta carga ou instabilidade.
+
+### Garantias de entrega com Kafka
+
+* Kafka é um sistema de mensagens distribuído que fornece uma maneira confiável de enviar mensagens entre aplicativos. Ele é projetado para lidar com grandes volumes de dados e pode ser usado para substituir sistemas de mensagens tradicionais, como JMS, RabbitMQ e AMQP. O Kafka é usado para uma variedade de casos de uso, incluindo streaming de dados, processamento de eventos, mensagens assíncronas, integração de aplicativos e muito mais.
+
+### Situações complexas e decisões de alto nível
+
+Alguns questionamentos que devem ser feitos:
+
+* O que acontece se o message broker cair?
+* Haverá perda de mensagens?
+* Seu sistema ficará fora do ar?
+* Como garantir resiliência?
+
+
+
 
 
 

@@ -18,27 +18,27 @@
   - [x] Características Operacionais
   - [x] Características Estruturais
   - [x] Características Cross Cutting
-- [ ] Performance
-  - [ ] Perspectivas para arquitetar um software
-  - [ ] Métricas para medir a performance
-  - [ ] Checklist para aumento de performance
-  - [ ] Escala concorrência e paralelismo
-  - [ ] Caching
-  - [ ] Caching vs Edge Computing
-- [ ] Escabilidade
-  - [ ] Escalabilidade
-  - [ ] Escalando Aplicações
-  - [ ] Escalando Banco de Dados
-  - [ ] Proxy Reverso
-- [ ] Resiliência
-  - [ ] Introdução a resiliência
-  - [ ] Proteger e ser protegido
-  - [ ] Health Check
-  - [ ] Rate Limit
-  - [ ] Circuit Breaker
-  - [ ] API Gateway
-  - [ ] Service Mesh
-  - [ ] Comunicação assíncrona
-  - [ ] Garantias de entrega com Retry
-  - [ ] Garantias de entrega com Kafka
-  - [ ] Situações complexas e decisões de alto nível
+- [x] Performance
+  - [x] Perspectivas para arquitetar um software
+  - [x] Métricas para medir a performance
+  - [x] Checklist para aumento de performance
+  - [x] Escala concorrência e paralelismo
+  - [x] Caching
+  - [x] Caching vs Edge Computing
+- [x] Escabilidade
+  - [x] Escalabilidade
+  - [x] Escalando Aplicações
+  - [x] Escalando Banco de Dados
+  - [x] Proxy Reverso
+- [x] Resiliência
+  - [x] Introdução a resiliência
+  - [x] Proteger e ser protegido
+  - [x] Health Check
+  - [x] Rate Limit
+  - [x] Circuit Breaker
+  - [x] API Gateway
+  - [x] Service Mesh
+  - [x] Comunicação assíncrona
+  - [x] Garantias de entrega com Retry
+  - [x] Garantias de entrega com Kafka
+  - [x] Situações complexas e decisões de alto nível
