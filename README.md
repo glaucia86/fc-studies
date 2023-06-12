@@ -16,18 +16,12 @@ Repository responsible for studies related to the Full Cycle course.
 
 **[Module 02 - Docker](./02-module/README.md)**
 
-  - Começando do Zero
-  - Código fonte
-  - Iniciando com Docker
-  - Trabalhando com Imagens
-  - Networks
-  - Colocando em prática
-  - Otimizando imagens
-  - Docker-compose
-  - Desafio
 </details>
 
 <details><summary><b>Módulo 3: Fundamentals of Software Architecture</b></summary>
+
+**[Module 03 - Fundamentos da Arquitetura de Software](./03-module/README.md)**
+
 </details>
 
 <details><summary><b>Módulo 4: Intersystem communication</b></summary>
