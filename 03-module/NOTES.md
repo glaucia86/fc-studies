@@ -1,13 +1,13 @@
-## Introdução a arquitetura de software
+# Introdução a arquitetura de software
 
-### Tipos de Arquitetura
+## Tipos de Arquitetura
 
 * Software
 * Solução
 * Tecnológica
 * Corporativa
   
-#### O que é Arquitetura Tecnológica?
+### O que é Arquitetura Tecnológica?
 
 Especialidade em tecnologias específicas de mercado. Acaba gerando valor baseado em especialidades. E, existem diversos tips de arquitetos e especialistas. Por exemplo, existem arquitetos em:
 
@@ -18,13 +18,13 @@ Especialidade em tecnologias específicas de mercado. Acaba gerando valor basead
 * SAP
 * E, por aí vai...
 
-#### O que é Arquitetura Corporativa?
+## O que é Arquitetura Corporativa?
 
 É a pessoa que impacta estrategigamente a organização como um todo. Sem contar essa pessoa consegue fazer avaliação de custos e de possíveis novas tecnologias. Outro ponto importante a mencionar , a pe pode padronizar tecnologias, processos e grandes implantações (sistemas "core" e/ou migrações). E, por fim, ela pode ser responsável por definir a estratégia de tecnologia da empresa.  
 
-### Arquiteto de Solução e Software
+## Arquiteto de Solução e Software
 
-#### O que é Arquiteto de Soluções?
+### O que é Arquiteto de Soluções?
 
 Pessoa responsável por ficar entre a área de negócios e software. Tendo que transformar requisitos de negócio em soluções de software. E um ponto importante a mencionar, essa pessoa precisa saber "desenhar", desenhar a solução arquitetorial da solução de um software para reproduzir como ele irá funcionar. Geralmente essa pessoa usa as seguintes ferramentas:
   * C4
@@ -33,7 +33,7 @@ Pessoa responsável por ficar entre a área de negócios e software. Tendo que t
 
 Essa pessoa também analisa os impactos em relação a uma escolha de uma determinada tecnologia. Pode também participar do processo comercial da pré-venda e venda. Faz analise dos impactos dos custos para o negócio.
 
-#### O que é Arquiteto de Software?
+### O que é Arquiteto de Software?
 
 A Arquitetura de Software é uma disciplina da Engenharia de Software e está diretamente ligada ao processo de desenvolvimento de software. E isso afeterá na estrutura organizacional da empresa. 
 
@@ -41,7 +41,7 @@ A Arquitetura de Software é uma disciplina da Engenharia de Software e está di
 
 O processo de arquitetar um software estabelece que o que está sendo desenvolvido faça parte de um conjunto maior.
 
-#### Papel do Arquiteto de Software
+## Papel do Arquiteto de Software
 
 Os papéis principais de um arquiteto de software são:
 
@@ -63,27 +63,27 @@ Outro ponto a ser mencionado é tomada de decisões de forma mais fria e calcula
 
 Ter mais clareza do impacto que o software possui na organização como um todo. Todo ser humano quer gerar valor e resultado, seja interno ou externo. E isso ajuda a evoluir a sua equipe e time. Outro ponto muito importante é a tomada de decisões com mais confiança. Quando você entende mais de Arquitetura, você se sente mais confiante para tomar decisões. E, por fim, você consegue se comunicar melhor com os demais envolvidos no projeto.
 
-### Arquitetura vs Design de Software
+## Arquitetura vs Design de Software
 
 * Arquitetura: escopo global ou alto nível
 * Design: escopo local ou baixo nível
 
 > "Atividades relaecionadas a arquitetura de software saão sempre de design. Entretanto nem todas as atividades de design são sobre arquitetura. O objetivo primário da arquitetura de software é garantir que os atributos de qualidade, restrições de alto nível e os objetivos do negócio, sejam atendidos pelo sistema. Qualquer decisão de design que não tenha relação com este objetivo não é arquitetural. Todas as decisões de design para um componente que não sejam visíveis fora dele, geralmente, também não são. ~ Elemar Júnior."
 
-### Sustentabilidade no dia Zero
+## Sustentabilidade no dia Zero
 
 Desenvolver software é caro. E isso pode impactar diretamente no negócio. Geralmente um determinado software resolverá uma "dor" de um cliente. Por isso que o software precisa se pagar ao longo do tempo. Procurar acompanhar a evolução do negócio. 
 
 Assim sendo, qunato mais tempo o software fica no ar, mais retorno gera. Ou seja, a solução precisa ser arquitetada.
 
-### Pilares da Arquitetura de Software
+## Pilares da Arquitetura de Software
 
 * **Estruturação**: ser de fácil evolução, componentização para atender os objetivos de negócio.
 * **Componetização**: separar as responsabilidades de cada componente.
 * **Relacionamento entre sistemas**: como os sistemas se comunicam entre si.
 * **Governança**: como o software será mantido e evoluído ao longo do tempo. Ex.: Documentação, testes, etc.
 
-### Requisitos Arquiteturais (RAs)
+## Requisitos Arquiteturais (RAs)
 
 * **Performance**: tempo de resposta, throughput, latência, etc.
 * **Armazenamento de Dados**: volume de dados, tipos de dados, onde armazenar, etc.
@@ -122,7 +122,7 @@ As características Arquiteturais são divididas em 3 grupos:
 * **Portabilidade (diversos banco de dados)**: o sistema deve ser fácil para adoção de outros bancos de dados. Ex.: ORM, etc.
 * Fácil suporte (logs, debugging): o sistema deve ser fácil para dar suporte. Foque muito em observabilidade. Ex.: logs, etc.
 
-### Características Cross-Cutting
+## Características Cross-Cutting
 
 * **Acessibilidade**: o sistema deve seguir padrões e seguir as regras de acessibilidade. Ex.: WCAG, etc.
 * **Processo de retenção e recuperação de dados (quanto tempo os dados serão mantidos)**: o sistema deve seguir as regras de retenção e recuperação de dados. Até porque isso envolve custos. Analisar o tipo de Storage que será utilizado. Ex. hot, cold, etc.
@@ -140,8 +140,7 @@ As características Arquiteturais são divididas em 3 grupos:
 * **Escabilidade**: horizontal, vertical, load balance, etc.
 * **Resiliência**: tolerância a falhas, recuperação de desastres, etc.
 
-### Métricas para medir a performance
-
+## Métricas para medir a performance
 
 O que é performance? É o desempenho que um software possui para completar um determinado workload.
 
@@ -178,13 +177,13 @@ Principais formas para aumentar eficiência são:
 * Banco de dados (índices, queries, tipos de dados, schema, etc)
 * Caching
   
-### Escala Computacional: Escala Vertical vs Escala Horizontal
+## Escala Computacional: Escala Vertical vs Escala Horizontal
 
 * **Escala Vertical**: aumentar a capacidade de processamento de um único servidor. Ex.: aumentar a memória RAM, aumentar o número de CPUs, etc.
 
 * **Escala Horizontal**: aumentar a capacidade de processamento de vários servidores. Ex.: aumentar o número de servidores, etc.
 
-### Diferença entre Concorrência e Paralelismo
+## Diferença entre Concorrência e Paralelismo
 
 > "Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é sobre fazer muitas coisas ao mesmo tempo." - Rob Pike
 
@@ -203,7 +202,7 @@ sequenceDiagram
     E->>E: 10ms
 ```
 
-### Caching
+## Caching
 
 Tipos de Caching:
 
@@ -214,7 +213,7 @@ Tipos de Caching:
   * Evita reprocessamento de algoritmos pesados
 * Objetos
 
-#### Caching Exclusivo vs Compartilhado
+### Caching Exclusivo vs Compartilhado
 
 * **Exclusivo**: cada servidor possui o seu próprio cache.
   * Baixa latência
@@ -231,7 +230,7 @@ Tipos de Caching:
     * Redis
     * Memcached
 
-### Caching vs Edge Computing
+## Caching vs Edge Computing
 
 O que é Edge Computing? É um modelo de computação distribuída que traz a computação e o armazenamento de dados mais próximo do local onde é necessário para melhorar a latência e a eficiência do tráfego de dados.
 
@@ -252,7 +251,7 @@ Quando falamos de Edge Computing, estamos em:
 
 Enquanto performance tem o foco em reduzir a latência e aumentar o throughput, a escabilidade visa termos a possibilidade de aumentar ou diminuir o throughput adicionando ou removendo a capacidade computacional.
 
-### Escalando aplicações
+## Escalando aplicações
 
 * **Disco efêmero**: disco que não é persistido. Ex.: disco de máquina virtual, etc.
 * **Servidor de aplicação vs Servidor de assets**: separar os servidores de aplicação dos servidores de assets. Ex.: imagens, vídeos, etc.
@@ -262,7 +261,7 @@ Enquanto performance tem o foco em reduzir a latência e aumentar o throughput, 
   
 Resumindo, escalar aplicações significa descentralizar os recursos. Tudo pode ser criado e destruído a qualquer momento.
 
-### Escalando banco de dados
+## Escalando banco de dados
 
 * **Aumentar recursos computacionais**: aumentar a capacidade computacional do banco de dados. Ex.: aumentar a memória RAM, aumentar o número de CPUs, etc.
 * **Distribuindo responsabilidades (escrita vs leitura)**: separar os bancos de dados de leitura dos bancos de dados de escrita.
@@ -280,13 +279,13 @@ Resumindo, escalar aplicações significa descentralizar os recursos. Tudo pode 
 * Explain nas queries
 * CQRS (Command Query Responsibility Segregation)
 
-### Proxy Reverso
+## Proxy Reverso
 
 > O que é Proxy Reverso? Um proxy reverso é um servidor que atua como intermediário entre os clientes e os servidores de destino. Ele recebe solicitações dos clientes e as encaminha para os servidores de destino, ocultando a identidade dos servidores de destino dos clientes. O proxy reverso também pode ser usado para balanceamento de carga, cache de conteúdo e segurança de rede.
 
 ![Proxy reverso](image.png)
 
-#### Soluções populares de Proxy Reverso
+### Soluções populares de Proxy Reverso
 
 * Nginx
 * HAProxy (HA = High Availability)
@@ -298,7 +297,7 @@ Resiliência é um conjunto de estratégias adotadas intencionalmente para a *ad
 
 Ter estratégias de resiliência nos possibilita minimizar os riscos de perda de dados e transações importantes para o negócio.
 
-### Proteger e ser protegido
+## Proteger e ser protegido
 
 * Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com *qualidade*.
 
@@ -306,7 +305,7 @@ Ter estratégias de resiliência nos possibilita minimizar os riscos de perda de
 
 * Um sistema lento no ar muitas vezes é pior do que um sistema dora do ar (Efeito dominó).
 
-### Health check
+## Health check
 
 * Sem sinais vitais, não é possível saber a "saúde" de um sistema. 
 
@@ -314,13 +313,13 @@ Ter estratégias de resiliência nos possibilita minimizar os riscos de perda de
 
 * Health check de qualidade
 
-### Rate Limit
+## Rate Limit
 
 * Protege o sistema baseado no que ele foi projetado para suportar.
 
 * Preferência programada por tipo de client
 
-### Circuit Breaker
+## Circuit Breaker
 
 Protege o sistema fazendo com que as requisições feitas para ele sejam negadas. Ex: erro 500.
 
@@ -330,39 +329,39 @@ Agora vejamos os tipos de circuit breaker:
 * **Circuito fechado**: requisições chegam normalmente
 * **Meio aberto**: permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente.
 
-### API Gateway
+## API Gateway
 
 * Garante que requisições "inapropriadas" chegeuem até o sistema. Ex.: usuário não autenticado.
 
 * Implementa políticas de Rate Limiting, Health Check.
 
-### Service Mesh
+## Service Mesh
 
 > Service Mesh é uma camada de infraestrutura de rede que gerencia o tráfego entre microservices em um ambiente de nuvem. Ele fornece recursos como descoberta de serviço, balanceamento de carga, segurança, monitoramento e resiliência. O Service Mesh é implementado como um conjunto de proxies de rede que são injetados em cada instância de microservice e que se comunicam uns com os outros para fornecer esses recursos.
 
 * Controla o tráfego de rede.
 * Evita implementações de proteção pelo próprio sistema.
 * mTLS (Mutual TLS) - Autenticação mútua entre os serviços.
-* Com Service Mesh a gente consegue trabalhar de forma automatizada com: Circuit Breaker, retry, timeout, fault inmjection, etc.
+* Com Service Mesh a gente consegue trabalhar de forma automatizada com: Circuit Breaker, retry, timeout, fault injection, etc.
 
-### Comunicação assíncrona
+## Comunicação assíncrona
 
 * Evita perda de dados.
 * Não há perda de dados no envio de uma transação de o server estiver fora.
 * Servidor pode processar a transação em seu tempo quando estiver disponível/online
 * Entender com profundidade o message broker/sistema de stream
 
-### Garantias de entrega com Retry
+## Garantias de entrega com Retry
 
 > Exponential backoff é uma técnica usada para lidar com falhas temporárias em sistemas distribuídos. Quando uma solicitação falha, em vez de tentar novamente imediatamente, a técnica de exponential backoff espera um período de tempo crescente antes de tentar novamente. O tempo de espera aumenta exponencialmente a cada tentativa subsequente, o que ajuda a evitar sobrecarregar o sistema com solicitações repetidas. Isso pode ajudar a melhorar a resiliência do sistema e garantir que as solicitações sejam processadas com sucesso em momentos de alta carga ou instabilidade.
 
 > Exponential backoff com Jitter é uma variação da técnica de exponential backoff que adiciona um elemento aleatório ao tempo de espera antes de cada nova tentativa. Isso ajuda a evitar que várias solicitações falhadas sejam reenviadas simultaneamente, o que pode sobrecarregar o sistema. O Jitter é adicionado ao tempo de espera multiplicando-o por um valor aleatório entre 0 e 1. Por exemplo, se o tempo de espera for de 10 segundos e o Jitter for de 0,5, o tempo de espera real antes da próxima tentativa será entre 5 e 15 segundos. Essa técnica pode ajudar a melhorar a resiliência do sistema e garantir que as solicitações sejam processadas com sucesso em momentos de alta carga ou instabilidade.
 
-### Garantias de entrega com Kafka
+## Garantias de entrega com Kafka
 
 * Kafka é um sistema de mensagens distribuído que fornece uma maneira confiável de enviar mensagens entre aplicativos. Ele é projetado para lidar com grandes volumes de dados e pode ser usado para substituir sistemas de mensagens tradicionais, como JMS, RabbitMQ e AMQP. O Kafka é usado para uma variedade de casos de uso, incluindo streaming de dados, processamento de eventos, mensagens assíncronas, integração de aplicativos e muito mais.
 
-### Situações complexas e decisões de alto nível
+## Situações complexas e decisões de alto nível
 
 Alguns questionamentos que devem ser feitos:
 
