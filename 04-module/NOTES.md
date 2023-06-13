@@ -190,7 +190,24 @@ HTTP/1.1 415 Unsupported Media Type
 
 ## Instalando Laminas API Tools
 
+O projeto modelo se encontra na pasta **module-04/laminas-samples**
 
+Projeto localizado em: [Projeto - API Tools Skeleton](https://github.com/codeedu/api-tools-skeleton.)
+
+Para executar:
+
+* Linux Users
+
+```bash
+docker build -t api-tools-test .
+docker run -p 8000:80 -v $(pwd):/var/www api-tools-test
+```
+
+* Windows Users
+
+```bash
+docker run -p 8000:80 -v %cd%:/var/www api-tools-test
+```
 
 
 
