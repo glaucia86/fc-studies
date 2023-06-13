@@ -200,12 +200,17 @@ Para executar:
 
 ```bash
 docker build -t api-tools-test .
+
+chmod +x ./.docker/entrypoint.sh
+
 docker run -p 8000:80 -v $(pwd):/var/www api-tools-test
 ```
 
 * Windows Users
 
 ```bash
+chmod +x ./.docker/entrypoint.sh
+
 docker run -p 8000:80 -v %cd%:/var/www api-tools-test
 ```
 
