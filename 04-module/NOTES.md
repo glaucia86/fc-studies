@@ -214,6 +214,23 @@ chmod +x ./.docker/entrypoint.sh
 docker run -p 8000:80 -v %cd%:/var/www api-tools-test
 ```
 
+## GraphQL
+
+### Introdução à GraphQL
+
+> O que é Graphql? GraphQL é uma linguagem de consulta de dados desenvolvida e usada pelo Facebook desde 2012. Ela foi criada com o objetivo de prover uma interface flexível e com boa performance para buscar e manipular dados em APIs, e atualmente é utilizada por muitas empresas como GitHub, Pinterest, Shopify e Intuit.
+
+### Gerando esqueleto do servidor GraphQL
+
+Hands-on usando gqlgen! Para executar o projeto, basta executar o comando abaixo: 
+
+* 04-module/go-graphql
+
+```bash
+go run server.go
+```
+
+
 
 
 
