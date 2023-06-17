@@ -262,6 +262,52 @@ Agora deve exibir "on" como o valor de GO111MODULE, indicando que os módulos Go
 
 Lembre-se de definir a variável de ambiente antes de executar quaisquer comandos Go ou iniciar seu programa Go para garantir que os módulos sejam usados corretamente.
 
+> As queries se encontram no arquivo: 'api.http'
+
+Para criar a base de dados usando o `sqlite3`, digite o seguinte comando no terminal:
+
+```bash
+sqlite3 test.db
+```
+
+Para criar a tabela, digite o seguinte comando no terminal:
+
+```bash
+create table categories (id string, name string, description string);
+```
+
+Para testar se está tudo funcionando, execute a aplicação:
+
+```bash
+go run cmd/server/server.go
+```
+
+Abra o browser e digite a seguinte URL:
+
+```bash
+http://localhost:8080/
+```
+
+E digite a seguinte `mutation` para criar uma nova categoria:
+
+```graphql
+mutation newCategory {
+  createCategory(input: {name: "Category 1", description: "Category 1 description"}) {
+    id
+    name
+    description
+  }
+}
+```
+
+Retorne até o terminal do `sqlite3` e digite o seguinte comando para verificar se a categoria foi criada:
+
+```bash
+select * from categories;
+```
+
+Se tudo estiver funcionando corretamente, você verá a categoria criada no terminal.
+
 
 
 
