@@ -2,17 +2,17 @@
 
 ## What I learned
 
-- [ ] Introdução
-  - [ ] Introdução
-  - [ ] Comunicação Sincrona vs Assincrona
+- [x] Introdução
+  - [x] Introdução
+  - [x] Comunicação Sincrona vs Assincrona
 
-- [ ] REST
-  - [ ] REST e Níveis de Maturidade
-  - [ ] Method e Content Negotiation
-  - [ ] Instalando Laminas API Tools
-  - [ ] Content Negotiation na Pratica
-  - [ ] Usando imagem oficial do PHP do Docker Hub
-  - [ ] Ambiente para executar o Laminas API Tools
+- [x] REST
+  - [x] REST e Níveis de Maturidade
+  - [x] Method e Content Negotiation
+  - [x] Instalando Laminas API Tools
+  - [x] Content Negotiation na Pratica
+  - [x] Usando imagem oficial do PHP do Docker Hub
+  - [x] Ambiente para executar o Laminas API Tools
 
 - [ ] GraphQL
   - [ ] Introdução ao GraphQL
