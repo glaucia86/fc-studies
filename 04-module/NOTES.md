@@ -230,6 +230,37 @@ Hands-on usando gqlgen! Para executar o projeto, basta executar o comando abaixo
 go run server.go
 ```
 
+> Pode acontecer de haver a necessidade de habilitar o `GO111MODULE` para que o projeto funcione corretamente. Para isso, siga as instruções abaixo:
+
+Para ativar os módulos Go, você pode definir a variável de ambiente GO111MODULE como "on". Veja como fazer:
+
+Para sistemas baseados em Unix (Linux, macOS, etc.):
+
+```bash
+export GO111MODULE=on
+```
+
+Para sistemas Windows (Prompt de Comando):
+
+```bash
+set GO111MODULE=on
+```
+
+Para sistemas Windows (PowerShell):
+
+```bash
+$env:GO111MODULE = "on"
+```
+
+Depois de definir a variável de ambiente, você pode verificar a alteração executando o seguinte comando:
+
+```bash
+go env GO111MODULE
+```
+
+Agora deve exibir "on" como o valor de GO111MODULE, indicando que os módulos Go estão habilitados.
+
+Lembre-se de definir a variável de ambiente antes de executar quaisquer comandos Go ou iniciar seu programa Go para garantir que os módulos sejam usados corretamente.
 
 
 
