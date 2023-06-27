@@ -8,7 +8,7 @@ mutation createCategory {
     }
 }
 
-# query: Get Category
+# query: Get Categories
 
 query queryCategory {
     categories {
