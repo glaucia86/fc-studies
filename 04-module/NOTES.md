@@ -308,8 +308,8 @@ select * from categories;
 
 Se tudo estiver funcionando corretamente, você verá a categoria criada no terminal.
 
-
-
+> para obter mais informações sobre o gqlgen, acesse o link: [gqlgen](https://gqlgen.com/)
+> como exercício dessa parte do módulo, criar um CRUD completo com GraphQL usando o TypeORM e TypeScript.
 
 
 
