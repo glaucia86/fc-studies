@@ -22,7 +22,7 @@ resolver:
   layout: follow-schema
   dir: graph
   package: graph
-  filename_template: "{name}.resolvers.go"
+  filename_template: '{name}.resolvers.go'
   # Optional: turn on to not generate template comments above resolvers
   # omit_template_comment: false
 
@@ -71,6 +71,12 @@ autobind:
 # modelgen, the others will be allowed when binding to fields. Configure them to
 # your liking
 models:
+  Category:
+    model:
+      - github.com/devfullcycle/13-GraphQL/graph/model.Category
+  Course:
+    model:
+      - github.com/devfullcycle/13-GraphQL/graph/model.Course
   ID:
     model:
       - github.com/99designs/gqlgen/graphql.ID
