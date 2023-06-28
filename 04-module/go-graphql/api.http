@@ -16,6 +16,28 @@ query queryCategories {
   }
 }
 
+query queryCategoriesWithCourses {
+  categories {
+    id
+    name
+    courses {
+      id
+      name
+    }
+  }
+}
+
+query queryCoursesWithCategory {
+  courses {
+    id
+    name
+    category {
+      id
+      name
+    }
+  }
+}
+
 mutation createCourse {
   createCourse(input: {name: "Full Cycle", description: "A hands-on course!", categoryId: "b44a7ce0-ccb6-4f76-9cd2-7e2268a91cc1"}) {
     id
@@ -29,3 +51,4 @@ query queryCourses {
     name
   }
 }
+
