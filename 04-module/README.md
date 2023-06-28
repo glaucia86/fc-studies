@@ -14,20 +14,20 @@
   - [x] Usando imagem oficial do PHP do Docker Hub
   - [x] Ambiente para executar o Laminas API Tools
 
-- [ ] GraphQL
-  - [ ] Introdução ao GraphQL
-  - [ ] Gerando esqueleto do servidor GraphQL
-  - [ ] Criando Schema GraphQL
-  - [ ] Gerando esqueleto de nossa aplicação
-  - [ ] Criando resolver para Category
-  - [ ] Persistindo Category via Playground
-  - [ ] Fazendo queries de Category
-  - [ ] Implementando CourseDB
-  - [ ] Criando resolver de CreateCourse
-  - [ ] Implementando QueryCourses
-  - [ ] Dados encadeados
-  - [ ] Finalizando encadeamento de categorias
-  - [ ] gqlgen
+- [x] GraphQL
+  - [x] Introdução ao GraphQL
+  - [x] Gerando esqueleto do servidor GraphQL
+  - [x] Criando Schema GraphQL
+  - [x] Gerando esqueleto de nossa aplicação
+  - [x] Criando resolver para Category
+  - [x] Persistindo Category via Playground
+  - [x] Fazendo queries de Category
+  - [x] Implementando CourseDB
+  - [x] Criando resolver de CreateCourse
+  - [x] Implementando QueryCourses
+  - [x] Dados encadeados
+  - [x] Finalizando encadeamento de categorias
+  - [x] gqlgen
 
 - [ ] gRPC
   - [ ] Iniciando com gRPC
