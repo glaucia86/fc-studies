@@ -1,19 +1,31 @@
-# mutation: Create Category
-
 mutation createCategory {
-    createCategory(input: { name: "Tecnologia", description: "Cursos de Tecnologia" }) {
-        id
-        name
-        description
-    }
+  createCategory(
+    input: {name: "Category 1", description: "Category 1 description"}
+  ) {
+    id
+    name
+    description
+  }
 }
 
-# query: Get Categories
+query queryCategories {
+  categories {
+    id
+    name
+    description
+  }
+}
 
-query queryCategory {
-    categories {
-        id
-        name
-        description
-    }
+mutation createCourse {
+  createCourse(input: {name: "Full Cycle", description: "A hands-on course!", categoryId: "b44a7ce0-ccb6-4f76-9cd2-7e2268a91cc1"}) {
+    id
+    name
+  }
+}
+
+query queryCourses {
+  courses {
+    id
+    name
+  }
 }
