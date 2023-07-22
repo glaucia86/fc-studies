@@ -16,7 +16,7 @@ import (
 const defaultPort = "8080"
 
 func main() {
-	db, err := sql.Open("sqlite3", "./data.db")
+	db, err := sql.Open("sqlite3", "../../data.db")
 
 	if err != nil {
 		log.Fatal("Failed to open database: %v", err)
