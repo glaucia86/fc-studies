@@ -319,6 +319,131 @@ Se tudo estiver funcionando corretamente, você verá a categoria criada no term
 
 GRPC: [Title](https://dev.to/devaddict/use-grpc-with-node-js-and-typescript-3c58)
 
+## gRPC
+
+### Conceitos iniciais
+
+#### O que é gRPC?
+
+* gRPC é um framework desenvolvido pela google que tem o objetivo de facilitar o processo de comunicação entre sistemas de uma forma extremamente rápida, leve e independente de linguagem de programação.
+* Faz parte da CNCF (Cloud Native Computing Foundation) e é um projeto open source.
+
+#### Em quais casos podemos utilizar o gRPC?
+
+* Ideal para microsserviços
+* Mobile, Browsers e Backend
+* Geração das bibliotecas de forma automática
+* Streaming bidirecional utilizando HTTP/2
+
+#### Linguagens (Suporte oficial)
+
+* gRPC-GO
+* gRPC-Java
+* gRPC-C
+  * Python
+  * Ruby
+  * Objective-C
+  * PHP
+  * C#
+  * Node.js
+  * Dart
+  * Kotlin
+
+### gRPC HTTP2 e Protocol Buffers
+
+gRPC é um Remote Procedure Call (RPC) framework que usa o HTTP/2 para transportar mensagens binárias (Protocol Buffers) entre clientes e servidores.
+
+[![what-is-rpc-in-operating-system.png](https://i.postimg.cc/RFvY9trh/what-is-rpc-in-operating-system.png)](https://postimg.cc/zLP7FVGY)
+
+#### Protocol Buffers
+
+* Protocol Buffers é uma forma de serializar dados estruturados.
+
+#### Protocol Buffers vs JSON
+
+* Arquivos binários < JSON
+* Processo de serialização é mais leve (CPU) do que JSON
+* Gasta menos recurso de rede
+* Processo é mais veloz
+
+> Exemplo de um arquivo protocol buffer
+
+```proto
+syntax = "proto3";
+
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}
+```
+
+#### HTTP/2
+
+* Nome original criado pela Google era SPDY
+* Lançado em 2015
+* Dados trafegados são binários e não texto como no HTTP 1.1
+* Utiliza a mesma conexão TCP para enviar e receber dados do cliente e do servidor (Multiplex)
+* Server Push
+* Headers são comprimidos
+* Gasta menos recursos de rede
+* Processo é mais veloz
+
+### Formatos de Comunicação
+
+#### gRPC - API 'Unary'
+
+* Uma chamada RPC simples do cliente para o servidor que retorna uma única resposta.
+* O cliente envia uma mensagem para o servidor e recebe uma resposta, como uma chamada de procedimento remoto normal.
+* Exemplo: Chamada de um método de um serviço remoto.
+
+[![grpc-api-unary.png](https://i.postimg.cc/5t9xK6P5/grpc-api-unary.png)](https://postimg.cc/cvjyr4G6)
+
+#### gRPC - API 'Server Streaming'
+
+* O cliente envia uma mensagem para o servidor e recebe uma sequência de respostas do servidor.
+* Exemplo: Chamada de um método de um serviço remoto que retorna uma sequência de resultados.
+
+[![grpc-api-server-streaming.png](https://i.postimg.cc/vHWbQWkL/grpc-api-server-streaming.png)](https://postimg.cc/SJNwdzyJ)
+
+#### gRPC - API 'Client Streaming'
+
+* O cliente envia uma sequência de mensagens para o servidor. O servidor envia uma única resposta para o cliente.
+* Exemplo: Chamada de um método de um serviço remoto que recebe uma sequência de mensagens do cliente e retorna uma única resposta.
+
+[![grpc-api-client-streaming.png](https://i.postimg.cc/fbghH5SZ/grpc-api-client-streaming.png)](https://postimg.cc/yJ95xmTr)
+
+#### gRPC - API 'Bidirectional Streaming'
+
+* Ambos os lados enviam uma sequência de mensagens usando um canal bidirecional. Isso é semelhante a uma chamada de procedimento remoto duplex.
+* Exemplo: Chamada de um método de um serviço remoto que recebe uma sequência de mensagens do cliente e retorna uma sequência de mensagens com uma única resposta para cada mensagem recebida.
+
+[![grpc-api-bi-directional-streaming.png](https://i.postimg.cc/mrPnr4hf/grpc-api-bi-directional-streaming.png)](https://postimg.cc/cKNhDVQX)
+
+### REST vs gRPC
+
+- REST
+  * Texto/JSON
+  * Uni-direcional
+  * Alta latência
+  * Sem contrato (maior chance de erros)
+  * Sem suporte a streaming (Request/Response)
+  * Design pré-definido
+  * Bibliotecas de terceiros
+
+- gRPC
+  * Protocol Buffers
+  * Bi-direcional e assícrono
+  * Baixa latência
+  * Contrato definido (.proto)
+  * Suporte a streaming (Request/Response)
+  * Design é definido
+  * Geração de código
+
+### gRPC vs Protocol Buffers
+
+**[Official Docs - gRPC](https://grpc.io/)**
+
 
 
 
