@@ -311,6 +311,13 @@ Se tudo estiver funcionando corretamente, você verá a categoria criada no term
 > para obter mais informações sobre o gqlgen, acesse o link: [gqlgen](https://gqlgen.com/)
 > como exercício dessa parte do módulo, criar um CRUD completo com GraphQL usando o TypeORM e TypeScript.
 
+### TODO: Fazer uma versão com TypeScript e TypeORM com GraphQL
+
+[Title](https://codetain.com/blog/implementing-server-side-crud-with-typescript-typeorm-and-graphql)
+
+[Title](https://dev.to/prisma/prototyping-a-crud-api-with-typegraphql-and-prisma-for-your-database-424c)
+
+GRPC: [Title](https://dev.to/devaddict/use-grpc-with-node-js-and-typescript-3c58)
 
 
 
