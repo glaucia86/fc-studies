@@ -480,3 +480,32 @@ O passo a passo acima é o mesmo para qualquer linguagem, basta trocar o comando
 ```bash
 go mod tidy
 ```
+
+4. Agora crie uma pasta chamada: `proto` e dentro dela crie um arquivo chamado: `course_category.proto` e cole o seguinte código:
+
+```proto
+syntax = "proto3";
+package pb;
+option go_package = "internal/pb";
+
+message Category {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message CreateCategoryRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message CreateCategoryResponse {
+  Category category = 1;
+}
+
+service CategoryService {
+  rpc CreateCategory(CreateCategoryRequest) returns (CreateCategoryResponse) { }
+}
+```
+
+O que esse arquivo faz? Ele define o contrato da comunicação entre o client e o server, ou seja, ele define o que o client pode enviar e o que o server pode receber e vice-versa.
