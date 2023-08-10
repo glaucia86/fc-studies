@@ -509,3 +509,9 @@ service CategoryService {
 ```
 
 O que esse arquivo faz? Ele define o contrato da comunicação entre o client e o server, ou seja, ele define o que o client pode enviar e o que o server pode receber e vice-versa.
+
+5. Agora execute o comando abaixo para gerar o código
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+```
