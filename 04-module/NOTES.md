@@ -515,3 +515,9 @@ O que esse arquivo faz? Ele define o contrato da comunicação entre o client e 
 ```bash
 protoc --go_out=. --go-grpc_out=. proto/course_category.proto
 ```
+
+Será gerado uma pasta dentro de `internal` chamada `pb` e dentro dela terá os arquivos: `course_category.pb.go` e `course_category_grpc.pb.go`
+
+[![Screen-Shot-08-10-23-at-07-22-PM.png](https://i.postimg.cc/5ty0QqFk/Screen-Shot-08-10-23-at-07-22-PM.png)](https://postimg.cc/qtf09Kw8)
+
+
