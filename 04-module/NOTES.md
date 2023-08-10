@@ -499,13 +499,14 @@ message CreateCategoryRequest {
   string description = 2;
 }
 
-message CreateCategoryResponse {
+message CategoryResponse {
   Category category = 1;
 }
 
 service CategoryService {
-  rpc CreateCategory(CreateCategoryRequest) returns (CreateCategoryResponse) { }
+  rpc CreateCategory(CreateCategoryRequest) returns (CategoryResponse) { }
 }
+
 ```
 
 O que esse arquivo faz? Ele define o contrato da comunicação entre o client e o server, ou seja, ele define o que o client pode enviar e o que o server pode receber e vice-versa.
@@ -520,4 +521,45 @@ Será gerado uma pasta dentro de `internal` chamada `pb` e dentro dela terá os 
 
 [![Screen-Shot-08-10-23-at-07-22-PM.png](https://i.postimg.cc/5ty0QqFk/Screen-Shot-08-10-23-at-07-22-PM.png)](https://postimg.cc/qtf09Kw8)
 
+6. Agora crie uma pasta chamada `service` e dentro dela crie um arquivo: `category.go` e cole o seguinte código:
 
+```go
+package service
+
+import (
+	"context"
+
+	"github.com/devfullcycle/14-gRPC/internal/database"
+	"github.com/devfullcycle/14-gRPC/internal/pb"
+)
+
+type CategoryService struct {
+	pb.UnimplementedCategoryServiceServer
+	CategoryDB database.Category
+}
+
+func NewCategoryService(categoryDB database.Category) *CategoryService {
+	return &CategoryService{
+		CategoryDB: categoryDB,
+	}
+}
+
+func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCategoryRequest) (*pb.CategoryResponse, error) {
+	category, err := c.CategoryDB.Create(in.Name, in.Description)
+
+	if err != nil {
+		return nil, err
+	}
+
+	categoryResponse := &pb.Category{
+		Id:          category.ID,
+		Name:        category.Name,
+		Description: category.Description,
+	}
+
+	return &pb.CategoryResponse{
+		Category: categoryResponse,
+		}, nil
+}
+
+```
