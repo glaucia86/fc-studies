@@ -444,6 +444,39 @@ message SearchRequest {
 
 **[Official Docs - gRPC](https://grpc.io/)**
 
+### Passo a passo: Go + gRPC
 
+Projeto: **[go-grpc]()**
 
+#### Instalação
 
+1. Instalar primeiramente o protoc
+
+* Linux, usando `apt` or `apt-get`, por exemplo
+
+```bash
+apt install -y protobuf-compiler
+protoc --version  # Ensure compiler version is 3+
+```
+
+* MacOS, usando Homebrew:
+
+```bash
+brew install protobuf
+protoc --version  # Ensure compiler version is 3+
+```
+
+2. Depois instalar o plugin do protoc para Go
+
+```bash
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+```
+
+O passo a passo acima é o mesmo para qualquer linguagem, basta trocar o comando de instalação do plugin do protoc para a linguagem desejada. E, você pode verificar na documentação oficial **[aqui](https://grpc.io/docs/languages/go/quickstart/)**
+
+3. Executando o projeto, vá até a pasta `go-grpc` e execute o comando abaixo
+
+```bash
+go mod tidy
+```
