@@ -575,6 +575,7 @@ import (
 	"github.com/devfullcycle/14-gRPC/internal/database"
 	"github.com/devfullcycle/14-gRPC/internal/pb"
 	"github.com/devfullcycle/14-gRPC/internal/service"
+	_ "github.com/mattn/go-sqlite3"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -605,4 +606,25 @@ func main() {
 		panic(err)
 	}
 }
+
+```
+
+Agora vamos instalar uma ferramenta que nos auxiliará no desenvolvimento do client do gRPC, **[Evans](https://github.com/ktr0731/evans)**
+
+8. Para instalar o Evans, execute o comando abaixo:
+
+```bash
+go install github.com/ktr0731/evans@latest
+```
+
+Agora execute o comando para executar o projeto:
+
+```bash
+go run cmd/grpcServer/main.go
+```
+
+E em outro terminal execute o comando abaixo para testar o servidor:
+
+```bash
+evans -r repl
 ```
