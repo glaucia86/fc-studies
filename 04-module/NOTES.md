@@ -630,3 +630,39 @@ evans -r repl
 ```
 
 > crie uma base de dados usando o `sqlite3` e crie uma tabela chamada `categories` com os campos: `id`, `name` e `description`
+
+Após isso, digite: `show package`. Esse comando listará os pacotes que estão disponíveis para serem usados. No nosso caso será: `pb`
+
+Em seguida digite: `package pb`. Esse comando irá selecionar o pacote que queremos usar.
+
+E para ver os serviços disponíveis desse pacote, digite: `show service`
+
+[![Captura-de-tela-2023-09-01-212749.png](https://i.postimg.cc/g0tQSKqQ/Captura-de-tela-2023-09-01-212749.png)](https://postimg.cc/JyJptZF5)
+
+E finalmente para selecionar o serviço, digite: `service CategoryService`
+
+[![Screen-Shot-09-01-23-at-10-53-PM.png](https://i.postimg.cc/7YC6mB18/Screen-Shot-09-01-23-at-10-53-PM.png)](https://postimg.cc/56VbtSkn)
+
+Para criar uma nova categoria usando gRPC com o Evans, digite o seguinte comando:
+
+```bash
+call CreateCategory
+```
+
+E digite os dados da categoria:
+
+```bash
+name: "Glaucia Lemos"
+description: "A Developer Advocate who likes to coding stuff things"
+```
+
+E se tudo estiver funcionando corretamente, você verá a seguinte resposta:
+
+````json
+{
+  "description": "A Developer Advocate who likes to coding stuff things",
+  "id": "f6ddc9c4-8398-4e8b-9cdf-a6a673191500",
+  "name": "Glaucia Lemos"
+}
+```
+
