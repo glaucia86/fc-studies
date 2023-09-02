@@ -628,3 +628,5 @@ E em outro terminal execute o comando abaixo para testar o servidor:
 ```bash
 evans -r repl
 ```
+
+> crie uma base de dados usando o `sqlite3` e crie uma tabela chamada `categories` com os campos: `id`, `name` e `description`
