@@ -33,5 +33,5 @@ func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCateg
 
 	return &pb.CategoryResponse{
 		Category: categoryResponse,
-		}, nil
+	}, nil
 }
