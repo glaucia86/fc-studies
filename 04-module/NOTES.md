@@ -890,3 +890,94 @@ func (c *Category) Find(id string) (Category, error) {
 
 </details>
 <br/>
+
+Agora é só testar o serviço recém criado usando os comandos:
+
+```bash
+go run cmd/grpcServer/main.go
+```
+
+E em outro terminal execute o comando abaixo para testar o servidor:
+
+```bash
+evans -r repl
+```
+
+### Trabalhando com Stream
+
+Trabalhar com stream é extremamente importante principalmente se você estiver trabalhando com inúmeros dados. Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto`:
+
+<details><summary><b>course_category.proto</b></summary>
+<br/>
+
+```proto
+(...)
+
+rpc CreateCategoryStream(stream CreateCategoryRequest)
+      returns (CategoryList) { }
+```
+
+</details>
+<br/>
+
+Execute o comando abaixo para atualizar o código:
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+```
+
+E agora vamos implementar esse serviço. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
+
+<details><summary><b>service/category.go</b></summary>
+<br/>
+
+```go
+
+func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateCategoryStreamServer) error {
+	categories := &pb.CategoryList{}
+
+	for {
+		category, err := stream.Recv()
+
+		if err == io.EOF {
+			return stream.SendAndClose(categories)
+		}
+
+		if err != nil {
+			return err
+		}
+
+		categoryResult, err := c.CategoryDB.Create(category.Name, category.Description)
+
+		if err != nil {
+			return err
+		}
+
+		// Aqui ele vai enviando e criando..  quando ele chegar no final do arquivo, ele vai enviar e fechar o stream
+		categories.Categories = append(categories.Categories, &pb.Category{
+			Id:          categoryResult.ID,
+			Name:        categoryResult.Name,
+			Description: categoryResult.Description,
+		})
+	}
+}
+```
+
+Vamos testar esse serviço. Execute novamente o comando abaixo:
+
+```bash
+go run cmd/grpcServer/main.go
+```
+
+E em outro terminal execute o comando abaixo para testar o servidor:
+
+```bash
+evans -r repl
+```
+
+O resultado:
+
+[![Captura-de-tela-2023-09-06-155930.png](https://i.postimg.cc/pLvdKtD8/Captura-de-tela-2023-09-06-155930.png)](https://postimg.cc/fJHZhpqT)
+
+### Trabalhando com Streams bideirecionais
+
