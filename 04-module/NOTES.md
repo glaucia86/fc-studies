@@ -979,5 +979,82 @@ O resultado:
 
 [![Captura-de-tela-2023-09-06-155930.png](https://i.postimg.cc/pLvdKtD8/Captura-de-tela-2023-09-06-155930.png)](https://postimg.cc/fJHZhpqT)
 
-### Trabalhando com Streams bideirecionais
+### Trabalhando com Streams bidirecionais
 
+Agora vamos trabalhar com streams bidirecionais. Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto`:
+
+<details><summary><b>course_category.proto</b></summary>
+<br/>
+
+```proto
+(...)
+
+service CategoryService {
+  rpc CreateCategory(CreateCategoryRequest) returns (Category) { }
+  rpc CreateCategoryStream(stream CreateCategoryRequest) returns (CategoryList) { }
+  rpc CreateCategoryBidirectional(stream CreateCategoryRequest) returns (stream Category) { }
+  rpc ListCategories(Blank) returns (CategoryList) { }
+  rpc GetCategory(CategoryGetRequest) returns (Category) { }
+}
+```
+
+</details>
+<br/>
+
+Execute o comando abaixo para atualizar o código:
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+```
+
+E agora vamos implementar esse serviço. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
+
+<details><summary><b>service/category.go</b></summary>
+<br/>
+
+```go
+func (c *CategoryService) CreateCategoryBidirectional(stream pb.CategoryService_CreateCategoryBidirectionalServer) error {
+	for {
+		category, err := stream.Recv()
+
+		if err == io.EOF {
+			return nil
+		}
+
+		if err != nil {
+			return err
+		}
+
+		categoryResult, err := c.CategoryDB.Create(category.Name, category.Description)
+
+		if err != nil {
+			return err
+		}
+
+		// Aqui ele vai enviando e criando..  quando ele chegar no final do arquivo, ele vai enviar e fechar o stream
+		err = stream.Send(&pb.Category{
+			Id:          categoryResult.ID,
+			Name:        categoryResult.Name,
+			Description: categoryResult.Description,
+		})
+
+		if err != nil {
+			return err
+		}
+	}
+}
+```
+
+Vamos testar esse serviço. Execute novamente o comando abaixo:
+
+```bash
+go run cmd/grpcServer/main.go
+```
+
+E em outro terminal execute o comando abaixo para testar o servidor:
+
+```bash
+evans -r repl
+```
+
+O que isso nos ensina? Trabalhar com stream nos ajuda a trabalhar com grandes volumes de dados. E, isso é extremamente importante quando estamos trabalhando com microsserviços. E, claro pensando em performance e escalabilidade.
