@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"io"
 
 	"github.com/devfullcycle/14-gRPC/internal/database"
 	"github.com/devfullcycle/14-gRPC/internal/pb"
@@ -70,4 +71,33 @@ func (c *CategoryService) GetCategory(ctx context.Context, in *pb.CategoryGetReq
 	}
 
 	return categoryResponse, nil
+}
+
+func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateCategoryStreamServer) error {
+	categories := &pb.CategoryList{}
+
+	for {
+		category, err := stream.Recv()
+
+		if err == io.EOF {
+			return stream.SendAndClose(categories)
+		}
+
+		if err != nil {
+			return err
+		}
+
+		categoryResult, err := c.CategoryDB.Create(category.Name, category.Description)
+
+		if err != nil {
+			return err
+		}
+
+		// Aqui ele vai enviando e criando..  quando ele chegar no final do arquivo, ele vai enviar e fechar o stream
+		categories.Categories = append(categories.Categories, &pb.Category{
+			Id:          categoryResult.ID,
+			Name:        categoryResult.Name,
+			Description: categoryResult.Description,
+		})
+	}
 }
