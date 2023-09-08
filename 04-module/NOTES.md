@@ -61,7 +61,9 @@ O modelo de maturidade de Richardson é uma classificação proposta por Leonard
 
 > O que é HATEOAS? HATEOAS é um acrônimo para Hypermedia as the Engine of Application State, que pode ser traduzido como Hipermídia como Motor do Estado da Aplicação. É um dos princípios do estilo arquitetural REST que define que a representação de um recurso deve conter links para outros recursos relacionados. Esses links permitem que o cliente navegue pela API de forma dinâmica, sem a necessidade de conhecimento prévio de quais recursos estão disponíveis.
 
-Exemplo de HATEOAS
+<details><summary><b>
+Exemplo de HATEOAS</b></summary>
+<br/>
 
 ```json
 HTTP/1.1 200 OK
@@ -85,6 +87,9 @@ Content-Length: ...
 }
 ```
 
+</details>
+<br/>
+
 ## Method e Content Negotiation
 
 ### Uma boa API REST
@@ -99,7 +104,11 @@ Content-Length: ...
 * HAL: Hypermedia Application Language
 * Siren
 
-1. Media Type = application/hal+json
+
+
+<details><summary><b>1. Media Type = application/hal+json</b></summary>
+<br/>
+
 
 ```json
 {
@@ -119,6 +128,9 @@ Content-Length: ...
   "price": 9.99
 }
 ```
+
+</details>
+<br/>
 
 ### REST: HTTP Method Negotiation
 
@@ -483,6 +495,9 @@ go mod tidy
 
 4. Agora crie uma pasta chamada: `proto` e dentro dela crie um arquivo chamado: `course_category.proto` e cole o seguinte código:
 
+<details><summary><b>course_category.proto</b></summary>
+<br/>
+
 ```proto
 syntax = "proto3";
 package pb;
@@ -509,6 +524,9 @@ service CategoryService {
 
 ```
 
+</details>
+<br/>
+
 O que esse arquivo faz? Ele define o contrato da comunicação entre o client e o server, ou seja, ele define o que o client pode enviar e o que o server pode receber e vice-versa.
 
 5. Agora execute o comando abaixo para gerar o código
@@ -522,6 +540,9 @@ Será gerado uma pasta dentro de `internal` chamada `pb` e dentro dela terá os 
 [![Screen-Shot-08-10-23-at-07-22-PM.png](https://i.postimg.cc/5ty0QqFk/Screen-Shot-08-10-23-at-07-22-PM.png)](https://postimg.cc/qtf09Kw8)
 
 6. Agora crie uma pasta chamada `service` e dentro dela crie um arquivo: `category.go` e cole o seguinte código:
+
+<details><summary><b>service/category.go</b></summary>
+<br/>
 
 ```go
 package service
@@ -563,7 +584,13 @@ func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCateg
 }
 ```
 
+</details>
+<br/>
+
 7. Agora vamos criar o servidor do gRPC, para isso crie uma pasta chamada `cmd/grpcServer` e dentro da pasta crie um arquivo chamado: `main.go` e cole o seguinte código:
+
+<details><summary><b>main.go</b></summary>
+<br/>
 
 ```go
 package main
@@ -608,6 +635,9 @@ func main() {
 }
 
 ```
+
+</details>
+<br/>
 
 Agora vamos instalar uma ferramenta que nos auxiliará no desenvolvimento do client do gRPC, **[Evans](https://github.com/ktr0731/evans)**
 
@@ -658,7 +688,7 @@ description: "A Developer Advocate who likes to coding stuff things"
 
 E se tudo estiver funcionando corretamente, você verá a seguinte resposta:
 
-````json
+```json
 {
   "description": "A Developer Advocate who likes to coding stuff things",
   "id": "f6ddc9c4-8398-4e8b-9cdf-a6a673191500",
@@ -666,3 +696,197 @@ E se tudo estiver funcionando corretamente, você verá a seguinte resposta:
 }
 ```
 
+Agora nós vamos criar um `CategoryList` para isso, abre o arquivo: `course_category.proto` e cole o seguinte código:
+
+<details><summary><b>course_category.proto</b></summary>
+<br/>
+
+```proto
+syntax = "proto3";
+package pb;
+option go_package = "internal/pb";
+
+message Blank {
+  string blank = 1;
+}
+
+message Category {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message CreateCategoryRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message CategoryResponse {
+  Category category = 1;
+}
+
+message CategoryList {
+  repeated Category categories = 1;
+}
+
+service CategoryService {
+  rpc CreateCategory(CreateCategoryRequest) returns (Category) { }
+  rpc ListCategories(Blank) returns (CategoryList) { }
+}
+```
+
+</details>
+<br/>
+
+Agora execute o comando abaixo para gerar o código:
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+```
+
+Agora nós vamos implementar esse serviço. Para isso, abre o arquivo: `category.go` e inclua o seguinte código:
+
+<details><summary><b>category.go</b></summary>
+<br/>
+
+```go
+func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCategoryRequest) (*pb.Category, error) {
+	category, err := c.CategoryDB.Create(in.Name, in.Description)
+
+	if err != nil {
+		return nil, err
+	}
+
+	categoryResponse := &pb.Category{
+		Id:          category.ID,
+		Name:        category.Name,
+		Description: category.Description,
+	}
+
+	return categoryResponse, nil
+}
+
+func (c *CategoryService) ListCategories(ctx context.Context, in *pb.Blank) (*pb.CategoryList, error) {
+	categories, err := c.CategoryDB.FindAll()
+
+	if err != nil {
+		return nil, err
+	}
+
+	var categoriesResponse []*pb.Category
+
+	for _, category := range categories {
+		categoryResponse := &pb.Category{
+			Id:          category.ID,
+			Name:        category.Name,
+			Description: category.Description,
+		}
+
+		categoriesResponse = append(categoriesResponse, categoryResponse)
+	}
+
+	return &pb.CategoryList{Categories: categoriesResponse}, nil
+}
+```
+
+</details>
+<br/>
+
+Agora vamos testar o serviço usando o Evans. Para isso, digite o seguinte comando:
+
+```bash
+go run cmd/grpcServer/main.go
+```
+
+E em outro terminal execute o comando abaixo para testar o servidor:
+
+```bash
+evans -r repl
+```
+
+E digite o seguinte comando para listar as categorias:
+
+```bash
+call ListCategories
+```
+
+### Buscando uma Categoria (Get Category by ID)
+
+Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto` e inclua:
+
+<details><summary><b>course_category.proto</b></summary>
+<br/>
+
+```proto
+(...)
+
+message CategoryGetRequest {
+  string id = 1;
+}
+
+service CategoryService {
+    rpc CreateCategory(CreateCategoryRequest) returns (Category) { }
+  rpc ListCategories(Blank) returns (CategoryList) { }
+  rpc GetCategory(CategoryGetRequest) returns (Category) { }
+}
+```
+
+</details>
+<br/>
+
+Agora vamos atualizar o que recentemente colocar no código usando o comando: 
+
+```bash
+protoc --go_out=. --go-grpc_out=. proto/course_category.proto
+```
+
+Agora é o momento da gente fazer a implementação dessa interface chamada `GetCategory`. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
+
+<details><summary><b>service/category.go</b></summary>
+<br/>
+
+```go
+func (c *CategoryService) GetCategory(ctx context.Context, in *pb.CategoryGetRequest) (*pb.Category, error) {
+	category, err := c.CategoryDB.Find(in.Id)
+
+	if err != nil {
+		return nil, err
+	}
+
+	categoryResponse := &pb.Category{
+		Id:          category.ID,
+		Name:        category.Name,
+		Description: category.Description,
+	}
+
+	return categoryResponse, nil
+}
+```
+
+</details>
+<br/>
+
+Precisamos antes de executar esse código, atualizar o arquivo `database/category.go` para incluir o seguinte código:
+
+<details><summary><b>database/category.go</b></summary>
+<br/>
+
+```go
+func (c *Category) Find(id string) (Category, error) {
+	var name, description string
+	err := c.db.QueryRow("SELECT name, description FROM categories WHERE id = $1", id).Scan(&name, &description)
+
+	if err != nil {
+		return Category{}, err
+	}
+
+	return Category{
+		ID:          id,
+		Name:        name,
+		Description: description,
+	}, nil
+}
+```
+
+</details>
+<br/>
