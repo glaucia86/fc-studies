@@ -1101,8 +1101,25 @@ O consul também garante recursos relacionados com segurança.
 
 Sobre Consul Health Check [aqui](https://developer.hashicorp.com/consul/tutorials/developer-discovery/service-registration-health-checks?in=consul%2Fdeveloper-discovery)
 
+Ele roda em diferentes provedores de nuvem. E, melhor eles conseguem se comunicar independente da nuvem que estiverem. Ele é uma ferramenta Multi-Cloud.
+
+[![1639531697-multiplatformservicemesh.jpg](https://i.postimg.cc/5NFkTGtQ/1639531697-multiplatformservicemesh.jpg)](https://postimg.cc/mtBwFmCT)
 
 ### Agent, Client e Server
+
+- **Agent:** processo que fica sendo executado em todos nós do cluster. Pode estar sendo executado em Client Mode ou Server Mode.
+
+- **Client:** registra os serviços localmente, Health Check, encaminha as informações e configurações dos serviços para o Server
+
+- **Server:** mantém o estado do cluster, registra os serviços, Membership (que é o client e que é o server), retorno de queries (DNS ou API), troca de informações entre datacenters, etc.
+
+#### Dev Mode
+
+- Nunca utilize em produção
+- Não é recomendado para ambientes de produção
+- Roda como servidor
+- Não escala
+- Registra tudo em memória
 
 ### Iniciando um agente consul
 
