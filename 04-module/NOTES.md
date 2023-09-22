@@ -1058,3 +1058,66 @@ evans -r repl
 ```
 
 O que isso nos ensina? Trabalhar com stream nos ajuda a trabalhar com grandes volumes de dados. E, isso é extremamente importante quando estamos trabalhando com microsserviços. E, claro pensando em performance e escalabilidade.
+
+## Service Discovery e Consul
+
+### Entendendo o contexto
+
+#### Perguntas a se fazer?
+
+- Qual máquina chamar?
+- Qual porta utilizar?
+- Precisamos saber o IP de cada instância?
+- Como saber se tenho permissão para acessar?
+
+#### Service Discovery
+
+- Descobre as máquinas disponíveis para acesso
+- Segmentação de máquinas para garantir segurança
+- Resoluções via DNS
+- Health Check
+- Como saber se tenho permissão para acessar
+
+### Visão geral do Consul
+
+#### Hashicorp Consul
+
+Sobre o [consul](https://www.consul.io/)
+
+- Service Discovery
+- Service Segmentation
+- Load Balancer na Borda (Layer 7)
+- Key/Value Configuration
+- Health Check
+- Open Source/Enterprise
+
+O consul também garante recursos relacionados com segurança. 
+
+### Service Registry
+
+[![1639507071-discoverserviceswithdnsorapi.jpg](https://i.postimg.cc/MZfcQbTm/1639507071-discoverserviceswithdnsorapi.jpg)](https://postimg.cc/grdk9h3x)
+
+### Health Check e Multicloud
+
+Sobre Consul Health Check [aqui](https://developer.hashicorp.com/consul/tutorials/developer-discovery/service-registration-health-checks?in=consul%2Fdeveloper-discovery)
+
+
+### Agent, Client e Server
+
+### Iniciando um agente consul
+
+### Criando nosso cluster
+
+### Criando primeiro client
+
+### Registrando o serviço
+
+### Registrando segundo serviço com retry join
+
+### Implementando checks
+
+### Sincronizando server via arquivo
+
+### Trabalhando com criptografia
+
+### User Interface e dicas para Produção
