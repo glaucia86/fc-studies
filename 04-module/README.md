@@ -29,35 +29,35 @@
   - [x] Finalizando encadeamento de categorias
   - [x] gqlgen
 
-- [ ] gRPC
-  - [ ] Iniciando com gRPC
-  - [ ] Conceitos iniciais
-  - [ ] gRPC HTTP2 e Protocol Buffers
-  - [ ] Formatos de comunicação
-  - [ ] REST vs gRPC
-  - [ ] gRPC vs Protocol Buffers
-  - [ ] Instalando compilador e plugins
-  - [ ] Fazendo setup do projeto
-  - [ ] Criando nosso protofile
-  - [ ] Fazendo geração de código com protoc
-  - [ ] Implementando CreateCategory
-  - [ ] Criando servidor gRPC
-  - [ ] Interagindo com evans
-  - [ ] Criando categoryList no protofile
-  - [ ] Listando categories
-  - [ ] Buscando uma categoria
-  - [ ] Trabalhando com stream
-  - [ ] Trabalhando com streams bidirecionais
+- [x] gRPC
+  - [x] Iniciando com gRPC
+  - [x] Conceitos iniciais
+  - [x] gRPC HTTP2 e Protocol Buffers
+  - [x] Formatos de comunicação
+  - [x] REST vs gRPC
+  - [x] gRPC vs Protocol Buffers
+  - [x] Instalando compilador e plugins
+  - [x] Fazendo setup do projeto
+  - [x] Criando nosso protofile
+  - [x] Fazendo geração de código com protoc
+  - [x] Implementando CreateCategory
+  - [x] Criando servidor gRPC
+  - [x] Interagindo com evans
+  - [x] Criando categoryList no protofile
+  - [x] Listando categories
+  - [x] Buscando uma categoria
+  - [x] Trabalhando com stream
+  - [x] Trabalhando com streams bidirecionais
 
 - [ ] Service Discovery e Consul
-  - [ ] Introdução ao capítulo
-  - [ ] Entendendo o contexto
-  - [ ] Visão geral do Consul
-  - [ ] Service registry
-  - [ ] Health check e Multicloud
-  - [ ] Agent, Client e Server
-  - [ ] Iniciando com agente consul
-  - [ ] Criando nosso cluster
+  - [x] Introdução ao capítulo
+  - [x] Entendendo o contexto
+  - [x] Visão geral do Consul
+  - [x] Service registry
+  - [x] Health check e Multicloud
+  - [x] Agent, Client e Server
+  - [x] Iniciando com agente consul
+  - [x] Criando nosso cluster
   - [ ] Criando primeiro client
   - [ ] Registrando serviço
   - [ ] Registrando segundo serviço com retry join
