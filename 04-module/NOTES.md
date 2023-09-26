@@ -1225,11 +1225,193 @@ dig @localhost -p 8600 consul01.node.consul
 
 Ele retornar o ip do servidor consul: `consul01.node.consul.   0       IN      A       127.0.0.1`
 
-```bash
-
-
-
 ### Criando nosso cluster
+
+Vamos criar um cluster com 3 nós. Para isso, crie um arquivo chamado: `docker-compose.yml` e inclua o seguinte código:
+
+<details><summary><b>docker-compose.yml</b></summary>
+<br/>
+
+```yml
+version: '3'
+
+services:
+  consulserver01:
+    image: consul:1.10
+    container_name: consulserver01
+    hostname: consulserver01
+    command: ['tail', '-f', '/dev/null']
+  consulserver02:
+    image: consul:1.10
+    container_name: consulserver02
+    hostname: consulserver02
+    command: ['tail', '-f', '/dev/null']
+  consulserver03:
+    image: consul:1.10
+    container_name: consulserver03
+    hostname: consulserver03
+    command: ['tail', '-f', '/dev/null']
+```
+</details>
+<br/>
+
+E, novamente execute o comando abaixo:
+
+```bash
+docker-compose up -d
+docker compose ps
+```
+
+Agora vamos levantar o cluster. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulserver01 sh
+```
+
+Agora vamos iniciar o agente consul. Mas, antes precisamos identificar o ip da máquina. Para isso, execute o comando abaixo: (rede do Docker)
+
+```bash
+ifconfig
+```
+
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker)
+
+Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
+
+```bash
+mkdir /etc/consul.d
+mkdir /var/lib/consul
+```
+
+```bash
+consul agent -server -bootstrap-expect=3 -node=consulserver01 -bind=<numero-do-ip-eth0> -data-dir=/var/lib/consul -config-dir=/etc/consul.d
+```
+
+Após executar esse comando, abre um novo terminal e vamos verificar os `members`. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulserver01 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+consul members
+```
+
+> Resposta: 
+
+```bash
+/ # consul members
+Node            Address          Status  Type    Build    Protocol  DC   Segment
+consulserver01  <numero-do-ip-eth0>:8301  alive   server  1.10.12  2         dc1  <all>
+```
+
+Vamos criar um novo agente. Para isso, abre um novo terminal e execute o comando abaixo:
+
+```bash
+docker exec -it consulserver02 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+ifconfig
+```
+
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker) 172.20.0.2
+
+Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
+
+```bash
+mkdir /etc/consul.d
+mkdir /var/lib/consul
+```
+
+```bash
+consul agent -server -bootstrap-expect=3 -node=consulserver02 -bind=<numero-do-ip-eth0> -data-dir=/var/lib/consul -config-dir=/etc/consul.d
+```
+
+Após executar esse comando, abre um novo terminal e vamos verificar os `members`. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulserver01 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+consul members
+```
+
+Ok. Agora temos 2 servidores executando em máquinas diferentes. Porém, queremos que eles se comuniquem. Para isso, execute o comando abaixo:
+
+```bash
+consul join <numero-do-ip-eth0>
+```
+
+Aparecerá a seguinte mensagem: `Successfully joined cluster by contacting 1 nodes.`
+
+Agora, digitar o comando `consul members`, aparecerá os 2 servidores sendo executados em um único `cluster`.
+
+Mas, nos propusemos a colocar 3 servidores. Então, vamos criar um novo agente. Para isso, abre um novo terminal e execute o comando abaixo:
+
+```bash
+docker exec -it consulserver03 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+ifconfig
+```
+
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker)
+
+Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
+
+```bash
+mkdir /etc/consul.d
+mkdir /var/lib/consul
+```
+
+```bash
+consul agent -server -bootstrap-expect=3 -node=consulserver03 -bind=172.20.0.3 -data-dir=/var/lib/consul -config-dir=/etc/consul.d
+```
+
+Após executar esse comando, abre um novo terminal e vamos verificar os `members`. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulserver03 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+consul members
+```
+
+Agora podemos notar que as 3 máquinas estão executando em um único `cluster`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Criando primeiro client
 
