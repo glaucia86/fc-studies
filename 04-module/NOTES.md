@@ -1123,6 +1123,112 @@ Ele roda em diferentes provedores de nuvem. E, melhor eles conseguem se comunica
 
 ### Iniciando um agente consul
 
+Crie um arquivo `docker-compose.yml` e inclua o seguinte código:
+
+<details><summary><b>docker-compose.yml</b></summary>
+<br/>
+
+```yml
+version: '3'
+
+services:
+  consul01:
+    image: consul:1.10
+    container_name: consul01
+    hostname: consul01
+    command: ['tail', '-f', '/dev/null']
+```
+
+</details>
+<br/>
+
+Em seguida execute o comando abaixo:
+
+```bash
+docker-compose up -d
+docker compose ps
+```
+
+Agora que está executando, queremos entrar nesse container. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consul01 sh
+```
+
+Dentro do container, execute o comando abaixo:
+
+```bash
+consul agent -dev
+```
+
+O que esse comando faz? Ele inicia o agente consul em modo de desenvolvimento. E, ele vai executar em modo de servidor e client. 
+Para ver como podemos trabalhar com comunicação entre sistemas, abre um novo terminal e repita os passos para entrar no container. Depois que entrar no container, digite agora:
+
+```bash
+consul members
+```
+
+O que esse comando faz? Ele mostra os membros que estão no cluster. E, como estamos em modo de desenvolvimento, ele mostra apenas um membro.
+
+```bash
+/ # consul members
+Node      Address         Status  Type    Build    Protocol  DC   Segment
+consul01  127.0.0.1:8301  alive   server  1.10.12  2         dc1  <all>
+```
+
+Vamos acessar agora os `catalogs`. Para isso, digite o seguinte comando:
+
+```bash
+curl localhost:8500/v1/catalog/nodes
+```
+
+Ao digitar esse comando apresentará o seguinte resultado:
+
+```json
+[
+  {
+    "ID": "2a90e273-580a-848f-66d8-2b70a74bc1ff",
+    "Node": "consul01",
+    "Address": "127.0.0.1",
+    "Datacenter": "dc1",
+    "TaggedAddresses": {
+      "lan": "127.0.0.1",
+      "lan_ipv4": "127.0.0.1",
+      "wan": "127.0.0.1",
+      "wan_ipv4": "127.0.0.1"
+    },
+    "Meta": {
+      "consul-network-segment": ""
+    },
+    "CreateIndex": 11,
+    "ModifyIndex": 12
+  }
+]
+```
+
+O plano de controle do Consul contém um ou mais `datacenters`. Um `datacenter` é a menor unidade da infraestrutura do Consul que pode realizar operações básicas do Consul. Um datacenter contém pelo menos um agente de servidor Consul, mas uma implantação no mundo real contém três ou cinco agentes de servidor e vários agentes de cliente do Consul. Você pode criar vários datacenters e permitir que nós em diferentes datacenters interajam entre si. Mais informações **[AQUI](https://developer.hashicorp.com/consul/docs/architecture)**.
+
+E, mais sobre Gossip Protocol **[AQUI](https://developer.hashicorp.com/consul/docs/architecture/gossip)**.
+Com Consul, você consegue trabalhar com API e Servidor DNS.
+
+Vamos criar um servidor DNS. Mas, antes precisamos atualizar o `bind-tools`. Para isso, execute o comando abaixo:
+
+```bash
+apk -U add bind-tools
+```
+
+Agora, vamos fazer a consulta. Para isso, digite o seguinte comando:
+
+```bash
+dig @localhost -p 8600 consul01.node.consul
+```
+
+Ele retornar o ip do servidor consul: `consul01.node.consul.   0       IN      A       127.0.0.1`
+
+```bash
+
+
+
 ### Criando nosso cluster
 
 ### Criando primeiro client
