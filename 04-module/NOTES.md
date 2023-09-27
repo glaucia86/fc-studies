@@ -495,8 +495,7 @@ go mod tidy
 
 4. Agora crie uma pasta chamada: `proto` e dentro dela crie um arquivo chamado: `course_category.proto` e cole o seguinte código:
 
-<details><summary><b>course_category.proto</b></summary>
-<br/>
+- course_category.proto
 
 ```proto
 syntax = "proto3";
@@ -524,9 +523,6 @@ service CategoryService {
 
 ```
 
-</details>
-<br/>
-
 O que esse arquivo faz? Ele define o contrato da comunicação entre o client e o server, ou seja, ele define o que o client pode enviar e o que o server pode receber e vice-versa.
 
 5. Agora execute o comando abaixo para gerar o código
@@ -541,8 +537,7 @@ Será gerado uma pasta dentro de `internal` chamada `pb` e dentro dela terá os 
 
 6. Agora crie uma pasta chamada `service` e dentro dela crie um arquivo: `category.go` e cole o seguinte código:
 
-<details><summary><b>service/category.go</b></summary>
-<br/>
+- service/category.go
 
 ```go
 package service
@@ -584,13 +579,9 @@ func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCateg
 }
 ```
 
-</details>
-<br/>
-
 7. Agora vamos criar o servidor do gRPC, para isso crie uma pasta chamada `cmd/grpcServer` e dentro da pasta crie um arquivo chamado: `main.go` e cole o seguinte código:
 
-<details><summary><b>main.go</b></summary>
-<br/>
+- main.go
 
 ```go
 package main
@@ -635,9 +626,6 @@ func main() {
 }
 
 ```
-
-</details>
-<br/>
 
 Agora vamos instalar uma ferramenta que nos auxiliará no desenvolvimento do client do gRPC, **[Evans](https://github.com/ktr0731/evans)**
 
@@ -698,8 +686,7 @@ E se tudo estiver funcionando corretamente, você verá a seguinte resposta:
 
 Agora nós vamos criar um `CategoryList` para isso, abre o arquivo: `course_category.proto` e cole o seguinte código:
 
-<details><summary><b>course_category.proto</b></summary>
-<br/>
+- course_category.proto
 
 ```proto
 syntax = "proto3";
@@ -735,9 +722,6 @@ service CategoryService {
 }
 ```
 
-</details>
-<br/>
-
 Agora execute o comando abaixo para gerar o código:
 
 ```bash
@@ -746,8 +730,7 @@ protoc --go_out=. --go-grpc_out=. proto/course_category.proto
 
 Agora nós vamos implementar esse serviço. Para isso, abre o arquivo: `category.go` e inclua o seguinte código:
 
-<details><summary><b>category.go</b></summary>
-<br/>
+- category.go
 
 ```go
 func (c *CategoryService) CreateCategory(ctx context.Context, in *pb.CreateCategoryRequest) (*pb.Category, error) {
@@ -789,9 +772,6 @@ func (c *CategoryService) ListCategories(ctx context.Context, in *pb.Blank) (*pb
 }
 ```
 
-</details>
-<br/>
-
 Agora vamos testar o serviço usando o Evans. Para isso, digite o seguinte comando:
 
 ```bash
@@ -814,8 +794,7 @@ call ListCategories
 
 Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto` e inclua:
 
-<details><summary><b>course_category.proto</b></summary>
-<br/>
+- course_category.proto
 
 ```proto
 (...)
@@ -831,9 +810,6 @@ service CategoryService {
 }
 ```
 
-</details>
-<br/>
-
 Agora vamos atualizar o que recentemente colocar no código usando o comando: 
 
 ```bash
@@ -842,8 +818,7 @@ protoc --go_out=. --go-grpc_out=. proto/course_category.proto
 
 Agora é o momento da gente fazer a implementação dessa interface chamada `GetCategory`. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
 
-<details><summary><b>service/category.go</b></summary>
-<br/>
+- service/category.go
 
 ```go
 func (c *CategoryService) GetCategory(ctx context.Context, in *pb.CategoryGetRequest) (*pb.Category, error) {
@@ -863,13 +838,9 @@ func (c *CategoryService) GetCategory(ctx context.Context, in *pb.CategoryGetReq
 }
 ```
 
-</details>
-<br/>
-
 Precisamos antes de executar esse código, atualizar o arquivo `database/category.go` para incluir o seguinte código:
 
-<details><summary><b>database/category.go</b></summary>
-<br/>
+- database/category.go
 
 ```go
 func (c *Category) Find(id string) (Category, error) {
@@ -888,9 +859,6 @@ func (c *Category) Find(id string) (Category, error) {
 }
 ```
 
-</details>
-<br/>
-
 Agora é só testar o serviço recém criado usando os comandos:
 
 ```bash
@@ -907,7 +875,7 @@ evans -r repl
 
 Trabalhar com stream é extremamente importante principalmente se você estiver trabalhando com inúmeros dados. Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto`:
 
-<details><summary><b>course_category.proto</b></summary>
+- course_category.proto
 <br/>
 
 ```proto
@@ -917,9 +885,6 @@ rpc CreateCategoryStream(stream CreateCategoryRequest)
       returns (CategoryList) { }
 ```
 
-</details>
-<br/>
-
 Execute o comando abaixo para atualizar o código:
 
 ```bash
@@ -928,8 +893,7 @@ protoc --go_out=. --go-grpc_out=. proto/course_category.proto
 
 E agora vamos implementar esse serviço. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
 
-<details><summary><b>service/category.go</b></summary>
-<br/>
+- service/category.go
 
 ```go
 func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateCategoryStreamServer) error {
@@ -962,9 +926,6 @@ func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateC
 }
 ```
 
-</details>
-<br/>
-
 Vamos testar esse serviço. Execute novamente o comando abaixo:
 
 ```bash
@@ -985,8 +946,7 @@ O resultado:
 
 Agora vamos trabalhar com streams bidirecionais. Para isso, vamos incluir o seguinte código no arquivo: `course_category.proto`:
 
-<details><summary><b>course_category.proto</b></summary>
-<br/>
+- course_category.proto
 
 ```proto
 (...)
@@ -999,9 +959,6 @@ service CategoryService {
   rpc GetCategory(CategoryGetRequest) returns (Category) { }
 }
 ```
-
-</details>
-<br/>
 
 Execute o comando abaixo para atualizar o código:
 
