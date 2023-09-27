@@ -1432,7 +1432,7 @@ services:
 </details>
 <br/>
 
-Agora, na raiz do projeto, crie um pasta e arquivo chamado: `clients/consul01`. E, agora digite o comando:
+Agora, na raiz do projeto, crie uma pasta chamado: `clients/consul01`. E, agora digite o comando:
 
 ```bash
 docker-compose up -d
@@ -1487,8 +1487,47 @@ consul members
 
 Você verá que o `client` está se comunicando com o `server`.
 
-
 ### Registrando o serviço
+
+Dentro da pasta `clients/consul01` crie um arquivo chamado: `services.json` e inclua o seguinte código:
+
+<details><summary><b>services.json</b></summary>
+<br/>
+
+```json
+{
+	"service": {
+		"id": "nginx",
+		"name": "nginx",
+		"tags": ["web"],
+		"port": 80
+	}
+}
+```
+
+Após isso, reinicie o `client` e execute o comando abaixo:
+
+> na mesma tela do prompt onde foi executado o comando: consul join <ip-do-server>
+
+```bash
+consul reload
+```
+
+Aparecerá a seguinte mensagem: `Configuration reload triggered`. Agora, na mesma tela, digite o comando:
+
+```bash
+apk -U add bind-tools
+```
+
+E, agora o comando:
+
+```bash
+dig @localhost -p 8600 nginx.service.consul
+```
+
+
+
+
 
 ### Registrando segundo serviço com retry join
 
