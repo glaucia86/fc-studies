@@ -8,6 +8,8 @@ services:
     command: ['tail', '-f', '/dev/null']
     volumes:
       - ./servers/server01:/etc/consul.d
+    ports:
+      - '8500:8500'
 
   consulserver02:
     image: consul:1.10
