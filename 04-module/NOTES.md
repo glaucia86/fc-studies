@@ -1319,7 +1319,7 @@ E, dentro do container execute o comando abaixo:
 ifconfig
 ```
 
-> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker) 172.20.0.2
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker) 
 
 Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
 
@@ -1393,27 +1393,100 @@ consul members
 
 Agora podemos notar que as 3 máquinas estão executando em um único `cluster`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Criando primeiro client
+
+Agora será o momento da gente criar o `client`. Para isso, vamos adicionar no arquivo `docker-compose.yml` o seguinte código:
+
+<details><summary><b>docker-compose.yml</b></summary>
+<br/>
+
+```yml
+version: '3'
+
+services:
+  consulserver01:
+    image: consul:1.10
+    container_name: consulserver01
+    hostname: consulserver01
+    command: ['tail', '-f', '/dev/null']
+  consulserver02:
+    image: consul:1.10
+    container_name: consulserver02
+    hostname: consulserver02
+    command: ['tail', '-f', '/dev/null']
+  consulserver03:
+    image: consul:1.10
+    container_name: consulserver03
+    hostname: consulserver03
+    command: ['tail', '-f', '/dev/null']
+
+  consulclient01:
+    image: consul:1.10
+    container_name: consulclient01
+    hostname: consulclient01
+    command: ['tail', '-f', '/dev/null']
+		volumes: 
+			- ./clients/consul01:/etc/consul.d
+```
+
+</details>
+<br/>
+
+Agora, na raiz do projeto, crie um pasta e arquivo chamado: `clients/consul01`. E, agora digite o comando:
+
+```bash
+docker-compose up -d
+docker compose ps
+```
+
+E, agora vamos executar o comando para iniciar o agente. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulclient01 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+ifconfig
+```
+
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker)
+
+Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
+
+```bash
+mkdir /etc/consul.d
+mkdir /var/lib/consul
+```
+
+```bash
+consul agent -bind=<numero-do-ip-eth0> -data-dir=/var/lib/consul -config-dir=/etc/consul.d
+```
+
+No momento em que a gente executar o comando acima, observe que o agent `client` vai executar. Porém, note que no final da execução há uma mensagem de error: `2023-09-27T02:03:05.696Z [ERROR] agent.anti_entropy: failed to sync remote state: error="No known Consul servers"`. O que isso quer nos dizer? Que o `client` não está conseguindo se comunicar com o `server`. Para isso, vamos executar o comando abaixo:
+
+> não se esqueça de realizar todo o processo de reinicialização do cluster, caso tenha parado. 
+
+```bash
+consul join <numero-do-ip-eth0>
+```
+
+Apresentará a seguinte mensagem: `Successfully joined cluster by contacting 1 nodes.`
+E, no lado do server, apresentará a seguinte mensagem abaixo:
+
+```bash
+2023-09-27T02:11:56.533Z [INFO]  agent.server.serf.lan: serf: EventMemberJoin: consulclient01 <ip-do-client>`. 
+```
+
+E, agora vamos executar o comando para verificar os `members`. Para isso, execute o comando abaixo:
+
+```bash
+consul members
+```
+
+Você verá que o `client` está se comunicando com o `server`.
+
 
 ### Registrando o serviço
 
