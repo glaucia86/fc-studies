@@ -1047,6 +1047,9 @@ func (c *CategoryService) CreateCategoryBidirectional(stream pb.CategoryService_
 }
 ```
 
+</details>
+<br/>
+
 Vamos testar esse serviço. Execute novamente o comando abaixo:
 
 ```bash
