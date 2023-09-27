@@ -1,0 +1,7 @@
+{
+  "server": true,
+  "bind_addr": "172.21.0.3",
+  "bootstrap_expect": 3,
+  "data_dir": "/tmp",
+  "retry_join": ["172.21.0.2", "172.21.0.5"]
+}

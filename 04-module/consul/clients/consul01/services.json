@@ -3,6 +3,13 @@
     "id": "nginx",
     "name": "nginx",
     "tags": ["web"],
-    "port": 80
+    "port": 80,
+    "check": {
+      "id": "nginx",
+      "name": "HTTP 80",
+      "http": "http://localhost",
+      "interval": "10s",
+      "timeout": "1s"
+    }
   }
 }

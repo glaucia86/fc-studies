@@ -1610,8 +1610,171 @@ dig @localhost -p 8600 nginx.service.consul
 
 ### Implementando checks
 
+Se você deseja saber um pouco mais sobre Health Checks no consul, acesse [aqui](https://developer.hashicorp.com/consul/docs/services/usage/checks).
+
+Bom abre o arquivo `services.json` e inclua o seguinte código:
+
+```json
+{
+  "service": {
+    "id": "nginx",
+    "name": "nginx",
+    "tags": ["web"],
+    "port": 80,
+    "check": {
+      "id": "nginx",
+      "name": "HTTP 80",
+      "http": "http://localhost",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}
+```
+
+Agora digite o comando:
+
+```bash
+consul reload
+```
+
+E, agora o comando:
+
+```bash
+dig @localhost -p 8600 nginx.service.consul
+```
+
 ### Sincronizando server via arquivo
+
+Crie uma pasta chamada `servers/server01` e dentro dela crie um arquivo chamado: `server.json` e inclua o seguinte código:
+
+```json
+{
+  "server": true,
+  "bind_addr": "172.20.0.2",
+  "bootstrap_expect": 3,
+  "data_dir": "/tmp",
+  "retry_join": ["172.20.0.4", "172.20.0.3"]
+}
+```
+
+Altere o arquivo `docker-compose.yml` e inclua o seguinte código:
+
+```yml
+version: '3'
+
+services:
+  consulserver01:
+    image: consul:1.10
+    container_name: consulserver01
+    hostname: consulserver01
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./servers/server01:/etc/consul.d
+
+  consulserver02:
+    image: consul:1.10
+    container_name: consulserver02
+    hostname: consulserver02
+    command: ['tail', '-f', '/dev/null']
+
+  consulserver03:
+    image: consul:1.10
+    container_name: consulserver03
+    hostname: consulserver03
+    command: ['tail', '-f', '/dev/null']
+
+  consulclient01:
+    image: consul:1.10
+    container_name: consulclient01
+    hostname: consulclient01
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul01:/etc/consul.
+
+  consulclient02:
+    image: consul:1.10
+    container_name: consulclient02
+    hostname: consulclient02
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul02:/etc/consul.d
+```
+
+> o processo de alteração se repitirá para o `consulserver02` e `consulserver03`
+
+Agora que você criou uma pasta/arquivo para o `consulserver02` e `consulserver03`, modifique os volumes de ambos no `docker-compose.yml`.
+
+```yml
+version: '3'
+
+services:
+  consulserver01:
+    image: consul:1.10
+    container_name: consulserver01
+    hostname: consulserver01
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./servers/server01:/etc/consul.d
+
+  consulserver02:
+    image: consul:1.10
+    container_name: consulserver02
+    hostname: consulserver02
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./servers/server02:/etc/consul.d
+
+  consulserver03:
+    image: consul:1.10
+    container_name: consulserver03
+    hostname: consulserver03
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./servers/server03:/etc/consul.d
+
+  consulclient01:
+    image: consul:1.10
+    container_name: consulclient01
+    hostname: consulclient01
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul01:/etc/consul.
+
+  consulclient02:
+    image: consul:1.10
+    container_name: consulclient02
+    hostname: consulclient02
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul02:/etc/consul.d
+```
+
+Agora, execute o comando abaixo:
+
+```bash
+docker-compose up -d
+docker compose ps
+```
+
+E, agora vamos executar o comando para iniciar o agente. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulserver02 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+consul agent -config-dir=/etc/consul.d
+```
 
 ### Trabalhando com criptografia
 
+
+(...refazer essa aula posteriormente...)
+
 ### User Interface e dicas para Produção
+
+
+(...refazer essa aula posteriormente...)
