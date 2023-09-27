@@ -1483,11 +1483,130 @@ E, agora o comando:
 dig @localhost -p 8600 nginx.service.consul
 ```
 
-
-
-
-
 ### Registrando segundo serviço com retry join
+
+Abre o arquivo `docker-compose.yml` e inclua o seguinte código:
+
+<details><summary><b>docker-compose.yml</b></summary>
+<br/>
+
+```yml
+version: '3'
+
+services:
+  consulserver01:
+    image: consul:1.10
+    container_name: consulserver01
+    hostname: consulserver01
+    command: ['tail', '-f', '/dev/null']
+
+  consulserver02:
+    image: consul:1.10
+    container_name: consulserver02
+    hostname: consulserver02
+    command: ['tail', '-f', '/dev/null']
+
+  consulserver03:
+    image: consul:1.10
+    container_name: consulserver03
+    hostname: consulserver03
+    command: ['tail', '-f', '/dev/null']
+
+  consulclient01:
+    image: consul:1.10
+    container_name: consulclient01
+    hostname: consulclient01
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul01:/etc/consul.
+      
+  consulclient02:
+    image: consul:1.10
+    container_name: consulclient02
+    hostname: consulclient02
+    command: ['tail', '-f', '/dev/null']
+    volumes:
+      - ./clients/consul02:/etc/consul.d
+```
+
+</details>
+<br/>
+
+E dentro da pasta `clients/consul02` crie um arquivo chamado: `services.json` e inclua o seguinte código:
+
+<details><summary><b>services.json</b></summary>
+
+```json
+{
+  "service": {
+    "id": "nginx2",
+    "name": "nginx",
+    "tags": ["web"],
+    "port": 80
+  }
+}
+```
+
+</details>
+<br/>
+
+Agora, vamos executar o comando abaixo:
+
+```bash
+docker-compose up -d
+docker compose ps
+```
+
+E, agora vamos executar o comando para iniciar o agente. Para isso, execute o comando abaixo:
+
+```bash
+docker exec -it consulclient02 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+ifconfig
+```
+
+> Resposta: `addr:<numero-do-ip-eth0>` (rede do Docker)
+
+Agora, vamos executar o comando do consul para executar o agente. Para isso, execute o comando abaixo:
+
+```bash
+mkdir /etc/consul.d
+mkdir /var/lib/consul
+```
+
+> no -retry-join incluir o ip do outro server
+
+```bash
+consul agent -bind=<numero-do-ip-eth0> -data-dir=/var/lib/consul -config-dir=/etc/consul.d -retry-join=<numero-do-ip-eth0>
+```
+
+Agora execute o comando abaixo:
+
+```bash
+docker exec -it consulclient02 sh
+```
+
+E, dentro do container execute o comando abaixo:
+
+```bash
+consul members
+```
+
+Na mesma tela, execute o comando abaixo:
+
+```bash
+apk -U add bind-tools
+```
+
+E, agora o comando:
+
+```bash
+dig @localhost -p 8600 nginx.service.consul
+```
 
 ### Implementando checks
 
