@@ -932,7 +932,6 @@ E agora vamos implementar esse serviço. Para isso, abra o arquivo: `service/cat
 <br/>
 
 ```go
-
 func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateCategoryStreamServer) error {
 	categories := &pb.CategoryList{}
 
@@ -962,6 +961,9 @@ func (c *CategoryService) CreateCategoryStream(stream pb.CategoryService_CreateC
 	}
 }
 ```
+
+</details>
+<br/>
 
 Vamos testar esse serviço. Execute novamente o comando abaixo:
 
