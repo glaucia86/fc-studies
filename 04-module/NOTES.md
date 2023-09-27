@@ -1011,8 +1011,7 @@ protoc --go_out=. --go-grpc_out=. proto/course_category.proto
 
 E agora vamos implementar esse serviço. Para isso, abra o arquivo: `service/category.go` e inclua o seguinte código:
 
-<details><summary><b>service/category.go</b></summary>
-<br/>
+* service/category.go
 
 ```go
 func (c *CategoryService) CreateCategoryBidirectional(stream pb.CategoryService_CreateCategoryBidirectionalServer) error {
@@ -1046,9 +1045,6 @@ func (c *CategoryService) CreateCategoryBidirectional(stream pb.CategoryService_
 	}
 }
 ```
-
-</details>
-<br/>
 
 Vamos testar esse serviço. Execute novamente o comando abaixo:
 
