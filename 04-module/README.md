@@ -49,7 +49,7 @@
   - [x] Trabalhando com stream
   - [x] Trabalhando com streams bidirecionais
 
-- [ ] Service Discovery e Consul
+- [x] Service Discovery e Consul
   - [x] Introdução ao capítulo
   - [x] Entendendo o contexto
   - [x] Visão geral do Consul
@@ -58,11 +58,11 @@
   - [x] Agent, Client e Server
   - [x] Iniciando com agente consul
   - [x] Criando nosso cluster
-  - [ ] Criando primeiro client
-  - [ ] Registrando serviço
-  - [ ] Registrando segundo serviço com retry join
-  - [ ] Implementando checks
-  - [ ] Sincronizando servers via arquivo
-  - [ ] Trabalhando com criptografia
-  - [ ] User Interface e dicas para Produção
+  - [x] Criando primeiro client
+  - [x] Registrando serviço
+  - [x] Registrando segundo serviço com retry join
+  - [x] Implementando checks
+  - [x] Sincronizando servers via arquivo
+  - [x] Trabalhando com criptografia
+  - [x] User Interface e dicas para Produção
   

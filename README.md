@@ -25,6 +25,9 @@ Repository responsible for studies related to the Full Cycle course.
 </details>
 
 <details><summary><b>Módulo 4: Intersystem communication</b></summary>
+
+**[Module 03 - Fundamentos da Arquitetura de Software](./04-module/README.md)**
+
 </details>
 
 <details><summary><b>Módulo 5: SOLID Express</b></summary>
