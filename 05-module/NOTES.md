@@ -61,5 +61,6 @@ O DIP é o quinto princípio do SOLID e diz que uma classe deve depender de abst
 
 Para identificar se uma classe está seguindo o DIP, basta verificar se uma classe está dependendo de abstrações e não de implementações. Caso a classe esteja dependendo de implementações, é necessário refatorar o código para que a classe esteja seguindo o DIP.
 
+> o examplo aqui foi baseado na aula do Rodrigo Branas de SOLID com TypeScript **[AQUI](https://youtube.com/watch?v=899Qa6sQcRc)**
 
 
