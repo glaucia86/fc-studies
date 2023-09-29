@@ -4,6 +4,7 @@
   "description": "A code sample how to use SOLID with TypeScript",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
