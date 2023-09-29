@@ -1,0 +1,21 @@
+{
+  "name": "05-module",
+  "version": "1.0.0",
+  "description": "A code sample how to use SOLID with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SOLID",
+    "TypeScript"
+  ],
+  "author": "Glaucia Lemos <@glaucia_lemos86>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
