@@ -5,9 +5,16 @@
  * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
  */
 
-import ShareButton from "./ShareButton";
+import ShareButtonTwitter from "./ShareButtonTwitter";
+import ShareButtonFacebook from "./ShareButtonFacebook";
+import ShareButtonLinkedin from "./ShareButtonLinkedin";
 
-const shareButton = new ShareButton("https://bit.ly/youtube-canal-glaucialemos");
-shareButton.bind(".btn-twitter", "twitter");
-shareButton.bind(".btn-linkedin", "linkedin");
-shareButton.bind(".btn-facebook", "facebook");
+
+const twitter = new ShareButtonTwitter('.btn-twitter', 'https://www.youtube.com/glaucia86');
+twitter.bind();
+
+const facebook = new ShareButtonFacebook('.btn-facebook', 'https://www.youtube.com/glaucia86');
+facebook.bind();
+
+const linkedin = new ShareButtonLinkedin('.btn-linkedin', 'https://www.youtube.com/glaucia86');
+linkedin.bind();
