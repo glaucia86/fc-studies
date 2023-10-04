@@ -2,9 +2,9 @@
 
 ## What I learned
 
-- [ ] Introdução ao SOLID
-- [ ] Single Responsibility Principle
-- [ ] Open Closed Principle
-- [ ] Liskov Substitution Principle
-- [ ] Interface Segregation Principle
-- [ ] Dependency Inversion Principle
+- [x] Introdução ao SOLID
+- [x] Single Responsibility Principle
+- [x] Open Closed Principle
+- [x] Liskov Substitution Principle
+- [x] Interface Segregation Principle
+- [x] Dependency Inversion Principle

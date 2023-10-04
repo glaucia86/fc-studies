@@ -12,28 +12,34 @@ Repository responsible for studies related to the Full Cycle course.
 
 ## ✏️ Studies 
 
-<details><summary><b>Módulo 2: Docker</b></summary>
+<details><summary><b>Module 2: Docker</b></summary>
 
 **[Module 02 - Docker](./02-module/README.md)**
 
 </details>
 
-<details><summary><b>Módulo 3: Fundamentals of Software Architecture</b></summary>
+<details><summary><b>Module 3: Fundamentals of Software Architecture</b></summary>
 
 **[Module 03 - Fundamentos da Arquitetura de Software](./03-module/README.md)**
 
 </details>
 
-<details><summary><b>Módulo 4: Intersystem communication</b></summary>
+<details><summary><b>Module 4: Intersystem communication</b></summary>
 
-**[Module 03 - Fundamentos da Arquitetura de Software](./04-module/README.md)**
+**[Module 04 - Intersystem communication](./04-module/README.md)**
 
 </details>
 
-<details><summary><b>Módulo 5: SOLID Express</b></summary>
+<details><summary><b>Module 5: SOLID Express</b></summary>
+
+**[Module 05 - SOLID Express](./05-module/README.md)**
+
 </details>
 
-<details><summary><b>Módulo 6: Domain Driven Design</b></summary>
+<details><summary><b>Module 6: Domain Driven Design</b></summary>
+
+**[Module 06 - Domain Driven Design](./06-module/README.md)**
+
 </details>
 
 <details><summary><b>Módulo 7: DDD: Tactical Modeling and Patterning</b></summary>
