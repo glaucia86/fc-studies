@@ -2,12 +2,11 @@
 
 ## What I learned
 
-- [ ] Introdução
-  - [ ] Ponto de Partida do DDD
-  - [ ] Complexidade de um software
-  - [ ] Resumindo
-  - [ ] Interface Segregation Principle
-  - [ ] Dependency Inversion Principle
+- [x] Introdução
+  - [x] Ponto de Partida do DDD
+  - [x] Complexidade de um software
+  - [x] Como DDD pode ajudar
+  - [x] Resumindo
 
 - [ ] Domínios, subdomínios e contextos
   - [ ] Domínio vs subdomínio
