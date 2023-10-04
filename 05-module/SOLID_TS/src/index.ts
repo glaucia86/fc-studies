@@ -20,5 +20,5 @@ facebook.bind();
 const linkedin = new ShareButtonLinkedin('.btn-linkedin', 'https://www.youtube.com/glaucia86');
 linkedin.bind();
 
-const print = new ShareButtonPrint('.btn-print', 'https://www.youtube.com/glaucia86');
+const print = new ShareButtonPrint('.btn-print');
 print.bind();
