@@ -69,6 +69,38 @@ Livros Recomendados:
 
 [![test-drawio.png](https://i.postimg.cc/WpMSsz1v/test-drawio.png)](https://postimg.cc/8szLH1vK)
 
+### O que é um contexto delimitado?
+
+#### Bounded Contexts
+
+"Um Bounded Context é uma fronteira explícita onde um modelo de domínio existe. Dentro da fronteira, todos os termos e frases da linguagem ubíqua possuem significado específico, e o modelo reflete a linguagem com exatidão." ~ Vaughn Vernon - Implementing Domain-Driven Design
+
+Então resumindo: _É uma fronteira lógica que delimita um conjunto de regras de negócio._
+
+### Contexto é rei
+
+Quando temos duas palavras (ou dois contextos) iguais, mas com objetivos diferentes, você está dentro de um contexto delimitado.
+
+Vejamos um exemplo abaixo onde o contexto é "Ticket":
+
+Você terá que modelirizar o contexto de acordo com o que ele representa, ou seja, o contexto de "Ticket" dentro do contexto de "Venda" é diferente do contexto de "Ticket" dentro do contexto de "Suporte".
+
+[![contexto-rei.png](https://i.postimg.cc/PJPRryT4/contexto-rei.png)](https://postimg.cc/T5v9tryL)
+
+### Elementos transversais
+
+Muitas das vezes quando estamos em contextos delimitados diferentes, esses contextos acabam se conversando. Seja entre: entidades, elementos que acabam sendo transversais, que estão por todos os lados, mas em perspectivas diferentes.
+
+Vejamos um exemplo na imagem abaixo com o contexto: "Cliente" é o mesmo. Mas que estão em contextos diferentes.
+
+[![context-rei-01.png](https://i.postimg.cc/VkpM3FVw/context-rei-01.png)](https://postimg.cc/ZWPCN6ms)
+
+
+
+
+
+
+
 
 
 
