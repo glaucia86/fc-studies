@@ -43,6 +43,15 @@ Repository responsible for studies related to the Full Cycle course.
 </details>
 
 <details><summary><b>Módulo 7: DDD: Tactical Modeling and Patterning</b></summary>
+
+**[Module 07 - DDD: Tactical Modeling and Patterning](./07-module/README.md)**
+
+</details>
+
+<details><summary><b>Módulo 8: Practical Event Storming</b></summary>
+</details>
+
+<details><summary><b>Módulo 8: Practical Event Storming</b></summary>
 </details>
 
 <details><summary><b>Módulo 8: Practical Event Storming</b></summary>
