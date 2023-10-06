@@ -35,13 +35,40 @@ Livros Recomendados:
 - Criar o design tático para conseguir mapear e agregar as entidades e objetos de valor da aplicação, bem como os eventos de domínio.
 - Clareza do que pe complexidade de negócio e complexidade técnica.
 
-#### Resumindo
+### Resumindo
 
 "In short, DDD is primarily about modeling a Ubiquitous Language in an explicity Bounded Context." ~ Vaughn Vernon 
 
 ## Domínios, subdomínios e contextos
 
 ### Domínio vs subdomínio
+
+- **Domain **
+  - Conjunto de regras de negócio que são difíceis de serem entendidas e implementadas. 
+
+  - **Core Domain**
+    - Conjunto de regras de negócio que são essenciais para o   negócio.
+    - Coração do negócio.
+    - Diferencial competitivo da empresa.
+    - Exemplo: Uber - `Sistema de localização de motoristas`
+
+  - **Support Domain**
+    - Conjunto de regras de negócio que são importantes para o  negócio, mas não são essenciais.
+    - Não são o foco da empresa, mas são necessárias para o   funcionamento do negócio.
+    - Apoiam o domínio
+    - Faz a operação do domínio acontecer. 
+    - Exemplo: Uber - `Sistema de pagamento`
+
+  - **Generic Domain**
+    - Conjunto de regras de negócio que são genéricas e não são essenciais para o negócio.
+    - Software auxiliares
+    - Sem diferencial competitivo
+    - Exemplo: Uber - `Sistema de cadastro de usuários`
+
+### Espaço do problema vs espaço da solução
+
+[![test-drawio.png](https://i.postimg.cc/WpMSsz1v/test-drawio.png)](https://postimg.cc/8szLH1vK)
+
 
 
 

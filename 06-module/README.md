@@ -9,7 +9,7 @@
   - [x] Resumindo
 
 - [ ] Domínios, subdomínios e contextos
-  - [ ] Domínio vs subdomínio
+  - [x] Domínio vs subdomínio
   - [ ] Espaço do problema vs espaço da solução
   - [ ] O que é contexto delimitado
   - [ ] Contexto e rei
