@@ -8,14 +8,14 @@
   - [x] Como DDD pode ajudar
   - [x] Resumindo
 
-- [ ] Domínios, subdomínios e contextos
+- [x] Domínios, subdomínios e contextos
   - [x] Domínio vs subdomínio
-  - [ ] Espaço do problema vs espaço da solução
-  - [ ] O que é contexto delimitado
-  - [ ] Contexto e rei
-  - [ ] Elementos transversais
+  - [x] Espaço do problema vs espaço da solução
+  - [x] O que é contexto delimitado
+  - [x] Contexto e rei
+  - [x] Elementos transversais
 
-- [ ] Visão estratégica
-  - [ ] Visão estratégica
-  - [ ] Context Mapping na Prática
-  - [ ] Padrões e starter kit
+- [x] Visão estratégica
+  - [x] Visão estratégica
+  - [x] Context Mapping na Prática
+  - [x] Padrões e starter kit
