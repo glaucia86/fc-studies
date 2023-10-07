@@ -18,7 +18,15 @@ Entidade é algo que tem Identidade. Voce consegue distinguir de quaisquer outro
 
 ### Configurando projeto TypeScript
 
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/tree/54220353ba7abf2a0a2415349e4fd502de918133)**
 
+### Criando entidade anêmica
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/tree/fbbef2f4d238e75090ea4fafb935fa1293827255)**
+
+### Regras de Negócio
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/tree/19f5cb1c8d91faf5c4452452b408ba58921d9161)**
 
 
 
