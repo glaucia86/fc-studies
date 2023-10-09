@@ -28,8 +28,35 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/tree/fbbe
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/tree/19f5cb1c8d91faf5c4452452b408ba58921d9161)**
 
+### Consistencia constante em primeiro lugar
 
+Se os seus dados na aplicação não estiverem consistentes, representa que você não está seguindo as regras de negócio. E, isso pode ser um problema muito sério para a sua aplicação.
 
+### Princípio da autovalidação
+
+Uma importante regra de ouro em relação ao princípio da autovalidação é: "Uma Entidade por padrão ela sempre vai ter que se autovalidar. Se deixar a validação para algo externo, você pode deixar a sua aplicação inconsistente."
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/8821e31f54f44e2aabae7dcfeb0235e089686dfa)**
+
+### Entity vs ORM
+
+Vejamos um exemplo de uma organização de um projeto
+
+```text
+Domain 
+- entity
+  - customer.ts (regra de negócio)
+
+Infra (tudo relacionado ao mundo externo)
+  - entity
+    - model
+      - customer.ts (get, set)
+```
+
+Observe bem, não podemos confudir que só porque uma determinada seja uma entidade. Pois podem ter contextos diferentes na aplicação. Uma determinada `entidade` pode se referir a regra de negócio, enquanto uma outra entidade, pode se referir a uma `model` de uma determinada `entidade` que está sendo persistida no banco de dados.
+
+- **Domain**: é complexidade de negócio
+- **Infra**: é complexidade acidental
 
 
 
