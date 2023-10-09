@@ -2,19 +2,19 @@
 
 ## What I learned
 
-- [ ] Introdução
-  - [ ] Introdução
-  - [ ] Resignificando conceitos
-  - [ ] Elementos Táticos
+- [x] Introdução
+  - [x] Introdução
+  - [x] Resignificando conceitos
+  - [x] Elementos Táticos
 
-- [ ] Entidades
-  - [ ] Entidades
-  - [ ] Configurando projeto TypeScript
-  - [ ] Criando entidade anêmica
-  - [ ] Regras de Negócio
-  - [ ] Consistência constante em primeiro lugar
-  - [ ] Princípio da autoavaliação
-  - [ ] Entidade vs ORM
+- [x] Entidades
+  - [x] Entidades
+  - [x] Configurando projeto TypeScript
+  - [x] Criando entidade anêmica
+  - [x] Regras de Negócio
+  - [x] Consistência constante em primeiro lugar
+  - [x] Princípio da autoavaliação
+  - [x] Entidade vs ORM
 
 - [ ] Value Objects
   - [ ] Introdução aos objetos de valor
