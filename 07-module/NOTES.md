@@ -58,6 +58,21 @@ Observe bem, não podemos confudir que só porque uma determinada seja uma entid
 - **Domain**: é complexidade de negócio
 - **Infra**: é complexidade acidental
 
+## Value Objects
+
+### Introdução aos objetos de valor
+
+### Entendendo Value Objects
+
+"Quando você se preocupa apenas com os atributos de um elemento de um model, classifique isso como um Value Object.
+"Trate o Value Object como imutável." - Eric Evans: Domain-Driven Design
+
+### Value Objects na prática
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/281e61e0a72d4727033afaf0737bb770e0262091)**
+
+
+
 
 
 
