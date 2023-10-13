@@ -71,6 +71,32 @@ Observe bem, não podemos confudir que só porque uma determinada seja uma entid
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/281e61e0a72d4727033afaf0737bb770e0262091)**
 
+## Agregados
+
+### Introdução aos agregados
+
+Uma `Entidade` está totalmente correlacionada com outra `Entidade`. Por exemplo: um pedido está totalmente correlacionado com um cliente. Ou seja, um pedido não existe sem um cliente. E, um cliente não existe sem um pedido.
+
+E, eventualmente uma `Entidade` está totalmente correlacionada com um `Objeto de Valor`. Por exemplo: um pedido está totalmente correlacionado com um endereço. Ou seja, um pedido não existe sem um endereço. E, um endereço não existe sem um pedido.
+
+### Entendendo Agregados
+
+#### Agregate
+
+> "Um agregado é um conjunto de objetos associados que tratamos como uma unidade para propósito de mudança de dados." - Eric Evans: Domain-Driven Design
+
+Exemplo:
+
+[![Agregados](https://i.postimg.cc/gkxvgrBd/teste.png)](https://postimg.cc/F7QdRF4n)
+
+### Agregados na prática
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/c5f4abffc367ba990cd4773758fcb48114441ea6)**
+
+
+
+
+
 
 
 
