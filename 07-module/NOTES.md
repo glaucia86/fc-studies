@@ -202,6 +202,10 @@ describe("Customer unit tests", () => {
 
 Abre o terminal e execute o comando: `npm run test`. Esse teste que estamos criando é simplesmente para averiguar se a configuração que criamos está funcionando. Se tudo der certo é porque está tudo ok!
 
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/bd411eb4cd0b85500b940c4e5f0d6ca47df3fcec)**
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/42dfe10c59e32367a2e29f88f11294ce97cb0e03)**
+
 
 
 
