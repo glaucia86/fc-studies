@@ -16,15 +16,15 @@
   - [x] Princípio da autoavaliação
   - [x] Entidade vs ORM
 
-- [ ] Value Objects
-  - [ ] Introdução aos objetos de valor
-  - [ ] Entendendo Value Objects
-  - [ ] Value Objects na prática
+- [x] Value Objects
+  - [x] Introdução aos objetos de valor
+  - [x] Entendendo Value Objects
+  - [x] Value Objects na prática
 
-- [ ] Agregados
-  - [ ] Introdução as agregados
-  - [ ] Entendendo agregados
-  - [ ] Agregados na prática
+- [x] Agregados
+  - [x] Introdução as agregados
+  - [x] Entendendo agregados
+  - [x] Agregados na prática
 
 - [ ] Avançando com testes
   - [ ] Introdução aos testes automatizados

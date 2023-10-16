@@ -93,6 +93,114 @@ Exemplo:
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/c5f4abffc367ba990cd4773758fcb48114441ea6)**
 
+## Avançando com Testes
+
+### Introdução aos testes automatizados
+
+### Preparando o ambiente com testes
+
+Vamos instalar os seguintes pacotes:
+
+```bash
+npm i -D jest @types/jest ts-node --save-dev
+```
+
+```bash
+npm i -D @swc/jest @swc/cli @swc/core
+```
+
+E, agora vamos configurar o `jest` na aplicação. Para isso, digite o comando abaixo:
+
+```bash
+npx jest --init
+```
+
+Aparecerá as seguintes opções: (basta colocar conforme abaixo)
+
+```bash
+The following questions will help Jest to create a suitable configuration for your project
+
+✔ Would you like to use Jest when running "test" script in "package.json"? … yes
+✔ Would you like to use Typescript for the configuration file? … yes
+✔ Choose the test environment that will be used for testing › node
+✔ Do you want Jest to add coverage reports? … no
+✔ Which provider should be used to instrument code for coverage? › v8
+✔ Automatically clear mock calls, instances, contexts and results before every test? … yes
+```
+
+Após isso, será criado um arquivo chamado: `jest.config.js`. E, dentro dele, vamos adicionar o seguinte código:
+
+```ts
+import type { Config } from 'jest';
+
+const config: Config = {
+
+  transform: {
+    "^.+\\.(t|j)sx?$": "@swc/jest",
+  },
+  clearMocks: true,
+  coverageProvider: "v8",
+};
+
+export default config;
+```
+
+Retorne ao arquivo `tsconfig.json` e faça as seguintes alterações:
+
+<details><summary><b>tsconfig.json</b></summary>
+<br/>
+
+```json
+{
+  "compilerOptions": {
+    "incremental": true,
+    "rootDir": ".",
+    "target": "ES2021",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    ".eslintrc.js",
+    "src/**/*.ts"
+  ]
+}
+```
+
+</details>
+<br/>
+
+Agora, dentro da pasta: `entity` crie o seguinte arquivo: `customer.spec.ts` e adicione o seguinte código:
+
+<details><summary><b>customer.spec.ts</b></summary>
+<br/>
+
+```ts
+/**
+ * file: src/entity/customer.spec.ts
+ * description: file responsible for test the Customer class
+ * data: 10/16/2023
+ * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
+ */
+
+describe("Customer unit tests", () => {
+
+  it("should return '1' as result", () => {
+    const result = 1;
+    expect(result).toBe(1);
+  });
+});
+```
+
+</details>
+<br/>
+
+
+Abre o terminal e execute o comando: `npm run test`. Esse teste que estamos criando é simplesmente para averiguar se a configuração que criamos está funcionando. Se tudo der certo é porque está tudo ok!
 
 
 
