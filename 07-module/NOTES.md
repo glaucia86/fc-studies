@@ -199,12 +199,119 @@ describe("Customer unit tests", () => {
 </details>
 <br/>
 
-
 Abre o terminal e execute o comando: `npm run test`. Esse teste que estamos criando é simplesmente para averiguar se a configuração que criamos está funcionando. Se tudo der certo é porque está tudo ok!
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/bd411eb4cd0b85500b940c4e5f0d6ca47df3fcec)**
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/42dfe10c59e32367a2e29f88f11294ce97cb0e03)**
+
+## Testando Customer
+
+> resalva... há error no arquivo customer.ts altere com o código abaixo:
+
+<details><summary><b>src/entity/customer.ts</b></summary>
+<br/>
+
+```ts
+/**
+ * file: src/entity/customer.ts
+ * description: file responsible for the Customer class
+ * data: 10/06/2023
+ * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
+ */
+
+import Address from "./address";
+
+export default class Customer {
+  private _id: string;
+  private _name: string = "";
+  private _address!: Address;
+  private _active: boolean = false;
+
+  constructor(id: string, name: string) {
+    this._id = id;
+    this._name = name;
+    this.validate();
+  }
+
+  validate() {
+    if (this._id.length === 0) {
+      throw new Error("Customer Id is required");
+    }
+    if (this._name.length === 0) {
+      throw new Error("Customer Name is required");
+    }
+  }
+
+  // aqui agora eu tenho um modelo rico. Que representa alguma regra de negócio
+  changeName(name: string) {
+    this._name = name;
+    this.validate();
+  }
+
+  activate() {
+    if (this._address === undefined) {
+      throw new Error("Address is mandatory to activate a customer");
+    }
+
+    this._active = true;
+  }
+
+  deactivate() {
+    this._active = false;
+  }
+
+  set Address(address: Address) {
+    this._address = address;
+  }
+}
+
+const customer = new Customer("1234", "Glaucia");
+console.log(customer);
+```
+
+</details>
+<br/>
+
+Agora crie um arquivo chamado `customer.spec.ts` dentro da pasta `entity` e adicione o seguinte código:
+
+<details><summary><b>customer.spec.ts</b></summary>
+<br/>
+
+```ts
+/**
+ * file: src/entity/customer.spec.ts
+ * description: file responsible for test the Customer class
+ * data: 10/16/2023
+ * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
+ */
+
+import Customer from "./customer";
+
+describe("Customer unit tests", () => {
+
+  it("should throw an error when 'id' is empty", () => {
+    expect(() => {
+      new Customer("", "Glaucia Lemos");
+    }).toThrowError("Id is required");
+  });
+
+  it("should throw an error when 'name' is empty", () => {
+    expect(() => {
+      new Customer("1234", "");
+    }).toThrowError("Name is required");
+  });
+});
+```
+
+</details>
+</br>
+
+Execute o comando: `npm run test` e veja se o teste passou ou não. Se passou, é porque está tudo ok!
+
+[![Captura-de-tela-2023-10-18-205636.png](https://i.postimg.cc/ZqPzYSfn/Captura-de-tela-2023-10-18-205636.png)](https://postimg.cc/v1mNXpww)
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/70e02883214f60bf8fa662e18cfeb49a9c7976ca)**
 
 
 
