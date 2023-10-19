@@ -313,7 +313,62 @@ Execute o comando: `npm run test` e veja se o teste passou ou não. Se passou, �
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/70e02883214f60bf8fa662e18cfeb49a9c7976ca)**
 
+## Criando testes de Order
 
+Crie um arquivo chamado `order.spec.ts` dentro da pasta `entity` e adicione o seguinte código:
+
+<details><summary><b>order.spec.ts</b></summary>
+<br/>
+
+```ts
+/**
+ * file: src/entity/order.spec.ts
+ * description: file responsible for test the Order class
+ * data: 10/20/2023
+ * author: Glaucia Lemos <Twitter: @glaucia_lemos86>
+ */
+
+import Order from "./order";
+import OrderItem from "./order_item";
+
+describe("Order unit tests", () => {
+  it("should return throw error when 'id' is empty", () => {
+    expect(() => {
+      new Order("", "1", []);
+    }).toThrowError("Invalid param: id");
+  });
+
+  it("should return throw error when 'Customer id' is empty", () => {
+    expect(() => {
+      new Order("1", "", []);
+    }).toThrowError("Invalid param: customerId");
+  });
+
+  it("should return throw error when 'Order item' is empty", () => {
+    expect(() => {
+      new Order("1", "1", []);
+    }).toThrowError("Items are required");
+  });
+
+  it("should calculate total order", () => {
+
+    const item = new OrderItem("1", "mobile", 100);
+    const item2 = new OrderItem("2", "mouse", 200);
+    const order = new Order("order-1", "customer-1", [item, item2]);
+
+    const total = order.total();
+
+    expect(total).toBe(300);
+  });
+});
+```
+
+</details>
+</br>
+
+Agora, execute o comando: `npm run test` e veja se o teste passou ou não. Se passou, é porque está tudo ok!
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/cc537166727eca5758610d482cf878b478ce72c8)**
 
 
 
