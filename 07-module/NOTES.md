@@ -370,6 +370,14 @@ Agora, execute o comando: `npm run test` e veja se o teste passou ou não. Se pa
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/cc537166727eca5758610d482cf878b478ce72c8)**
 
+## Criando classe Product e testes
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/40eefc61b569baf6cf34ad2f88c7214d781eec4b)**
+
+## Relacionando Item com Product
+
+
+
 
 
 
