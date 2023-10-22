@@ -376,10 +376,17 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/40
 
 ## Relacionando Item com Product
 
+Só para recapitular, na nossa aplicação exemplo, nós temos os seguintes `Agregados`. Que são eles:
 
+- Customer => Address
+  - aqui temos um relacionamento entre value object e entidade
+- Order => OrderItem
+  - aqui temos um relacionamento entre value object e entidade
+- Product
 
+Então o relacionamento entre `Customer` e `Order` são por meio de `Id`. Da mesma forma, será entre `Product` com `Order`. Pois estão em agregados diferentes.
 
-
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/d8b91363e81eb70f5f89086cf999973ca3af986f)**
 
 
 
