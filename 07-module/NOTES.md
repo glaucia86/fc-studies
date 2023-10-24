@@ -388,6 +388,21 @@ Então o relacionamento entre `Customer` e `Order` são por meio de `Id`. Da mes
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/d8b91363e81eb70f5f89086cf999973ca3af986f)**
 
+### Refactoring
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/5109c26957ae870a6cbfebc23cbd54e223815215)**
+
+> p.s.: tive que desfazer o refactoring
+
+## Jest vs SWC
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/c60e669afce60abcb7abcfc6cd9e5d51fdf16f22)**
+
+## Entidades 
+
+
+
+
 
 
 

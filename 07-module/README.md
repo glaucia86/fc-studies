@@ -26,15 +26,15 @@
   - [x] Entendendo agregados
   - [x] Agregados na prática
 
-- [ ] Avançando com testes
-  - [ ] Introdução aos testes automatizados
-  - [ ] Preparando o ambiente com testes
-  - [ ] Testando Customer
-  - [ ] Criando testes de Order
-  - [ ] Criando classe Product
-  - [ ] Ajuste no price do OrderItem
-  - [ ] Relacionando Item com Product
-  - [ ] Jest vs SWC
+- [x] Avançando com testes
+  - [x] Introdução aos testes automatizados
+  - [x] Preparando o ambiente com testes
+  - [x] Testando Customer
+  - [x] Criando testes de Order
+  - [x] Criando classe Product
+  - [x] Ajuste no price do OrderItem
+  - [x] Relacionando Item com Product
+  - [x] Jest vs SWC
 
 - [ ] Domain Services
   - [ ] Entendendo Domain Services
