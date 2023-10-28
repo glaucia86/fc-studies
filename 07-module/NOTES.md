@@ -205,7 +205,7 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/bd
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/42dfe10c59e32367a2e29f88f11294ce97cb0e03)**
 
-## Testando Customer
+### Testando Customer
 
 > resalva... há error no arquivo customer.ts altere com o código abaixo:
 
@@ -313,7 +313,7 @@ Execute o comando: `npm run test` e veja se o teste passou ou não. Se passou, �
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/70e02883214f60bf8fa662e18cfeb49a9c7976ca)**
 
-## Criando testes de Order
+### Criando testes de Order
 
 Crie um arquivo chamado `order.spec.ts` dentro da pasta `entity` e adicione o seguinte código:
 
@@ -370,11 +370,11 @@ Agora, execute o comando: `npm run test` e veja se o teste passou ou não. Se pa
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/cc537166727eca5758610d482cf878b478ce72c8)**
 
-## Criando classe Product e testes
+### Criando classe Product e testes
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/40eefc61b569baf6cf34ad2f88c7214d781eec4b)**
 
-## Relacionando Item com Product
+### Relacionando Item com Product
 
 Só para recapitular, na nossa aplicação exemplo, nós temos os seguintes `Agregados`. Que são eles:
 
@@ -394,11 +394,41 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/51
 
 > p.s.: tive que desfazer o refactoring
 
-## Jest vs SWC
+### Jest vs SWC
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/c60e669afce60abcb7abcfc6cd9e5d51fdf16f22)**
 
-## Entidades 
+## Domain Services
+
+### Entendendo Domain Services
+
+> "Um serviço de domínio é uma operação sem estado que cumpre uma tarefa específica do domínio. Muitas vezes, a melhor indicação de que você deve criar um Serviço no modelo de domínio é quando a operação que você precisa executar parece não se encaixar como um método em um Agregado ou um Objeto de Valor." ~ Vernon, Vaugh. Implementando Domain-Driven Design 
+
+- Uma entidade pode realizar uma ação que vai afetar todas as entidades?
+- Como realizar uma operação em lote?
+- Como calcular algo cuja as informações constam em mais de uma entidade?
+
+#### Domain Services: Cuidados
+
+- Quando houver muitos Domain Services em seu projeto, **TALVEZ**, isso pode indicar que seus agregados estão anemicos.
+- Domain Services são Stateless, ou seja, não possuem estado.
+
+### Definindo nosso `ProductService`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/8fb87e3d0ad27932c639801febb1492153f6da5e)**
+
+### Implementando `ProductService`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/95be76bd30eb39d167cfec7ea75977b1dea3b8d1)**
+
+### Definindo `OrderService`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/51b6ed63fa52ca6eddb422d6f1c4757081f5db9b)**
+
+### Realizando cálculo com OrderService
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/60b2253be3101fa7a7947484fb464dd3e3932143)**
+
 
 
 
