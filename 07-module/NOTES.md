@@ -429,6 +429,19 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/51
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/60b2253be3101fa7a7947484fb464dd3e3932143)**
 
+### Definindo políticas de Rewards
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/bfaccf6677fccb953fa42c35100679cdaec69088)**
+
+### Implementando o programa de rewards
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/b2a623057a3135298fb1a196d81c4546180b2fbf)**
+
+### Testando regra de reward points
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/480ac5e1d808003d12e63e99a5d44c7b42666836)**
+
+
 
 
 
