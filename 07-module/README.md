@@ -36,20 +36,20 @@
   - [x] Relacionando Item com Product
   - [x] Jest vs SWC
 
-- [ ] Domain Services
-  - [ ] Entendendo Domain Services
-  - [ ] Definindo nosso ProductService
-  - [ ] Implementando ProductService
-  - [ ] Definindo OrderService
-  - [ ] Realizando cálculo com OrderService
-  - [ ] Definindo políticas de Reward
-  - [ ] Implementando programa de Rewards
-  - [ ] Testando regra de reward points
+- [x] Domain Services
+  - [x] Entendendo Domain Services
+  - [x] Definindo nosso ProductService
+  - [x] Implementando ProductService
+  - [x] Definindo OrderService
+  - [x] Realizando cálculo com OrderService
+  - [x] Definindo políticas de Reward
+  - [x] Implementando programa de Rewards
+  - [x] Testando regra de reward points
 
 - [ ] Repositories
-  - [ ] Introdução aos Repositórios
-  - [ ] Definindo Interface
-  - [ ] Entendendo a Camada de Infra
+  - [x] Introdução aos Repositórios
+  - [x] Definindo Interface
+  - [x] Entendendo a Camada de Infra
   - [ ] Configurando o Sequelize
   - [ ] Verificando Jest com Sequelize
   - [ ] Implementando ProductRepository

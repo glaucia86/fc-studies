@@ -441,6 +441,28 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/b2
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/480ac5e1d808003d12e63e99a5d44c7b42666836)**
 
+## Repositories
+
+### Introdução aos Repositórios
+
+> Um repositório comumente se refere a um local de armazenamento, geralmente considerado um local de segurança ou preservação dos itens nele armazenados. Quando você armazena algo em um repositório e depois retorna para recuperá-lo, você espera que ele **esteja no mesmo estado que estava quando você o colocou lá**. Em algum momento, você pode optar por remover o item armazenado do repositório. ~ Vernon, Vaugh. Implementando Domain-Driven Design.
+
+> Esses objetos semelhantes a coleções são persistência. Todo tipo **Agregado** persistente terá um **Repositório**. De um modo geral, existe uma relação **um-para-um entre um tipo Agregado e um Repositório.** ~ Vernon, Vaugh. Implementando Domain-Driven Design.
+
+### Definindo Interface
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/fbfee45824cabcb1cb458694bd0279a7603349ec)**
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/4177280a4ce17cf77f5b1902ae10b3af72d1dee3)**
+
+### Entendendo camada de Infra
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/e8a35de8020a426bdfe3425726f5e4fb4433428a)**
+
+### Configurando sequelize
+
+### Verificando Jest com Sequelize
+
 
 
 
