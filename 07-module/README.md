@@ -50,9 +50,9 @@
   - [x] Introdução aos Repositórios
   - [x] Definindo Interface
   - [x] Entendendo a Camada de Infra
-  - [ ] Configurando o Sequelize
-  - [ ] Verificando Jest com Sequelize
-  - [ ] Implementando ProductRepository
+  - [x] Configurando o Sequelize
+  - [x] Verificando Jest com Sequelize
+  - [x] Implementando ProductRepository
   - [ ] Modelando Order e Items
   - [ ] Criando teste para OrderRepository
   - [ ] Implementando OrderRepository
