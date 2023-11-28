@@ -461,7 +461,39 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/e8
 
 ### Configurando sequelize
 
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/6eaeb92a4039c3d9f64898cde078572ef6d6ae5f)**
+
 ### Verificando Jest com Sequelize
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/5712f3b407f5bdce2f4ff8888aa62aee763e9718)**
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/6191f115a51e880dff10d1d9290c9964d82c2c4d)**
+
+### Implementando `ProductRepository`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/bfe536afd82e466ff595c132d06e3f18d92807a2)**
+
+### Implementando `CustomerRepository`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/22ea02f19bf00c5a81280cb53989e070cec7c7a5)**
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/9a16cb7cb62386442101e866f894d7c28144e405)**
+
+### Criando teste para `OrderRepository`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/56ed63a6da6fa8a9b4a930aadcf5a40b1e88d4ab)**
+
+### Criando teste para `OrderRepository`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/3a7b27ffc281c96115057980f145922d4ad0c469)**
+
+### Implementando `OrderRepository`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/9ddbe261a4fdc23b9907b1a7e4abc929e5c4d717)**
+
+
+
+
 
 
 
