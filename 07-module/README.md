@@ -46,7 +46,7 @@
   - [x] Implementando programa de Rewards
   - [x] Testando regra de reward points
 
-- [ ] Repositories
+- [x] Repositories
   - [x] Introdução aos Repositórios
   - [x] Definindo Interface
   - [x] Entendendo a Camada de Infra
@@ -56,7 +56,7 @@
   - [x] Modelando Order e Items
   - [x] Criando teste para OrderRepository
   - [x] Implementando OrderRepository
-  - [ ] Desafio de Repositórios
+  - [x] Desafio de Repositórios
 
 - [ ] Domain Events
   - [ ] Introdução aos Domain Events

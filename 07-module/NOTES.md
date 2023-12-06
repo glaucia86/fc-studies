@@ -491,8 +491,36 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/3a
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/9ddbe261a4fdc23b9907b1a7e4abc929e5c4d717)**
 
+## Domain Events
 
+"Use um evento de domínio para capturar uma ocorrência de algo que aconteceu no domínio." ~ Vernon, Vaugh. Implementando Domain-Driven Design.
 
+"A essencia de um evento de domínio é que você o usa para capturar coisas que podem desencadear uma mudança no estado do aplicativo que você está desenvolvendo. Esses objetos de evento são processados para causar alterações no sistema e armazenados para fornecer um AuditLog." ~ Fowler, Martin. Domain Event
+
+Todo evento deve ser representado em uma ação realizada no passado:
+
+- `CustomerCreated`
+- `OrderCreated`
+- `OrderItemCreated`
+
+### Quando usar Domain Events?
+
+Normalmente um Domain Event deve ser utilizado quando queremos notificar Bounded Contexts de uma mudança de estado.
+
+### Componentes de um Domain Event
+
+- **Event**: é a representação de um evento que ocorreu no passado.
+- **Event Handler**: é a representação de um manipulador de eventos. Ele é responsável por executar uma ação quando um evento ocorre.
+- **Event Dispatcher**: é responsável por armazenar e executar os handlers de um evento quando ele for disparado.
+
+### Dinâmica
+
+- Criar um "Event Dispatcher"
+- Criar um "Evento"
+- Criar um "Handler" para o "Evento"
+- Registrar o Evento, juntamente com o Handler no "Event Dispatcher"
+
+Agora para disparar um evento, basta executar o método "notify" do "Event Dispatcher". Nesse momento todos os Handlers registrados no evento serão executados.
 
 
 
