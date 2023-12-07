@@ -522,6 +522,34 @@ Normalmente um Domain Event deve ser utilizado quando queremos notificar Bounded
 
 Agora para disparar um evento, basta executar o método "notify" do "Event Dispatcher". Nesse momento todos os Handlers registrados no evento serão executados.
 
+### Definindo Interfaces
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/f65b59f4c2d896049646016dbcf31ee03612882b)**
+
+### Definindo teste para registrar evento
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/8933b17ff45ff0a5f6c9199cf2778cd7c090f302)**
+
+### Criando evento e event handler
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/366399b446c8f7a9c312e861c4f790d0cb5b55e0)**
+
+### Registrando nosso primeiro evento
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/773683080576fe938bf4960cce09ab7276166b40)**
+
+### Desregistrando eventos
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/db273434fef3bb1a4b01c53de844bb9e93e1b24c)**
+
+### Disparando eventos
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/1880562c42abf0dd2c7957d3ae11971f8e6ed80d)**
+
+### Exemplo de implementação
+
+Code Developed: **[here](https://github.com/devfullcycle/fc-ddd-patterns/tree/domain-events)**
+
 
 
 

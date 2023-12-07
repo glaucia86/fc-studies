@@ -59,14 +59,14 @@
   - [x] Desafio de Repositórios
 
 - [ ] Domain Events
-  - [ ] Introdução aos Domain Events
-  - [ ] Definindo Interfaces
-  - [ ] Definindo teste para registrar evento
-  - [ ] Criando eveto e event handler
-  - [ ] Registrando nosso primeiro evento
-  - [ ] Desregistrando eventos
-  - [ ] Disparando eventos
-  - [ ] Exemplo de implementação
+  - [x] Introdução aos Domain Events
+  - [x] Definindo Interfaces
+  - [x] Definindo teste para registrar evento
+  - [x] Criando eveto e event handler
+  - [x] Registrando nosso primeiro evento
+  - [x] Desregistrando eventos
+  - [x] Disparando eventos
+  - [x] Exemplo de implementação
   - [ ] Implemente Domain Events de Customer
 
 - [ ] Módulos
