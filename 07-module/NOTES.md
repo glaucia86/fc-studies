@@ -566,6 +566,13 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/fc
 - Organizado pelo domínio/subdomínio e não pelo tipo de objetos
 - Devem respeitar a mesma divisão quando estão em camadas diferentes
 
+### Modularizando a camada de domínio
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/45f76ef04a550eae9595a8f7c04895170f216d0f)**
+
+### Modularizando a camada de infraestrutura
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/0ecf91ca784cfa10cf4eed00cee5562d9c246db6)**
 
 
 

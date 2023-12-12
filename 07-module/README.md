@@ -69,10 +69,10 @@
   - [x] Exemplo de implementação
   - [x] Implemente Domain Events de Customer
 
-- [ ] Módulos
-  - [ ] Entendendo Módulos
-  - [ ] Modularizando a camada de domínio
-  - [ ] Modularizando a camada de infraestrutura
+- [x] Módulos
+  - [x] Entendendo Módulos
+  - [x] Modularizando a camada de domínio
+  - [x] Modularizando a camada de infraestrutura
 
 - [ ] Factories
   - [ ] Conceituando Factories
