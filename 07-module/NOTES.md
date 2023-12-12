@@ -574,6 +574,21 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/45
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/0ecf91ca784cfa10cf4eed00cee5562d9c246db6)**
 
+## Factories
+
+### Conceituando Factories
+
+"Desloque a responsabilidade de criar instâncias de objetos complexos e AGREGADOS para um objeto separado, que pode não ter responsabilidade no modelo de domínio, mas ainda faz parte do design do domínio. Forneça uma interface que encapsule toda a criação complexa e que não exija que o cliente faça referência às classes concretas dos objetos que estão sendo instanciados. Crie AGGREGATES inteiros de uma única vez, reforçando suas invariantes." ~ Eric Evans - Domain Driven Design
+
+### Dinâmica
+
+![Alt text](image.png)
+
+### Implementando Factory de `Product`
+
+Code Developed: **[commit]()**
+
+
 
 
 

@@ -75,8 +75,8 @@
   - [x] Modularizando a camada de infraestrutura
 
 - [ ] Factories
-  - [ ] Conceituando Factories
-  - [ ] Dinâmica
+  - [x] Conceituando Factories
+  - [x] Dinâmica
   - [ ] Implementando Factory de Product
   - [ ] Criando Factory de Customer
   - [ ] Fabricando o agregado de Order
