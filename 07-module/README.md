@@ -58,7 +58,7 @@
   - [x] Implementando OrderRepository
   - [x] Desafio de Repositórios
 
-- [ ] Domain Events
+- [x] Domain Events
   - [x] Introdução aos Domain Events
   - [x] Definindo Interfaces
   - [x] Definindo teste para registrar evento
@@ -67,7 +67,7 @@
   - [x] Desregistrando eventos
   - [x] Disparando eventos
   - [x] Exemplo de implementação
-  - [ ] Implemente Domain Events de Customer
+  - [x] Implemente Domain Events de Customer
 
 - [ ] Módulos
   - [ ] Entendendo Módulos

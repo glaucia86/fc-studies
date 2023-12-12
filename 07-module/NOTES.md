@@ -550,6 +550,23 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/18
 
 Code Developed: **[here](https://github.com/devfullcycle/fc-ddd-patterns/tree/domain-events)**
 
+### Implemente Domain Events de Customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/fc2af41e2a4867415303208ae6e4d25507d8a1a1)**
+
+## Módulos
+
+"Em um contexto DDD, Módulos em seu modelo servem como conteineres nomeados para classes de objetos de domínio que são altamente coesas entre si. O objetivo deve ser baixo acoplamento entre as classes que estão em módulos diferentes. Como os Módulos usados no DDD não são compartimentos de armazenamento anêmicos ou genéricos, também é importante nomear adequadamente os Módulos. ~ Vernon, Vaugh. Implementando Domain-Driven Design.
+
+### Características de um Módulo
+
+- Respeitar a linguagem Universal 
+- Baixo acoplamento
+- Um ou mais agregados devem estar juntos somente se fazem sentido
+- Organizado pelo domínio/subdomínio e não pelo tipo de objetos
+- Devem respeitar a mesma divisão quando estão em camadas diferentes
+
+
 
 
 
