@@ -586,7 +586,21 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/0e
 
 ### Implementando Factory de `Product`
 
-Code Developed: **[commit]()**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/7a816654c260f43c250cdae8976b4c8008ce36a1)**
+
+### Criando Factory de `Customer`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/a98322be50765210cd3eb5dc659970a5cbf85a35)**
+
+### Fabricando o agregado de `Order`
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-ddd/commit/aeb452b86274f541d6f1f9b233ec450622e9bbff)**
+
+## Considerações Finais
+
+
+
+
 
 
 
