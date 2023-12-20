@@ -1,0 +1,145 @@
+<mxfile host="65bd71144e">
+    <diagram id="nKNEXT5ZMw7rAxgOzKtQ" name="Page-1">
+        <mxGraphModel dx="1438" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="27" value="Fazer upload do vídeo" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Criar vídeo" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="395" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Cliente" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="395" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Administrador de Assinaturas" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="395" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;ATORES&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="340" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Vídeo criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="60" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Categoria criada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="60" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Plano de assinatura criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="60" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Assinatura aprovada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="60" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Upload do vídeo realizado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="150" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Gênero criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="150" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Cliente criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="150" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Assinatura rejeitada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="150" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Vídeo publicado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Cast Member criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Assinatura iniciada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Vídeo assistido" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;EVENTOS&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="10" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;COMANDOS&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="530" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="630" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Vídeo criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;direction=south;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="790" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Upload do vídeo realizado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Criar categoria" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="630" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Categoria criada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Criar gênero" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="790" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Gênero criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Publicar vídeo" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="980" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Vídeo publicado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Criar cast member" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="375" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Administrador de vídeos" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="315" y="980" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Cast Member criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="465" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Criar Plano" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Administrador de assinaturas" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="630" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Plano criado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="570" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Fazer assinatura" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Cliente" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="790" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Assinatura iniciada" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="730" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Assistir Vídeo" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Cliente" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f4d701;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="980" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Vídeo assistido" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="920" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

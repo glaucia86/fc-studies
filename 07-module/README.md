@@ -74,15 +74,15 @@
   - [x] Modularizando a camada de domínio
   - [x] Modularizando a camada de infraestrutura
 
-- [ ] Factories
+- [x] Factories
   - [x] Conceituando Factories
   - [x] Dinâmica
-  - [ ] Implementando Factory de Product
-  - [ ] Criando Factory de Customer
-  - [ ] Fabricando o agregado de Order
+  - [x] Implementando Factory de Product
+  - [x] Criando Factory de Customer
+  - [x] Fabricando o agregado de Order
 
-- [ ] Considerações Finais
-  - [ ] Palavras Finais
+- [x] Considerações Finais
+  - [x] Palavras Finais
 
 
 
