@@ -25,5 +25,13 @@ São eventos relevantes ao sistema! Os verbos sempre estão no passado, pois já
 
 ## Entendendo eventos e comandos na prática
 
+![Eventos e comandos](./images/event-storming-01.png)
 
+## Pontos de decisão e policies
+
+Policy: "Quando algo acontece, faça!"
+
+## Exemplo de Policy no projeto
+
+![Policy](./images/event-storming-02.png)
 

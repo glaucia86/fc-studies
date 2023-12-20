@@ -6,8 +6,8 @@
 - [x] Fundamentos
 - [x] Eventos e comandos
 - [x] Entendendo eventos e comandos na prática
-- [ ] Pontos de decisão e policies
-- [ ] Exemplo de Policy no projeto
+- [x] Pontos de decisão e policies
+- [x] Exemplo de Policy no projeto
 - [ ] Definição de cronologia
 - [ ] Origem dos eventos
 - [ ] Entendendo o surgimento de Agregados
