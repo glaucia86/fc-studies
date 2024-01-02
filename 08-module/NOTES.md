@@ -10,6 +10,8 @@ Normalmente acontece em um formato de workshop. É uma dinâmica de grupo envolv
 
 > recomendação de livro sobre o assunto: https://leanpub.com/introducing_eventstorming
 
+> excelente artigo sobre Event Storming: https://medium.com/@samar.benamar/event-storming-the-storm-that-cleans-up-the-mess-b2bb578db7c
+
 ## Eventos e comandos
 
 É muito importante saber mapear os eventos e comandos que acontecem no domínio da aplicação. Isso é um domínio de evento!
@@ -34,4 +36,33 @@ Policy: "Quando algo acontece, faça!"
 ## Exemplo de Policy no projeto
 
 ![Policy](./images/event-storming-02.png)
+
+## Cronologia
+
+A cronologia é muito importante para entendermos a ordem dos eventos e comandos.
+
+![Alt text](./images/image.png)
+
+## Origem dos eventos
+
+- Eventos externos
+- Eventos internos
+- Tempo
+- Usuário
+- Consequencia
+
+## Definindo Contextos Delimitados
+
+![Alt text](./images/event-storming-05.png)
+
+![Alt text](./images/event-storming-06.png)
+
+## Mapeamento de eventos Codeflix
+
+![Alt text](./images/event-storming-07.png)
+
+
+
+
+
 
