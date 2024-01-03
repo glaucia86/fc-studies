@@ -8,12 +8,12 @@
 - [x] Entendendo eventos e comandos na prática
 - [x] Pontos de decisão e policies
 - [x] Exemplo de Policy no projeto
-- [ ] Definição de cronologia
-- [ ] Origem dos eventos
-- [ ] Entendendo o surgimento de Agregados
-- [ ] Definindo Contextos Delimitados
-- [ ] Arrow voting
-- [ ] Agregados fluxos e bounded contexts
-- [ ] Contextos e Microsserviços
-- [ ] Palavras Finais
-- [ ] Mapeamento de eventos Codeflix
+- [x] Definição de cronologia
+- [x] Origem dos eventos
+- [x] Entendendo o surgimento de Agregados
+- [x] Definindo Contextos Delimitados
+- [x] Arrow voting
+- [x] Agregados fluxos e bounded contexts
+- [x] Contextos e Microsserviços
+- [x] Palavras Finais
+- [x] Mapeamento de eventos Codeflix
