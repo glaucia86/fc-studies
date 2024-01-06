@@ -84,6 +84,6 @@
 - [x] Considerações Finais
   - [x] Palavras Finais
 
-
+> Module 07 - DDD: Tactical Modeling and Patterning Code Sample **[here](https://github.com/glaucia86/fc-studies-ddd)**
 
 
