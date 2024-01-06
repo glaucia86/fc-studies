@@ -116,3 +116,47 @@ Faltou nos processos acima:
 * Cliente terá prejuízo com a brusca mudança arquitetural?
 * Em qual momento tudo se perdeu?
 * Se você fosse novo na equipe, você julgaria os devs que fizeram tudo isso?
+
+## Arquitetura vs Design de Software
+
+"Atividades relacionadas a arquitetura de software são sempre de design. Entretanto nem todas as atividades de design são sobre arquitetura. O objetivo primário da arquitetura de software é garantir que os atributos de qualidade, restrições de alto nível e os objetivos do negócio, sejam atendidos pelo sistema. Qualquer decisão de design que não tenha relação com este objetivo não é arquitetural. Todas a decisões de design para um componente que não sejam "visíveis" fora dele, geralmente, também não são." ~ Elemar Junior
+
+## Apresentando arquitetura hexagonal
+
+"Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases." ~ Alistair Cockburn
+
+"Permitir que uma aplicação seja igualmente dirigida por usuários, programas, testes automatizados ou scripts em lote, e que seja desenvolvida e testada em isolamento de seus dispositivos e bancos de dados de execução." ~ Alistair Cockburn
+
+O termo "Arquitetura" Hexagonal está muito ligado com decisões de design de software do que necessariamente de arquitetura.
+
+### Arquitetura Hexagonal ou "Ports and Adapters"
+
+![alt text](image.png)
+
+## Dinâmica da arquitetura
+
+* Definição de limites e proteção nas regras da aplicação
+* Componetização e desacomplamento
+  * Logs
+  * Cache
+  * Banco de dados
+  * Comandos
+  * Filas
+  * Http/APIs/GraphQL
+* Facilidade na quebra para microserviços
+
+Exemplo:
+
+![alt text](image-1.png)
+
+### Dependency Inversion Principle
+
+* Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
+
+* Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
+
+## Hexagonal vs Clean vs Onion
+
+* Não há padrão estabelecido de como o código deve ser organizado
+
+* Quanto mais desacoplado for o seu código, melhor!
