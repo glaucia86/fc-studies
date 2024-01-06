@@ -49,10 +49,19 @@ Repository responsible for studies related to the Full Cycle course.
 </details>
 
 <details><summary><b>Módulo 8: Practical Event Storming</b></summary>
+
+**[Module 8: Practical Event Storming](./08-module/README.md)**
+
 </details>
 
-<details><summary><b>Módulo 8: Practical Event Storming</b></summary>
+<details><summary><b>Módulo 9: Hexagonal Architecture</b></summary>
+
+**[Module 9: Hexagonal Architecture](./09-module/README.md)**
+
 </details>
 
-<details><summary><b>Módulo 8: Practical Event Storming</b></summary>
+<details><summary><b>Módulo 10: Practical Clean Architecture</b></summary>
+
+**[Module 10: Practical Clean Architecture](./10-module/README.md)**
+
 </details>

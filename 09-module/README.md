@@ -2,14 +2,14 @@
 
 ## What I learned
 
-- [ ] Introdução a Arquitetura Hexagonal
-  - [ ] Introdução
-  - [ ] Ciclo de um projeto
-  - [ ] Reflexões importantes
-  - [ ] Arquitetura vs Design de Software
-  - [ ] Apresentando arquitetura hexagonal
-  - [ ] Dinâmica da arquitetura
-  - [ ] Hexagonal vs Clean vs Onion
+- [x] Introdução a Arquitetura Hexagonal
+  - [x] Introdução
+  - [x] Ciclo de um projeto
+  - [x] Reflexões importantes
+  - [x] Arquitetura vs Design de Software
+  - [x] Apresentando arquitetura hexagonal
+  - [x] Dinâmica da arquitetura
+  - [x] Hexagonal vs Clean vs Onion
 
 
 - [ ] Arquitetura Hexagonal na prática
