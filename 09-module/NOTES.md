@@ -160,3 +160,17 @@ Exemplo:
 * Não há padrão estabelecido de como o código deve ser organizado
 
 * Quanto mais desacoplado for o seu código, melhor!
+
+## Arquitetura Hexagonal na Prática
+
+### Setando o ambiente
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/23e7165d753e5edbf04caf335a823cfbab046377)**
+
+### Definindo interface
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/125f57504d0b98c05f34ec2ab0b8bc0383e8e460)**
+
+### Implementando e testando Enable
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/7616836644159cbe6e0aebb95e111b047d369715)**
