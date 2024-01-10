@@ -174,3 +174,11 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 ### Implementando e testando Enable
 
 Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/7616836644159cbe6e0aebb95e111b047d369715)**
+
+### Implementando e testando demais métodos
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/4e90e36bccadb51057c2e8b60cd49873662ad899)**
+
+### Definindo interfaces de serviços e persistência
+
+Code Developed **[commit]()**
