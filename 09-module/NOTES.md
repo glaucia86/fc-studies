@@ -181,4 +181,17 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Definindo interfaces de serviços e persistência
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/ac84a563597116cdb71c269b5b1e1dad2dd522aa)**
+
+### Criando service e método `Get`
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/3150d6ee918c15c968e2608f768f5376211f6c5a)**
+
+
+### Trabalhando com `gomock` e `mockgen`
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/562f06ae248ba78d52abdc8d6376ae3e9c351677)**
+
+### Finalizando implementação do `service`
+
 Code Developed **[commit]()**
