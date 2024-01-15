@@ -194,4 +194,26 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Finalizando implementação do `service`
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/8587478793091c0194ac6aed3bd9629288245ab3)**
+
+### Iniciando criação do adapter Db
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/931d5d1bc560ce30e58f30e1ea9dbce86b4cc16d)**
+
+### Preparando testes de banco de dados
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/ae34ae05b0445ddd30b9495460523a4f02274947)**
+
+### Criando testes do método `Get`
+
 Code Developed **[commit]()**
+
+### Implementando método `Save`
+
+Code Developed **[commit]()**
+
+### Testando o método `Save`
+
+Code Developed **[commit]()**
+
+### Testando `Service` com `Db`

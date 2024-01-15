@@ -13,18 +13,18 @@
 
 
 - [ ] Arquitetura Hexagonal na prática
-  - [ ] Links úteis para esse capítulo
-  - [ ] Repositório do projeto
-  - [ ] Setando ambiente
-  - [ ] Definindo interface
-  - [ ] Implementando e testando Enable
-  - [ ] Implementando e testando demais métodos
-  - [ ] Definindo interfaces de serviços e persistência
-  - [ ] Criando service e método `Get`
-  - [ ] Trabalhando com `gomock` e `mockgen`
-  - [ ] Finalizando implementação do service
-  - [ ] Iniciando criação do adapter Db
-  - [ ] Preparando testes de banco de dados
+  - [x] Links úteis para esse capítulo
+  - [x] Repositório do projeto
+  - [x] Setando ambiente
+  - [x] Definindo interface
+  - [x] Implementando e testando Enable
+  - [x] Implementando e testando demais métodos
+  - [x] Definindo interfaces de serviços e persistência
+  - [x] Criando service e método `Get`
+  - [x] Trabalhando com `gomock` e `mockgen`
+  - [x] Finalizando implementação do service
+  - [x] Iniciando criação do adapter Db
+  - [x] Preparando testes de banco de dados
   - [ ] Criando testes de método `Get`
   - [ ] Implementando método `Save`
   - [ ] Testando método `Save`
