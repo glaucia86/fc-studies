@@ -206,14 +206,42 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Criando testes do método `Get`
 
-Code Developed **[commit]()**
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/3f9ff07d8552d8ea8d3418f83abe068336d21c98)**
 
 ### Implementando método `Save`
 
-Code Developed **[commit]()**
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/39945dfa321b28ba069c082c4c8ef8ba60fb755e)**
 
 ### Testando o método `Save`
 
-Code Developed **[commit]()**
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/39945dfa321b28ba069c082c4c8ef8ba60fb755e)**
 
-### Testando `Service` com `Db`
+### Testando `Service` com `DbAdapter`
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/34d5532b516bc12164a5c6f06c4a929059c6dca4)**
+
+### Considerações sobre adapters
+
+### Criando Adaptador CLI
+
+### Testando CLI
+
+### Implementando CLI com Cobra
+
+### Exibindo resultado e considerações
+
+### Criando servidor web
+
+### Iniciando implementação dos handlers
+
+### Finalizando implementação do `getProduct`
+
+### Executando o `webserver`
+
+### Trabalhando com DTO
+
+### Criando `Handler Create`
+
+### Testando processo de criação
+
+### Enable e Disable Handlers e considerações finais
