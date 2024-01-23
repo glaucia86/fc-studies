@@ -224,7 +224,11 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Criando Adaptador CLI
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/b711160f73b34bc23e731d8f7e9dfb8597ab652d)**
+
 ### Testando CLI
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/09530415c994c77354e11138fe3d138c85f82af1)**
 
 ### Implementando CLI com Cobra
 
