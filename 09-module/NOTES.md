@@ -232,6 +232,8 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Implementando CLI com Cobra
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/e495bb751998dff440f77a5e50e78044147388e1)**
+
 ### Exibindo resultado e considerações
 
 ### Criando servidor web
