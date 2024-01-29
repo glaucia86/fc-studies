@@ -236,13 +236,23 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Exibindo resultado e considerações
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/1a9d15aeaaeba6efca65b45e6a7f5eafa4a085f6)**
+
 ### Criando servidor web
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/2cbc5c36030271d449633f6e9347568704bbbc66)**
 
 ### Iniciando implementação dos handlers
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/8eae0805bb3273f16c6a4261e25f71115b443a29)**
+
 ### Finalizando implementação do `getProduct`
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/596c7b9a9672076a86ee420d261b474c2d935be3)**
+
 ### Executando o `webserver`
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/bf1b225b8be6361b48d6c655985f1e9422b805da)**
 
 ### Trabalhando com DTO
 
