@@ -256,8 +256,16 @@ Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-arch
 
 ### Trabalhando com DTO
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/0be4f2342773b236bd24a65eb18bda588b939f21)**
+
 ### Criando `Handler Create`
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/78c4b9757a91a810c858a3583b8e2579deca9b31)**
 
 ### Testando processo de criação
 
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/ac22d0b32357a82fe35e2393787b7a54e43e9de9)**
+
 ### Enable e Disable Handlers e considerações finais
+
+Code Developed **[commit](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/commit/bea4cc1a0803a055cb8ff797720c43fcccb5cef5)**
