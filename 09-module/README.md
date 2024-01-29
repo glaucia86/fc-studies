@@ -12,7 +12,7 @@
   - [x] Hexagonal vs Clean vs Onion
 
 
-- [ ] Arquitetura Hexagonal na prática
+- [x] Arquitetura Hexagonal na prática
   - [x] Links úteis para esse capítulo
   - [x] Repositório do projeto
   - [x] Setando ambiente
@@ -25,22 +25,22 @@
   - [x] Finalizando implementação do service
   - [x] Iniciando criação do adapter Db
   - [x] Preparando testes de banco de dados
-  - [ ] Criando testes de método `Get`
-  - [ ] Implementando método `Save`
-  - [ ] Testando método `Save`
-  - [ ] Testando Service com `DbAdapter`
-  - [ ] Considerações sobre adapters
-  - [ ] Criando Adaptador CLI
-  - [ ] Testando CLI
-  - [ ] Implementando CLI com Cobra
-  - [ ] Exibindo resultado e considerações
-  - [ ] Criando servidor web
-  - [ ] Iniciando implementação dos handlers
-  - [ ] Finalizando implementação do `getProduct`
-  - [ ] Executando `webserver`
-  - [ ] Trabalhando com DTO
-  - [ ] Criando Handler Create
-  - [ ] Testando processo de criação
-  - [ ] Enable e Disable Handlers e considerações finais
+  - [x] Criando testes de método `Get`
+  - [x] Implementando método `Save`
+  - [x] Testando método `Save`
+  - [x] Testando Service com `DbAdapter`
+  - [x] Considerações sobre adapters
+  - [x] Criando Adaptador CLI
+  - [x] Testando CLI
+  - [x] Implementando CLI com Cobra
+  - [x] Exibindo resultado e considerações
+  - [x] Criando servidor web
+  - [x] Iniciando implementação dos handlers
+  - [x] Finalizando implementação do `getProduct`
+  - [x] Executando `webserver`
+  - [x] Trabalhando com DTO
+  - [x] Criando Handler Create
+  - [x] Testando processo de criação
+  - [x] Enable e Disable Handlers e considerações finais
 
 >  Module 09 - Arquitetura Hexagonal Code Sample **[here](https://github.com/glaucia86/fc-studies-hexagonal-architecture-go/tree/main)**
