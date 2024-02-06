@@ -3,11 +3,11 @@
 ## What I learned
 
 - [ ] Conceitos Básicos
-  - [ ] Introdução
-  - [ ] Origem Clean Architecture
-  - [ ] Pontos Importantes sobre arquitetura
-  - [ ] Keep options open
-  - [ ] Uses cases
+  - [x] Introdução
+  - [x] Origem Clean Architecture
+  - [x] Pontos Importantes sobre arquitetura
+  - [x] Keep options open
+  - [x] Uses cases
   - [ ] O fluxo do Use Cases
   - [ ] Limites arquiteturais
   - [ ] Input vs Output
