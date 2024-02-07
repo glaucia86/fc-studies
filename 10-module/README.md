@@ -2,21 +2,21 @@
 
 ## What I learned
 
-- [ ] Conceitos Básicos
+- [x] Conceitos Básicos
   - [x] Introdução
   - [x] Origem Clean Architecture
   - [x] Pontos Importantes sobre arquitetura
   - [x] Keep options open
   - [x] Uses cases
-  - [ ] O fluxo do Use Cases
-  - [ ] Limites arquiteturais
-  - [ ] Input vs Output
-  - [ ] Entendendo DTOs
-  - [ ] Presenters
-  - [ ] Entities vs DDD
+  - [x] O fluxo do Use Cases
+  - [x] Limites arquiteturais
+  - [x] Input vs Output
+  - [x] Entendendo DTOs
+  - [x] Presenters
+  - [x] Entities vs DDD
 
-- [ ] Código Fonte
-    - [ ] Repositório
+- [x] Código Fonte
+    - [x] Repositório
 
 - [ ] Iniciando com Use Cases
     - [ ] Relembrando o projeto

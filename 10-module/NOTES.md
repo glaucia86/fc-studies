@@ -69,5 +69,72 @@ Lembra-se do DDD? Atacar a complexidade no coração do software.
 * Ex.: Alterar vs Inserir. Ambos consultam se o registro existe, persistem dados. MAS, são Use Cases diferentes. Por que?
 * SRP (Single Responsibility Principle) => mudam por razões diferentes
 
-#### Duplicação real vs acidental
+### O fluxo dos Use Cases
 
+Use Cases contam uma história. 
+
+![alt text](./images/image-01.png)
+
+> referência da imagem: https://medium.com/@unaware_harry/a-deep-dive-into-clean-architecture-and-solid-principles-dcdcec5db48a
+
+### Limites arquiteturais
+
+Tudo que não impacta diretamente nas regras de negócio deve estar em um limite arquitetural diferente. Ex.: não será o frontend, banco de dados que mudarão as regras de negócio da aplicação.
+
+![alt text](./images/image-02.png)
+
+![alt text](./images/image-03.png)
+
+O Banco de Dados conhece as Regras de Negócios. As Regras de Negócios não conhecem o Banco de Dados.	
+
+![alt text](./images/image-04.png)
+
+Algo que você deve questionar e até mesmo fazendo analogia é: "Será que o código que estou criando, se eu estiver, por exemplo, no primeiro andar de um prédio, eu estaria ao mesmo tempo no último andar do prédio". Se a resposta for sim, você está rompendo os limites arquiteturais.
+
+### Input vs Output
+
+* No final do dia, tudo se resume a um `Input` que retorna um `Output`
+* Ex: Criar um pedido (dados do pedido = input) 
+      Pedido criado (dados de retorno do pedido = output)
+* Simplifique que seu raciocínio ao criar um software sempre pensando em `Input` e `Output`
+
+![alt text](./images/image-04.png)
+
+### Entendendo DTOs
+
+* Trafegar os dados entre os limites arquiteturais
+* Objeto anêmico, sem comportamento
+* Contém dados (Input ou Output)
+* Não possui regras de negócio
+* Não possui comportamento
+* Não faz nada!
+
+Ex.:
+
+* API -> CONTROLLER -> USE CASE -> ENTITY
+* Controller cria um DTO com os dados recebidos e envia para o Use Case
+* Use Case executa seu fluxo, pega o resultado, cria um DTO para output e retorna para o Controller.
+
+### Presenters
+
+* Objetos de transformação
+* Adequa o DTO de output no formato correto para entregar o resultado
+* Lembrando: um sistema por ter diversos formatos de entrega. Ex.: XML, JSON, Protobuf, GraphQL, CLI, etc.
+
+Vejamos um exemplo:
+
+```javascript
+input = new CategoryInputDTO("name");
+output = CreateCategoryUseCase(input);
+jsonResult = CategoryPresenter(output).toJson();
+xmlResult = CategoryPresenter(output).toXml();
+```
+
+### Entities vs DTOs
+
+* Entities da Clean Architecture são diferentes das Entities do DDD
+* Clean Architecture define entity como camada de regras de negócio
+* Elas se aplicam em qualquer situação
+* Não há definição explicita de como criar as entities
+* Normalmente utilizamos táticas do DDD
+* Entities = Agregados + Domain Services
