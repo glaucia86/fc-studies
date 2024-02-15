@@ -19,7 +19,7 @@
     - [x] Repositório
 
 - [ ] Iniciando com Use Cases
-    - [ ] Relembrando o projeto
+    - [x] Relembrando o projeto
     - [ ] Criando nosso primeiro DTO
     - [ ] Testando criação para primeiro use case
     - [ ] Entendendo problemas com testes de integração
@@ -34,4 +34,4 @@
     - [ ] Implementando listagem de Customer    
     - [ ] Desafio de use cases  
 
->  Module 10 -  **[here]()**
+>  Module 10 -  **[here](https://github.com/glaucia86/fc-studies-clean-architecture)**
