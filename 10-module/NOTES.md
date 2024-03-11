@@ -138,3 +138,18 @@ xmlResult = CategoryPresenter(output).toXml();
 * Não há definição explicita de como criar as entities
 * Normalmente utilizamos táticas do DDD
 * Entities = Agregados + Domain Services
+
+## Iniciando com Use Cases
+
+### Relembrando o projeto
+
+Link do repositório: **[fc-studies-clean-architecture](https://github.com/glaucia86/fc-studies-clean-architecture)**
+
+### Criando nosso primeiro DTO
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/aff6b6fd57cc7f42ebb5b2230e14d8407b6bbb9d)**
+
+### Testando criação para primeiro use case
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/8d0785b530dabe3921ac5dac2e5b7bc27fdc334d)**
+

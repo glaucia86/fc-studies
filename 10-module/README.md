@@ -18,11 +18,11 @@
 - [x] Código Fonte
     - [x] Repositório
 
-- [ ] Iniciando com Use Cases
+- [x] Iniciando com Use Cases
     - [x] Relembrando o projeto
-    - [ ] Criando nosso primeiro DTO
-    - [ ] Testando criação para primeiro use case
-    - [ ] Entendendo problemas com testes de integração
+    - [x] Criando nosso primeiro DTO
+    - [x] Testando criação para primeiro use case
+    - [x] Entendendo problemas com testes de integração
     - [ ] Criando primeiro teste de unidade
     - [ ] Retornando erro em teste de unidade
     - [ ] Preparando teste de criação de Customer
