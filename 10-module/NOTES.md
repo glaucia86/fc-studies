@@ -165,3 +165,26 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/5e7f8840de4f917c32cd1eba95db6ef1356bbbab)**
 
+### Criando UseCase para criar customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/51a6477181a49ba9cf48164cc078aa0e8945f9fb)**
+
+### Implementando testes de criar customer quanto temos dados inválidos
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/a59ec344ff1e155ec04750849051ee9af23852e8)**
+
+### Criando UseCase para alterar customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/aee8970013314c1eb800a1c242ec5970216bb629)**
+
+### Desenvolvendo UseCase para alterar Customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/a0f522acd790b9e5430a39e5a227a4749e7d8562)**
+
+### Testando usecase para listagem de Customer
+
+Code Developed: **[commit]()**
+
+### Implementando listagem de Customer
+
+Code Developed: **[commit]()**
