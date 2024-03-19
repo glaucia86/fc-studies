@@ -23,9 +23,9 @@
     - [x] Criando nosso primeiro DTO
     - [x] Testando criação para primeiro use case
     - [x] Entendendo problemas com testes de integração
-    - [ ] Criando primeiro teste de unidade
-    - [ ] Retornando erro em teste de unidade
-    - [ ] Preparando teste de criação de Customer
+    - [x] Criando primeiro teste de unidade
+    - [x] Retornando erro em teste de unidade
+    - [x] Preparando teste de criação de Customer
     - [ ] Criando o UseCase para criar customer
     - [ ] Implementando testes de criar customer quando temos dados inválidos
     - [ ] Criando UseCase para alterar Customer 

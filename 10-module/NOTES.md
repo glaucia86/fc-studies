@@ -153,3 +153,15 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/8d0785b530dabe3921ac5dac2e5b7bc27fdc334d)**
 
+### Criando primeiro teste de unidade
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/0b52e559e1eeac101b49b99bafc423981b5a36ac)**
+
+### Retornando erro em teste de unidade
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/96a0d2809b5ff4edc6637411378823d516d2c419)**
+
+### Preparando teste de criação de Customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/5e7f8840de4f917c32cd1eba95db6ef1356bbbab)**
+
