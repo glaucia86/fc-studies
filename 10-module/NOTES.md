@@ -183,8 +183,8 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 ### Testando usecase para listagem de Customer
 
-Code Developed: **[commit]()**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/fde7dc4144720c23ed7b5811ee2e2c26500067b4)**
 
 ### Implementando listagem de Customer
 
-Code Developed: **[commit]()**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/d87faabbd050d1eff400d8921cb128adc062f8ca)**
