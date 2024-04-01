@@ -145,7 +145,7 @@ xmlResult = CategoryPresenter(output).toXml();
 
 Link do repositório: **[fc-studies-clean-architecture](https://github.com/glaucia86/fc-studies-clean-architecture)**
 
-### Criando nosso primeiro DTO
+### Criando nosso primeiro DTO - OK
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/aff6b6fd57cc7f42ebb5b2230e14d8407b6bbb9d)**
 
@@ -188,3 +188,9 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 ### Implementando listagem de Customer
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/d87faabbd050d1eff400d8921cb128adc062f8ca)**
+
+## Camada de API
+
+### Configurando Express
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/889e72d4e71b577dd95512929affb88bcb71910e)**
