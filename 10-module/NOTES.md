@@ -189,8 +189,36 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/d87faabbd050d1eff400d8921cb128adc062f8ca)**
 
+### Desafio de usecases
+
+> Commits on Mar 25, 2024
+
 ## Camada de API
 
 ### Configurando Express
 
 Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/889e72d4e71b577dd95512929affb88bcb71910e)**
+
+### Criando primeiro teste E2E
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/c1c57a89da88f05ee3d0f3086dd426f82a062dd4)**
+
+### Criando primeiro endpoint
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/a69ef81cd89493f97480e46b2164d302619b4376)**
+
+### Fazendo nosso teste retornar 500
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/2ff3910fe482f1e4a42a25d4bd8dd35784700b8c)**
+
+### Testando listagem de Customers
+
+Code Developed: **[commit]()**
+
+### Implementando endpoint de listagem
+
+Code Developed: **[commit]()**
+
+### Endpoint para Products
+
+Code Developed: **[commit]()**
