@@ -213,12 +213,35 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 ### Testando listagem de Customers
 
-Code Developed: **[commit]()**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/96788b87e8a7b0accb2a012a8ab5dfe0b6ba27de)**
 
 ### Implementando endpoint de listagem
 
-Code Developed: **[commit]()**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/834a01d2d308b84f7dbfbb107e0e646c1984ddd9)**
 
 ### Endpoint para Products
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/19091bd20c829000ec36b3cb22740f6582772a7d)**
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/491b25af7d9874cc237a5e99c656443d41bd54cf)**
+
+## Notification Pattern
+
+### Implementando Notification Pattern
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/a9d7484d0a93f6dade9b310c297ad1e0d79db991)**
+
+### Adicionando Notication em Customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/edddd0b36acfa7db61f5bbcbb628d6a9d5a247fb)**
+
+### Criando NotificationError
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/f67b78a7fb0d7495580727a0ff41b32357a2082a)**
+
+### Corrigindo e executando todos os tests
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/39bce4f43fac524b69f4c6c4c4f41fb73e017450)**
+
+### Notification Pattern para Products
 
 Code Developed: **[commit]()**

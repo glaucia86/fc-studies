@@ -34,22 +34,22 @@
     - [x] Implementando listagem de Customer    
     - [x] Desafio de use cases 
 
-- [ ] Camada de API
-  - [ ] Trabalhando com APIs
-  - [ ] Configurando o Express
-  - [ ] Criando o primeiro teste E2E
-  - [ ] Criando o primeiro endpoint
-  - [ ] Fazendo o nosso teste retornar 500
-  - [ ] Testando listagem de Customers
-  - [ ] Implementando endpoint de listagem
-  - [ ] Endpoint para Products
+- [x] Camada de API
+  - [x] Trabalhando com APIs
+  - [x] Configurando o Express
+  - [x] Criando o primeiro teste E2E
+  - [x] Criando o primeiro endpoint
+  - [x] Fazendo o nosso teste retornar 500
+  - [x] Testando listagem de Customers
+  - [x] Implementando endpoint de listagem
+  - [x] Endpoint para Products
 
 - [ ] Notification Pattern
-  - [ ] Notification Pattern
-  - [ ] Implementando o Notification
-  - [ ] Adicionando Notification em Customer
-  - [ ] Criando NotificationError
-  - [ ] Corrigindo e executando todos os testes
+  - [x] Notification Pattern
+  - [x] Implementando o Notification
+  - [x] Adicionando Notification em Customer
+  - [x] Criando NotificationError
+  - [x] Corrigindo e executando todos os testes
   - [ ] Notification Pattern para Products
 
 >  Module 10 -  **[here](https://github.com/glaucia86/fc-studies-clean-architecture)**
