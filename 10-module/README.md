@@ -44,12 +44,21 @@
   - [x] Implementando endpoint de listagem
   - [x] Endpoint para Products
 
-- [ ] Notification Pattern
+- [x] Notification Pattern
   - [x] Notification Pattern
   - [x] Implementando o Notification
   - [x] Adicionando Notification em Customer
   - [x] Criando NotificationError
   - [x] Corrigindo e executando todos os testes
-  - [ ] Notification Pattern para Products
+  - [x] Notification Pattern para Products
+
+- [ ] Validações vs Acoplamento
+  - [ ] Validações e limites arquiteturais
+  - [ ] Implementando validações
+  - [ ] Criando factory para validação
+  - [ ] Validando Product
+  
+- [ ]
+  - [ ]
 
 >  Module 10 -  **[here](https://github.com/glaucia86/fc-studies-clean-architecture)**

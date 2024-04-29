@@ -244,4 +244,39 @@ Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-archite
 
 ### Notification Pattern para Products
 
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/b1f3847fafaefa475bd91c2cfd5675c32b6f901b)**
+
+
+## Validações vs Acoplamento
+
+### Validações e limites arquiteturais
+
+### Implementando validações
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/bb5354d700ca36b3ac6e3cae6f3b24f0cf7ae319)**
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/bb5354d700ca36b3ac6e3cae6f3b24f0cf7ae319)**
+
+### Criando factory para validação
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/4370625c52b10f261ff23136051b16af0de395f6)**
+
+### Validando Product
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/75d16c8e630845b62db0c20bec89cc9ed151c08c)**
+
+## Presenters
+
+### Entendendo Presenters
+
 Code Developed: **[commit]()**
+
+### Criando Presenter para listagem de customer
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/d79f65f5d82c9bc2e533a876df932bf34d976f1b)**
+
+### Presenter na prática
+
+### Finalizando
+
+Code Developed: **[commit](https://github.com/glaucia86/fc-studies-clean-architecture/commit/eb07c138f699a7828a755fe6c832bf6b6a8f1ff5)**
