@@ -84,3 +84,75 @@ Vamos pensar em longo prazo com 'User'
 - Efeitos colaterais indesejados
 
 Precisamos evitar isso!
+
+## Sistemas monolíticos modulares
+
+- DDD é um ponto de partida: pois com DDD tudo é contexto
+
+Ex.:
+- Catálogo
+  - [user]
+
+- Carrinho
+  - [user]
+
+- Checkout
+  - [user]
+
+- Pagamentos
+  - [cliente]
+
+- Suporte ao cliente
+  - [cliente]
+
+- Marketing
+  - [lead]
+
+- Programa de Pontos
+  - [beneficiário]
+
+- Lista de casamento
+  - [convidado]
+
+"Cada contexto pode virar um módulo no seu sistema monolítico. E cada módulo se conecta a uma base de dados."
+
+![alt text](./images/modular-monolito.png)
+
+Assim sendo os sistemas monolíticos modulares são:
+
+- Módulos quebrados em 'bounded contexts'
+- Conversam através de contratos e facades
+- Entidades podem ser 'duplicadas' tendo apenas os atributos necessários
+- Equipes especializadas por módulos
+- Alta coesão: o que muda junto, permanece junto1
+
+## Segregação de banco de dados
+
+Aqui é a representação de um sistema monolítico modular com bancos de dados segregados.
+
+![alt text](./images/segregration-monolith.png)
+
+Cada módulo pode ter seu próprio banco de dados. Isso é uma forma de garantir que cada módulo tenha sua própria responsabilidade e não se misture com os outros módulos.
+
+Por que isso faz sentido?
+
+Uma das coisas que causa acoplamento é o banco de dados. Se você tem um banco de dados compartilhado, você tem um acoplamento entre os módulos. Se você tem um banco de dados para cada módulo, você tem uma forma de garantir que cada módulo tenha sua própria responsabilidade e não se misture com os outros módulos.
+
+## E os Microsserviços?
+
+> "Se é para segregar tanto, não é melhor já trabalhar com microsserviços?"
+
+Talvez você esteja se perguntando isso. E a resposta é: 
+
+- Um único deploy
+- Única operação
+- Observabilidade simplificada
+- Sistemas se comunicando internamente
+- Única linguagem. Menos governança
+
+## Shared Kernel
+
+Shared Kernel é um núcleo compartilhado. É um conjunto de classes, interfaces, funções, etc. que são compartilhadas entre dois ou mais contextos delimitados.
+
+
+
