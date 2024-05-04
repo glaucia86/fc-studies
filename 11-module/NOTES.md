@@ -85,7 +85,7 @@ Vamos pensar em longo prazo com 'User'
 
 Precisamos evitar isso!
 
-## Sistemas monolíticos modulares
+### Sistemas monolíticos modulares
 
 - DDD é um ponto de partida: pois com DDD tudo é contexto
 
@@ -126,7 +126,7 @@ Assim sendo os sistemas monolíticos modulares são:
 - Equipes especializadas por módulos
 - Alta coesão: o que muda junto, permanece junto1
 
-## Segregação de banco de dados
+### Segregação de banco de dados
 
 Aqui é a representação de um sistema monolítico modular com bancos de dados segregados.
 
@@ -138,7 +138,7 @@ Por que isso faz sentido?
 
 Uma das coisas que causa acoplamento é o banco de dados. Se você tem um banco de dados compartilhado, você tem um acoplamento entre os módulos. Se você tem um banco de dados para cada módulo, você tem uma forma de garantir que cada módulo tenha sua própria responsabilidade e não se misture com os outros módulos.
 
-## E os Microsserviços?
+### E os Microsserviços?
 
 > "Se é para segregar tanto, não é melhor já trabalhar com microsserviços?"
 
@@ -150,9 +150,24 @@ Talvez você esteja se perguntando isso. E a resposta é:
 - Sistemas se comunicando internamente
 - Única linguagem. Menos governança
 
-## Shared Kernel
+### Shared Kernel
 
 Shared Kernel é um núcleo compartilhado. É um conjunto de classes, interfaces, funções, etc. que são compartilhadas entre dois ou mais contextos delimitados.
 
+## Estrutura do Projeto
 
+### ContextMap
 
+![alt text](./images/code-store.png)
+
+### Comunicação entre módulos
+
+Você evitará acomplamento entre módulos através de contratos e facades.
+
+![alt text](./images/communication-modules.png)
+
+### Comunicação interna vs externa
+
+A comunicação interna com a externa acontecerá por meio de APIs, numa camada de Controllers.
+
+![alt text](./images/internal-vs-external.png)
