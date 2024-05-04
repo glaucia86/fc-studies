@@ -2,26 +2,26 @@
 
 ## What I learned
 
-- [] Conceitos Básicos
-  - [] Introdução
-  - [] As polêmicas por trás dos monolitos
-  - [] Monolito em primeiro
-  - [] Tipos de monolitos
-  - [] Sistemas monolíticos acoplados
-  - [] Sistemas monolíticos modulares
-  - [] Segregação de banco de dados
-  - [] E os Microsserviços
-  - [] Shared Kernel
+- [x] Conceitos Básicos
+  - [x] Introdução
+  - [x] As polêmicas por trás dos monolitos
+  - [x] Monolito em primeiro
+  - [x] Tipos de monolitos
+  - [x] Sistemas monolíticos acoplados
+  - [x] Sistemas monolíticos modulares
+  - [x] Segregação de banco de dados
+  - [x] E os Microsserviços
+  - [x] Shared Kernel
 
-- [] Código Fonte
-    - [] Repositório
+- [x] Código Fonte
+    - [x] Repositório
 
-- [] Estrutura do Projeto
-  - [] Dinâmica de entendimento do mini projeto
-  - [] Relembrando DDD
-  - [] Context Map
-  - [] Comunicação entre módulos
-  - [] Comunicação interna vs externa
+- [x] Estrutura do Projeto
+  - [x] Dinâmica de entendimento do mini projeto
+  - [x] Relembrando DDD
+  - [x] Context Map
+  - [x] Comunicação entre módulos
+  - [x] Comunicação interna vs externa
 
 - [] Iniciando projeto exemplo
   - [] Entendendo processo de codificação
