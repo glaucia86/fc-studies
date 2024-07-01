@@ -24,10 +24,10 @@
   - [x] Comunicação interna vs externa
 
 - [] Iniciando projeto exemplo
-  - [] Entendendo processo de codificação
-  - [] Criando pacote shared
-  - [] Criando entidade Product
-  - [] Criando teste para nosso usecase
+  - [x] Entendendo processo de codificação
+  - [x] Criando pacote shared
+  - [x] Criando entidade Product
+  - [x] Criando teste para nosso usecase
   - [] Desenvolvendo caso de uso
   - [] Criando teste de ProductRepository
   - [] Implementando create product

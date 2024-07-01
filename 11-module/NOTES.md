@@ -171,3 +171,18 @@ Você evitará acomplamento entre módulos através de contratos e facades.
 A comunicação interna com a externa acontecerá por meio de APIs, numa camada de Controllers.
 
 ![alt text](./images/internal-vs-external.png)
+
+## Iniciando projeto exemplo
+
+### Criando pacote shared
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/0a54f3b0639da16cdb85c42d4632c42bd3c64dba)**
+
+
+### Criando entidade Product
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/95991aba88a5af92d1da3c9892d07721811c76fe)**
+
+### Criando teste para nosso usecase
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/c8f729621bd5aaf6825dab65bc090a2ae7631b3a)**
