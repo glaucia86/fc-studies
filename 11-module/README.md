@@ -28,14 +28,14 @@
   - [x] Criando pacote shared
   - [x] Criando entidade Product
   - [x] Criando teste para nosso usecase
-  - [] Desenvolvendo caso de uso
-  - [] Criando teste de ProductRepository
-  - [] Implementando create product
-  - [] Implementando find a product
-  - [] Criando interface da nossa Facade
-  - [] Implementando Facade
-  - [] Testando nossa Facade
-  - [] Implementando Factory para nossa Facade
+  - [x] Desenvolvendo caso de uso
+  - [x] Criando teste de ProductRepository
+  - [x] Implementando create product
+  - [x] Implementando find a product
+  - [x] Criando interface da nossa Facade
+  - [x] Implementando Facade
+  - [x] Testando nossa Facade
+  - [x] Implementando Factory para nossa Facade
 
 - [] Store Catalog
   - [] Criando teste para checar estoque

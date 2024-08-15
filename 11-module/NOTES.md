@@ -186,3 +186,45 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 ### Criando teste para nosso usecase
 
 **[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/c8f729621bd5aaf6825dab65bc090a2ae7631b3a)**
+
+### Desenvolvendo caso de uso
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/89bd613602df0349b9fa7c43941d56534a0ddcb5)**
+
+### Criando Teste do `ProductRepository`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/d0e07cc093007d30dd69c302785cca85b401041c)**
+
+### Implementando `Create Product`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/bced91ce0104a9604c12c316d454ab4bdabd50a2)**
+
+### Implementando find a product
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/c8bc68d529ee4fc4c797952fe3ab355f5b03517b)**
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/cfd52cc9e0cdf35c1761d3ef9a2c9436714340cb)**
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/35ba53a9bb5e873b90ecffddb48e792628daaf32)**
+
+### Criando interface da nossa Facade
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/df96761f3358f33794dca538a78199866da0764a)**
+
+### Implementando Facade
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/f9f45e1e3c525784be0516acf401f126a17a017a)**
+
+### Testando nossa Facade
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/5e014b4d1f3bf36dac77af37fd4e4ea3e984f5e3)**
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/9aeb7b089f76e6cf979011e29bff67cd06665eac)**
+
+### Implementando Factory para nossa Facade
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ddd20d3beeb655390988331dd2bdb78bff592946)**
+
+### Extra - Implementando `check-stock` use case
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
