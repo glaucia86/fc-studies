@@ -228,3 +228,29 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 ### Extra - Implementando `check-stock` use case
 
 **[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+
+## Store Catalog
+
+### Criando teste para checar estoque
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+
+### Implementando `CheckStockUseCase`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+
+### Testando facade para verificação de stock
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+
+### Criando entidade Product
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+
+### Implementando teste do `FindAllProducts UseCase`
+
+**[Code Developed]()**
+
+### Implementando `FindAllProducts UseCase`
+
+**[Code Developed]()**
