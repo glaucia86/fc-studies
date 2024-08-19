@@ -245,12 +245,70 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Criando entidade Product
 
-**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ea9c0b1512ee367c09661fe1e1df67d13bad6042)**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/deb3a198dcc0fbea371c51628aecd285f5eea191)**
 
 ### Implementando teste do `FindAllProducts UseCase`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/260dac5dc1794f7b34de8197773f468159f92e53)**
 
 ### Implementando `FindAllProducts UseCase`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/a14f455b5dec69b8f63165f2ab036bc96f971622)**
+
+### Criando Model de Product
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/2ac768cf1c67b95a4c1c3272428183f76f316b2c)**
+
+### Criando testes para `ProductRepository`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/e18d5e0a0a3ee1eae78c8c6971f39d44be5437cd)**
+
+### Implementando `FindAll` no `ProductRepository`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/5683f9950926adf95e18890696b6311e2a5144a4)**
+
+### Testando UseCase `FindProduct`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/a7af71b6b68421a9450de6af522828ad164ea851)**
+
+### Finalizando `FindProductUseCase`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/34e18b25591a1f6ac9245c346478fba7b9fc6ad0)**
+
+### Finalizando repositório
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/db6b144560a0ee860748ee6904f8425cc724b866)**
+
+### Criando Interface da `StoreCatalogFacade`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/2d52841f731619d7a5a6d416eedab87857ed5f0b)**
+
+### Criando teste para Facade StoreCatalog
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/8ae108d2c1bdec9ee6e9bccebae5e84630fb5e24)**
+
+### Finalizando StoreCatalogFacade
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/c68c191c2f180b5d0aced799a4219a6a41474b3c)**
+
+## Módulo ClientAdm
+
+### Iniciando módulo `Client-Adm`
+
+**[Code Developed]()**
+
+### Implementando caso de uso `AddClient`
+
+**[Code Developed]()**
+
+### Implementando `FindClientUseCase`
+
+**[Code Developed]()**
+
+### Implementando `ClientModel`
+
+**[Code Developed]()**
+
+### Implementando método `find` no `ClientRepository`
 
 **[Code Developed]()**
