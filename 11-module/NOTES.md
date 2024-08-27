@@ -295,15 +295,15 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Iniciando módulo `Client-Adm`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/d480cfe94379b4e5c85b242c06e512889bc7b19f)**
 
 ### Implementando caso de uso `AddClient`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/bddebab0a3543e217effd45e3b85d9676bab352c)**
 
 ### Implementando `FindClientUseCase`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/12ffce91aa67f01f0351d56366998e44ca53fe59)**
 
 ### Implementando `ClientModel`
 
