@@ -307,8 +307,24 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Implementando `ClientModel`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/a20ac63c773b72e4e51579ddfd5f03f98509c3cf)**
 
 ### Implementando método `find` no `ClientRepository`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commits/main/)**
+
+### Implementando `Add` no `ClientRepository`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/9d5abd45a05dd3cf5cedbc73dad1845c6be1bf58)**
+
+### Implementando interface da facade
+
+**[Code Developed]()**
+
+### Implementando Add da Facade
+
+**[Code Developed]()**
+
+### Finalizando Facade e Factory
 
 **[Code Developed]()**
