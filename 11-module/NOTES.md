@@ -319,12 +319,12 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Implementando interface da facade
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/2097b84ce387643cba1e4fc784ca94928e4cf0c5)**
 
 ### Implementando Add da Facade
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/6ae20f64e51058201a3c9e8457bed07044fb3536)**
 
 ### Finalizando Facade e Factory
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/c5c49b25e00fab128a8cdec3b1f8d3dfcf5d5692)**
