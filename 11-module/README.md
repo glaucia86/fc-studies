@@ -37,33 +37,33 @@
   - [x] Testando nossa Facade
   - [x] Implementando Factory para nossa Facade
 
-- [] Store Catalog
-  - [] Criando teste para checar estoque
-  - [] Implementando CheckStockUseCase
-  - [] Testando facade para verificação de stock
-  - [] Criando entidade Product
-  - [] Implementando teste do FindAllProducts UseCase
-  - [] Implementando FindAllProducts UseCase
-  - [] Criando Model de Product
-  - [] Criando testes para ProductRepository
-  - [] Implementando FindAll no ProductRepository
-  - [] Testando UseCase FindProduct
-  - [] Finalizando FindProductUseCase
-  - [] Finalizando repositório
-  - [] Criando Interface da StoreCatalogFacade
-  - [] Criando teste para Facade StoreCatalog
-  - [] Finalizando StoreCatalogFacade
+- [x] Store Catalog
+  - [x] Criando teste para checar estoque
+  - [x] Implementando CheckStockUseCase
+  - [x] Testando facade para verificação de stock
+  - [x] Criando entidade Product
+  - [x] Implementando teste do FindAllProducts UseCase
+  - [x] Implementando FindAllProducts UseCase
+  - [x] Criando Model de Product
+  - [x] Criando testes para ProductRepository
+  - [x] Implementando FindAll no ProductRepository
+  - [x] Testando UseCase FindProduct
+  - [x] Finalizando FindProductUseCase
+  - [x] Finalizando repositório
+  - [x] Criando Interface da StoreCatalogFacade
+  - [x] Criando teste para Facade StoreCatalog
+  - [x] Finalizando StoreCatalogFacade
 
-- [] Módulo ClientAdm
-  - [] Iniciando módulo Client-Adm
-  - [] Implementando caso de uso AddClient
-  - [] Implementando FindClientUseCase
-  - [] Criando ClientModel
-  - [] Implementando método find no ClientRepository
-  - [] Implementando Add no ClientRepository
-  - [] Definindo interface da facade
-  - [] Implementando Add da Facade
-  - [] Finalizando Facade e Factory
+- [x] Módulo ClientAdm
+  - [x] Iniciando módulo Client-Adm
+  - [x] Implementando caso de uso AddClient
+  - [x] Implementando FindClientUseCase
+  - [x] Criando ClientModel
+  - [x] Implementando método find no ClientRepository
+  - [x] Implementando Add no ClientRepository
+  - [x] Definindo interface da facade
+  - [x] Implementando Add da Facade
+  - [x] Finalizando Facade e Factory
 
 - [] Pagamento
   - [] Iniciando com Payment
