@@ -66,11 +66,11 @@
   - [x] Finalizando Facade e Factory
 
 - [] Pagamento
-  - [] Iniciando com Payment
-  - [] Finalizando criação da entidade
-  - [] Desenvolvendo UseCase de ProcessPayment
-  - [] Finalizando testes do caso de uso
-  - [] Criando repositório de Transaction
+  - [x] Iniciando com Payment
+  - [x] Finalizando criação da entidade
+  - [x] Desenvolvendo UseCase de ProcessPayment
+  - [x] Finalizando testes do caso de uso
+  - [x] Criando repositório de Transaction
   - [] Implementando PaymentFacade
   - [] Finalizando Factory
 

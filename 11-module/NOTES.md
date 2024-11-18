@@ -342,3 +342,19 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 ### Desenvolvendo UseCase de ProcessPayment
 
 **[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/d1740f795cd9d478dd394bb6ed5a4e8fc4bfacb8)**
+
+### Finalizando testes do caso de uso
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/2e7e4a6ded05bdf5341c15b58f5d2928af0f31a7)**
+
+### Criando repositório de `Transaction`
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/fc713488c572c8f886fa557e4767e90fd2db8516)**
+
+### Implementando `PaymentFacade`
+
+**[Code Developed]()**
+
+### Finalizando Factory
+
+**[Code Developed]()**
