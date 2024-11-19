@@ -353,8 +353,14 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Implementando `PaymentFacade`
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/f3258aef846044988388fc7687b1776085a8aba1)**
 
 ### Finalizando Factory
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/914f02033847a22478404d82b5718b5416dd18ac)**
+
+## Invoice
+
+### Criação de módulo de Invoice
 
 **[Code Developed]()**

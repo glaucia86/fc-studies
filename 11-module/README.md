@@ -71,8 +71,8 @@
   - [x] Desenvolvendo UseCase de ProcessPayment
   - [x] Finalizando testes do caso de uso
   - [x] Criando repositório de Transaction
-  - [] Implementando PaymentFacade
-  - [] Finalizando Factory
+  - [x] Implementando PaymentFacade
+  - [x] Finalizando Factory
 
 - [] Invoice
   - [] Criação de módulo de Invoice
