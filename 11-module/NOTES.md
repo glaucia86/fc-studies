@@ -363,4 +363,21 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 
 ### Criação de módulo de Invoice
 
-**[Code Developed]()**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/e10dee649da35b145eb6a9113ee7ed2c6ea3384d)**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/989128bbf6311d9226b2d02fa9b5a97b0efe1ff0)**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/3ebad1bf0cf1520394f2688a9235ac8b318361ea)**
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/a815143c31f309dbcaa5a17e09627ea9599f1267)**
+
+## Checkout
+
+### Criando entidade client
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/1693bf231764df8528bd351bb15b6a013395653f)**
+
+### Implementando product e order
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/16a531b93126fc84be13e370508eee3c59c09a12)**
+
+### Preparando UseCase
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/8dea7ba6649f8f7a33ef710285ee95b72d99e71e)**

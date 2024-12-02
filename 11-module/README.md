@@ -74,8 +74,8 @@
   - [x] Implementando PaymentFacade
   - [x] Finalizando Factory
 
-- [] Invoice
-  - [] Criação de módulo de Invoice
+- [x] Invoice
+  - [x] Criação de módulo de Invoice
 
 - [] Checkout
   - [] Criando entidade client
