@@ -381,3 +381,23 @@ A comunicação interna com a externa acontecerá por meio de APIs, numa camada 
 ### Preparando UseCase
 
 **[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/8dea7ba6649f8f7a33ef710285ee95b72d99e71e)**
+
+### Criando primeiro teste para client
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/3f36c1dedb71a6d5b1f097da983648626693abbf)**
+
+### Testando validação dos produtos
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/ae684e1cb36eb04d8a3d316f04d631cae52c1f39)**
+
+### Implementando validateProducts
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/d4db093bbbd5ea9edf813e6191f385725fa97e57)**
+
+### Testando método de verificação do produto
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/db2a8cdcb4b14d644edd02f2c1d7c918f4831bee)**
+
+### Implementando verificação de stock
+
+**[Code Developed](https://github.com/glaucia86/fc-studies-monolith-ts/commit/408be80c22f26b53d76458037c1c0d29f7a7a316)**

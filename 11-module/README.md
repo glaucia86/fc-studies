@@ -78,9 +78,9 @@
   - [x] Criação de módulo de Invoice
 
 - [] Checkout
-  - [] Criando entidade client
-  - [] Implementando product e order
-  - [] Preparando UseCase
+  - [x] Criando entidade client
+  - [x] Implementando product e order
+  - [x] Preparando UseCase
   - [] Criando primeiro teste para client
   - [] Testando validação dos produtos
   - [] Implementando validateProducts
