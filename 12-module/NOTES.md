@@ -75,3 +75,5 @@ Quando você precisa de tecnologias específicas em partes do seu sistema.
 - CI/CD, Testes, Ambientes - você precisará de maturidade. Se você hoje não conseguir fazer um deploy no monolito, você não vai conseguir fazer em microsserviços. Pois você terá muitos deploys diferentes. Precisará de muita maturidade nesse processo.
 
 - Comece pelas beiradas. O que isso significa? Não comece pela área principal do seu sistema. Pois é muito arriscado. Comece por áreas que não são tão críticas, e vá evoluindo aos poucos e migrando aos poucos. Isso vai gerar a necessidade de criar um Padrão de estrangulamento. Onde você vai ter o monolito e o microsserviço trabalhando juntos, e aos poucos você vai migrando o monolito para o microsserviço.
+
+![Mind map](./images/image.png)
