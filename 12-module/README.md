@@ -2,12 +2,12 @@
 
 ## What I learned
 
-- [] Introdução
-    - [] Conceitos básicos
-    - [] Microsserviços vs Monoliticos
-    - [] Quando utilizar microsserviços
-    - [] Quanto utilizar sistemas monolíticos
-    - [] Migração de monolitos para microsserviços
+- [x] Introdução
+    - [x] Conceitos básicos
+    - [x] Microsserviços vs Monoliticos
+    - [x] Quando utilizar microsserviços
+    - [x] Quanto utilizar sistemas monolíticos
+    - [x] Migração de monolitos para microsserviços
 
 - [] Características
     - [] Componentização
